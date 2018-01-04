@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[isarray]]></title>
+    <title><![CDATA[判断变量是否为数组]]></title>
     <url>%2F2018%2F01%2F04%2Fisarray%2F</url>
-    <content type="text"><![CDATA[判断变量是否为数组Array.isArray()]]></content>
+    <content type="text"><![CDATA[Array.isArray()]]></content>
       <categories>
         <category>前端基本问题</category>
         <category>javaScript</category>
@@ -19,5 +19,8 @@
       <categories>
         <category>hexo</category>
       </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
   </entry>
 </search>
