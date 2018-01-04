@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[判断变量是否为数组]]></title>
     <url>%2F2018%2F01%2F04%2Fisarray%2F</url>
-    <content type="text"><![CDATA[Array.isArray()]]></content>
+    <content type="text"><![CDATA[Array.isArray() 用于确定传递的值是否是一个 Array]]></content>
       <categories>
         <category>前端基本问题</category>
         <category>javaScript</category>
