@@ -4,6 +4,13 @@
     <title><![CDATA[数组的倒序与重排序]]></title>
     <url>%2F2018%2F01%2F05%2FarraySort%2F</url>
     <content type="text"><![CDATA[1.数组倒序 Array.reverse() 示例： 123var values = [1,2,3,4,5];values.reverse();console.log(values) //5,4,3,2,1 2.数组排序 Array.sort() 示例： 12345678910111213function compare(value1,value2) &#123; if (value1&lt;value2) &#123; return 1; &#125; else if (value1&gt;value2) &#123; return -1; &#125; else &#123; return 0; &#125;&#125;var values = [0,1,5,10,9];values.sort(compare);console.log(values); //10, 9, 5, 1, 0]]></content>
+      <categories>
+        <category>前端基本问题</category>
+        <category>javaScript</category>
+      </categories>
+      <tags>
+        <tag>javaScript-Array</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[判断变量是否为数组]]></title>
@@ -14,7 +21,7 @@
         <category>javaScript</category>
       </categories>
       <tags>
-        <tag>javaScript</tag>
+        <tag>javaScript-Array</tag>
       </tags>
   </entry>
   <entry>
