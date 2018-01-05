@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[数组的倒序与重排序]]></title>
+    <url>%2F2018%2F01%2F05%2FarraySort%2F</url>
+    <content type="text"><![CDATA[1.数组倒序 Array.reverse() 示例： 123var values = [1,2,3,4,5];values.reverse();console.log(values) //5,4,3,2,1 2.数组排序 Array.sort() 示例： 12345678910111213function compare(value1,value2) &#123; if (value1&lt;value2) &#123; return 1; &#125; else if (value1&gt;value2) &#123; return -1; &#125; else &#123; return 0; &#125;&#125;var values = [0,1,5,10,9];values.sort(compare);console.log(values);]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[判断变量是否为数组]]></title>
-    <url>%2F2018%2F01%2F04%2Fisarray%2F</url>
+    <url>%2F2018%2F01%2F04%2FisArray%2F</url>
     <content type="text"><![CDATA[Array.isArray() 用于确定传递的值是否是一个 Array]]></content>
       <categories>
         <category>前端基本问题</category>
@@ -14,7 +19,7 @@
   </entry>
   <entry>
     <title><![CDATA[Hexo 上传步骤]]></title>
-    <url>%2F2018%2F01%2F04%2Fuse-hexo%2F</url>
+    <url>%2F2018%2F01%2F04%2FuseHexo%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Clean cache1$ hexo clean Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
       <categories>
         <category>hexo</category>
