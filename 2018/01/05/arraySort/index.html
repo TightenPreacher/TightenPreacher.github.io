@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="1.数组倒序  Array.reverse() 示例： 123var values = [1,2,3,4,5];values.reverse();console.log(values) //5,4,3,2,1 2.数组排序  Array.sort() 示例： 12345678910111213function compare(value1,value2) &amp;#123;    if (value1&amp;">
+<meta name="description" content="1.数组倒序  Array.reverse() 示例：">
 <meta name="keywords" content="javaScript-Array">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数组的倒序与重排序">
 <meta property="og:url" content="http://yoursite.com/2018/01/05/arraySort/index.html">
 <meta property="og:site_name" content="猫月日记">
-<meta property="og:description" content="1.数组倒序  Array.reverse() 示例： 123var values = [1,2,3,4,5];values.reverse();console.log(values) //5,4,3,2,1 2.数组排序  Array.sort() 示例： 12345678910111213function compare(value1,value2) &amp;#123;    if (value1&amp;">
+<meta property="og:description" content="1.数组倒序  Array.reverse() 示例：">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-05T09:58:03.261Z">
+<meta property="og:updated_time" content="2018-01-10T07:19:40.235Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数组的倒序与重排序">
-<meta name="twitter:description" content="1.数组倒序  Array.reverse() 示例： 123var values = [1,2,3,4,5];values.reverse();console.log(values) //5,4,3,2,1 2.数组排序  Array.sort() 示例： 12345678910111213function compare(value1,value2) &amp;#123;    if (value1&amp;">
+<meta name="twitter:description" content="1.数组倒序  Array.reverse() 示例：">
 
 
 
@@ -388,8 +388,7 @@
 
       
         <p><strong>1.数组倒序</strong>  <strong>Array.reverse()</strong></p>
-<p>示例：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> values = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</span><br><span class="line">values.reverse();</span><br><span class="line"><span class="built_in">console</span>.log(values) <span class="comment">//5,4,3,2,1</span></span><br></pre></td></tr></table></figure>
+<p>示例：<br><a id="more"></a><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> values = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</span><br><span class="line">values.reverse();</span><br><span class="line"><span class="built_in">console</span>.log(values) <span class="comment">//5,4,3,2,1</span></span><br></pre></td></tr></table></figure></p>
 <p><strong>2.数组排序</strong>  <strong>Array.sort()</strong></p>
 <p>示例：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">compare</span>(<span class="params">value1,value2</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (value1&lt;value2) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (value1&gt;value2) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> values = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">5</span>,<span class="number">10</span>,<span class="number">9</span>];</span><br><span class="line">values.sort(compare);</span><br><span class="line"><span class="built_in">console</span>.log(values); <span class="comment">//10, 9, 5, 1, 0</span></span><br></pre></td></tr></table></figure>
