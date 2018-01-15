@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[数组的归并方法]]></title>
+    <url>%2F2018%2F01%2F10%2FarrayMerge%2F</url>
+    <content type="text"><![CDATA[1.reduce()与reduceRight() 返回数组项的总和示例： 12345678910111213var values = [1,2,3,4,5];var sum = values.reduce(function(prev, cur, index , array)&#123; console.log(prev) return prev + cur&#125;);console.log(sum);var values = [1,2,3,4,5];var sum1 = values.reduceRight(function(prev, cur, index , array)&#123; console.log(prev) return prev + cur&#125;);console.log(sum);]]></content>
+      <categories>
+        <category>前端基本问题</category>
+        <category>数组</category>
+      </categories>
+      <tags>
+        <tag>javaScript-Array</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[数组的迭代方法]]></title>
     <url>%2F2018%2F01%2F10%2FarrayIteration%2F</url>
     <content type="text"><![CDATA[1.every() 判断数组所有项是否符合条件示例： 12345var numbers = [1,2,3,4,5,4,3,2,1];var everyResult = numbers.every(function(item, index , array)&#123; return (item &gt; 2)&#125;);console.log(everyResult); 2.some() 判断数组某项是否符合条件 示例： 12345var numbers = [1,2,3,4,5,4,3,2,1];var someResult = numbers.some(function(item, index , array)&#123; return (item &gt; 2)&#125;);console.log(someResult); 3.filter() 筛选数组返回出符合条件的项 示例： 12345var numbers = [1,2,3,4,5,4,3,2,1];var filterResult = numbers.filter(function(item, index , array)&#123; return (item &gt; 2)&#125;);console.log(filterResult); 4.map() 返回对数组运算后的结果 示例： 12345var numbers = [1,2,3,4,5,4,3,2,1];var mapResult = numbers.map(function(item, index , array)&#123; return (item * 2)&#125;);console.log(mapResult); 5.forEach() 等同for循环迭代数组 示例： 1234var numbers = [1,2,3,4,5,4,3,2,1];numbers.forEach(function(item, index , array)&#123; //执行某些操作&#125;);]]></content>
       <categories>
         <category>前端基本问题</category>
-        <category>javaScript</category>
+        <category>数组</category>
       </categories>
       <tags>
         <tag>javaScript-Array</tag>
@@ -18,7 +30,7 @@
     <content type="text"><![CDATA[1.数组倒序 Array.reverse() 示例：123var values = [1,2,3,4,5];values.reverse();console.log(values) //5,4,3,2,1 2.数组排序 Array.sort() 示例： 12345678910111213function compare(value1,value2) &#123; if (value1&lt;value2) &#123; return 1; &#125; else if (value1&gt;value2) &#123; return -1; &#125; else &#123; return 0; &#125;&#125;var values = [0,1,5,10,9];values.sort(compare);console.log(values); //10, 9, 5, 1, 0]]></content>
       <categories>
         <category>前端基本问题</category>
-        <category>javaScript</category>
+        <category>数组</category>
       </categories>
       <tags>
         <tag>javaScript-Array</tag>
@@ -30,7 +42,7 @@
     <content type="text"><![CDATA[Array.isArray() 用于确定传递的值是否是一个 Array]]></content>
       <categories>
         <category>前端基本问题</category>
-        <category>javaScript</category>
+        <category>数组</category>
       </categories>
       <tags>
         <tag>javaScript-Array</tag>
