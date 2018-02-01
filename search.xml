@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[aboutData]]></title>
+    <url>%2F2018%2F01%2F31%2FaboutDate%2F</url>
+    <content type="text"><![CDATA[Date类型，基于Java.util.Date类基础上构建 1-基本用法 1var now = new Date() //获取当前日期与时间 2-Date.parse() ​ Date.parse()接受一个表示日期的字符串参数，返回相应日期的毫秒数。如： 123Date.parse("1/31/2018") // 月/日/年Date.parse("January 25,2018") // 英文月名 日,年Date.parse("Tue May 25 2018 12:12:12 GMT-0700") //英文星期几 英文月名 日 年 时:分:秒 时区 3-Date.UTC()]]></content>
+      <categories>
+        <category>前端基本问题</category>
+        <category>Data类型</category>
+      </categories>
+      <tags>
+        <tag>javaScript-Data()</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[判断变量是否为数组]]></title>
     <url>%2F2018%2F01%2F15%2FisArray%2F</url>
     <content type="text"><![CDATA[Array.isArray() 用于确定传递的值是否是一个 Array]]></content>
