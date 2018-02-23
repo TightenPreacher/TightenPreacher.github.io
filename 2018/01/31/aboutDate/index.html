@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="javaScript-Data()," />
+  <meta name="keywords" content="javaScript-Date()," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Date类型，基于Java.util.Date类基础上构建 1-基本用法 1var now = new Date()  //获取当前日期与时间 2-Date.parse() ​    Date.parse()接受一个表示日期的字符串参数，返回相应日期的毫秒数。如： 123Date.parse(&quot;1/31/2018&quot;) 	// 月/日/年Date.parse(&quot;January 25,2018&quot;)	/">
-<meta name="keywords" content="javaScript-Data()">
+<meta name="description" content="Date类型，基于Java.util.Date类基础上构建 1-基本用法 1var now = new Date()  //获取当前日期与时间 2-Date.parse() ​    Date.parse()接受一个表示日期的字符串参数，返回相应日期的毫秒数。如： 1234Date.parse(&quot;1/31/2018&quot;) 	// 月/日/年Date.parse(&quot;January 25,2018&quot;)">
+<meta name="keywords" content="javaScript-Date()">
 <meta property="og:type" content="article">
 <meta property="og:title" content="aboutData">
 <meta property="og:url" content="http://yoursite.com/2018/01/31/aboutDate/index.html">
 <meta property="og:site_name" content="猫月日记">
-<meta property="og:description" content="Date类型，基于Java.util.Date类基础上构建 1-基本用法 1var now = new Date()  //获取当前日期与时间 2-Date.parse() ​    Date.parse()接受一个表示日期的字符串参数，返回相应日期的毫秒数。如： 123Date.parse(&quot;1/31/2018&quot;) 	// 月/日/年Date.parse(&quot;January 25,2018&quot;)	/">
+<meta property="og:description" content="Date类型，基于Java.util.Date类基础上构建 1-基本用法 1var now = new Date()  //获取当前日期与时间 2-Date.parse() ​    Date.parse()接受一个表示日期的字符串参数，返回相应日期的毫秒数。如： 1234Date.parse(&quot;1/31/2018&quot;) 	// 月/日/年Date.parse(&quot;January 25,2018&quot;)">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-31T10:34:55.997Z">
+<meta property="og:updated_time" content="2018-02-23T09:06:20.074Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="aboutData">
-<meta name="twitter:description" content="Date类型，基于Java.util.Date类基础上构建 1-基本用法 1var now = new Date()  //获取当前日期与时间 2-Date.parse() ​    Date.parse()接受一个表示日期的字符串参数，返回相应日期的毫秒数。如： 123Date.parse(&quot;1/31/2018&quot;) 	// 月/日/年Date.parse(&quot;January 25,2018&quot;)	/">
+<meta name="twitter:description" content="Date类型，基于Java.util.Date类基础上构建 1-基本用法 1var now = new Date()  //获取当前日期与时间 2-Date.parse() ​    Date.parse()接受一个表示日期的字符串参数，返回相应日期的毫秒数。如： 1234Date.parse(&quot;1/31/2018&quot;) 	// 月/日/年Date.parse(&quot;January 25,2018&quot;)">
 
 
 
@@ -388,12 +388,16 @@
 
       
         <p><strong><code>Date类型，基于Java.util.Date类基础上构建</code></strong></p>
-<p>1-基本用法</p>
+<p><strong>1-基本用法</strong></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> now = <span class="keyword">new</span> <span class="built_in">Date</span>()  <span class="comment">//获取当前日期与时间</span></span><br></pre></td></tr></table></figure>
-<p>2-Date.parse()</p>
+<p><strong>2-Date.parse()</strong></p>
 <p>​    Date.parse()接受一个表示日期的字符串参数，返回相应日期的毫秒数。如：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Date</span>.parse(<span class="string">"1/31/2018"</span>) 	<span class="comment">// 月/日/年</span></span><br><span class="line"><span class="built_in">Date</span>.parse(<span class="string">"January 25,2018"</span>)	<span class="comment">// 英文月名 日,年</span></span><br><span class="line"><span class="built_in">Date</span>.parse(<span class="string">"Tue May 25 2018 12:12:12 GMT-0700"</span>) 	<span class="comment">//英文星期几 英文月名 日 年 时:分:秒 时区</span></span><br></pre></td></tr></table></figure>
-<p>3-Date.UTC()</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Date</span>.parse(<span class="string">"1/31/2018"</span>) 	<span class="comment">// 月/日/年</span></span><br><span class="line"><span class="built_in">Date</span>.parse(<span class="string">"January 25,2018"</span>)	<span class="comment">// 英文月名 日,年</span></span><br><span class="line"><span class="built_in">Date</span>.parse(<span class="string">"Tue May 25 2018 12:12:12 GMT-0700"</span>) 	<span class="comment">//英文星期几 英文月名 日 年 时:分:秒 时区</span></span><br><span class="line"><span class="built_in">Date</span>.parse(<span class="string">"2018-02-13T00:00:00"</span>) 	<span class="comment">//ES5 ISO 8601 扩展格式 YYYY-MM-DDTHH:mm:ss.sssZ</span></span><br></pre></td></tr></table></figure>
+<p>​    如传入字符串不能表示日期，则返回<code>NaN</code>，如果直接传给Date()，也会调用Date.parse()。则:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> someDate = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">"January 25,2018"</span>) 		<span class="comment">//与上述例子等同</span></span><br></pre></td></tr></table></figure>
+<p><strong>3-Date.UTC()</strong></p>
+<p>​    Date.UTC()的参数分别是年份、基于0的月份、月中的某一天、小时数、分钟、秒、毫秒数。只有年月是必须的。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> y2k = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="built_in">Date</span>.UTC(<span class="number">2000</span>,<span class="number">0</span>));		<span class="comment">//GTM 时间 2000年1月1日午夜零时</span></span><br><span class="line"><span class="keyword">var</span> allFives = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="built_in">Date</span>.UTC(<span class="number">2005</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">17</span>,<span class="number">55</span>,<span class="number">555</span>)); 		<span class="comment">//GTM 时间 2005年5月5日下午5:55:55</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -411,7 +415,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/javaScript-Data/" rel="tag"># javaScript-Data()</a>
+            <a href="/tags/javaScript-Date/" rel="tag"># javaScript-Date()</a>
           
         </div>
       
