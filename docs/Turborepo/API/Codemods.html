@@ -1,0 +1,981 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>编码方式 · Turborepo 中文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Changelog/" />
+    
+    
+    <link rel="prev" href="CLIUsage.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    开始
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../GettingStarted/AddtoExistingProject.html">
+            
+                <a href="../GettingStarted/AddtoExistingProject.html">
+            
+                    
+                    兼容构建工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../GettingStarted/CreateANewMonorepo.html">
+            
+                <a href="../GettingStarted/CreateANewMonorepo.html">
+            
+                    
+                    创建新的项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../GettingStarted/AddtoExistingMonorepo.html">
+            
+                <a href="../GettingStarted/AddtoExistingMonorepo.html">
+            
+                    
+                    替换构建工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    核心概念
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../CoreConcepts/CachingTasks.html">
+            
+                <a href="../CoreConcepts/CachingTasks.html">
+            
+                    
+                    缓存任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../CoreConcepts/RemoteCaching.html">
+            
+                <a href="../CoreConcepts/RemoteCaching.html">
+            
+                    
+                    远程缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../CoreConcepts/Monorepos.html">
+            
+                <a href="../CoreConcepts/Monorepos.html">
+            
+                    
+                    项目
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../CoreConcepts/Monorepos/RunningTasks.html">
+            
+                <a href="../CoreConcepts/Monorepos/RunningTasks.html">
+            
+                    
+                    运行任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../CoreConcepts/Monorepos/FilteringWorkspaces.html">
+            
+                <a href="../CoreConcepts/Monorepos/FilteringWorkspaces.html">
+            
+                    
+                    筛选工作空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Handbook/">
+            
+                <a href="../Handbook/">
+            
+                    
+                    项目手册
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Handbook/WhatIsAMonorepo.html">
+            
+                <a href="../Handbook/WhatIsAMonorepo.html">
+            
+                    
+                    什么是单体项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../Handbook/PackageInstallation.html">
+            
+                <a href="../Handbook/PackageInstallation.html">
+            
+                    
+                    依赖安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../Handbook/Workspaces.html">
+            
+                <a href="../Handbook/Workspaces.html">
+            
+                    
+                    工作空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../Handbook/MigratingToAMonorepo.html">
+            
+                <a href="../Handbook/MigratingToAMonorepo.html">
+            
+                    
+                    迁移项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../Handbook/DevelopmentTasks.html">
+            
+                <a href="../Handbook/DevelopmentTasks.html">
+            
+                    
+                    开发任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../Handbook/BuildingYourApp.html">
+            
+                <a href="../Handbook/BuildingYourApp.html">
+            
+                    
+                    构建应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../Handbook/DeployingWithDocker.html">
+            
+                <a href="../Handbook/DeployingWithDocker.html">
+            
+                    
+                    部署Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../Handbook/SharingCode/">
+            
+                <a href="../Handbook/SharingCode/">
+            
+                    
+                    共享代码
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.8.1" data-path="../Handbook/SharingCode/InternalPackages.html">
+            
+                <a href="../Handbook/SharingCode/InternalPackages.html">
+            
+                    
+                    内部代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../Handbook/Linting/">
+            
+                <a href="../Handbook/Linting/">
+            
+                    
+                    Lint
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.9.1" data-path="../Handbook/Linting/TypeScript.html">
+            
+                <a href="../Handbook/Linting/TypeScript.html">
+            
+                    
+                    TypeScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9.2" data-path="../Handbook/Linting/ESLint.html">
+            
+                <a href="../Handbook/Linting/ESLint.html">
+            
+                    
+                    ESLint
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../Handbook/Testing.html">
+            
+                <a href="../Handbook/Testing.html">
+            
+                    
+                    测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../Handbook/PublishingPackages/">
+            
+                <a href="../Handbook/PublishingPackages/">
+            
+                    
+                    发布依赖
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.11.1" data-path="../Handbook/PublishingPackages/Bundling.html">
+            
+                <a href="../Handbook/PublishingPackages/Bundling.html">
+            
+                    
+                    构建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11.2" data-path="../Handbook/PublishingPackages/VersioningAndPublishing.html">
+            
+                <a href="../Handbook/PublishingPackages/VersioningAndPublishing.html">
+            
+                    
+                    版本管理和发布
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="../Handbook/Troubleshooting.html">
+            
+                <a href="../Handbook/Troubleshooting.html">
+            
+                    
+                    故障排除
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../CIRecipes/">
+            
+                <a href="../CIRecipes/">
+            
+                    
+                    CI专题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../CIRecipes/CircleCI.html">
+            
+                <a href="../CIRecipes/CircleCI.html">
+            
+                    
+                    CircleCI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../CIRecipes/GitHubActions.html">
+            
+                <a href="../CIRecipes/GitHubActions.html">
+            
+                    
+                    GitHub Actions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../CIRecipes/GitLabCI.html">
+            
+                <a href="../CIRecipes/GitLabCI.html">
+            
+                    
+                    GitLab CI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../CIRecipes/TravisCI.html">
+            
+                <a href="../CIRecipes/TravisCI.html">
+            
+                    
+                    Travis CI
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    API参考
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="ConfigurationOptions.html">
+            
+                <a href="ConfigurationOptions.html">
+            
+                    
+                    配置选项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="CLIUsage.html">
+            
+                <a href="CLIUsage.html">
+            
+                    
+                    CLI 使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7.3" data-path="Codemods.html">
+            
+                <a href="Codemods.html">
+            
+                    
+                    编码方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../Changelog/">
+            
+                <a href="../Changelog/">
+            
+                    
+                    更新日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../Upgrading/">
+            
+                <a href="../Upgrading/">
+            
+                    
+                    升级到v1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../Troubleshooting/">
+            
+                <a href="../Troubleshooting/">
+            
+                    
+                    故障排除
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../Acknowledgements/">
+            
+                <a href="../Acknowledgements/">
+            
+                    
+                    鸣谢
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../FAQ/">
+            
+                <a href="../FAQ/">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >编码方式</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="turborepo-codemods">Turborepo Codemods</h1>
+<p>Turborepo&#x63D0;&#x4F9B;&#x4E86;Codemod&#x8F6C;&#x6362;&#x548C;&#x81EA;&#x52A8;&#x8FC1;&#x79FB;&#x811A;&#x672C;&#xFF0C;&#x5F53;&#x67D0;&#x4E2A;&#x529F;&#x80FD;&#x88AB;&#x5E9F;&#x5F03;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x5E2E;&#x52A9;&#x4F60;&#x5347;&#x7EA7;Turborepo&#x4EE3;&#x7801;&#x5E93;&#x3002;</p>
+<p>Codemods&#x662F;&#x4EE5;&#x7F16;&#x7A0B;&#x65B9;&#x5F0F;&#x5728;&#x4F60;&#x7684;&#x4EE3;&#x7801;&#x5E93;&#x4E0A;&#x8FD0;&#x884C;&#x7684;&#x8F6C;&#x6362;&#x3002;&#x8FD9;&#x4F7F;&#x5F97;&#x5927;&#x91CF;&#x7684;&#x53D8;&#x5316;&#x53EF;&#x4EE5;&#x88AB;&#x5E94;&#x7528;&#xFF0C;&#x800C;&#x4E0D;&#x9700;&#x8981;&#x624B;&#x52A8;&#x6D4F;&#x89C8;&#x6BCF;&#x4E2A;&#x6587;&#x4EF6;&#x3002;</p>
+<h2 id="&#x4F7F;&#x7528;&#x65B9;&#x6CD5;">&#x4F7F;&#x7528;&#x65B9;&#x6CD5;</h2>
+<pre><code class="lang-sh">npx @turbo/codemod &lt;transform&gt; &lt;path&gt;
+</code></pre>
+<ul>
+<li><code>transform</code> - &#x53D8;&#x6362;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x89C1;&#x4E0B;&#x9762;&#x7684;&#x53EF;&#x7528;&#x53D8;&#x6362;.</li>
+<li><code>path</code> - &#x8FDB;&#x884C;&#x8F6C;&#x6362;&#x7684;&#x6587;&#x4EF6;&#x6216;&#x76EE;&#x5F55;</li>
+<li><code>--dry</code> - &#x505A;&#x4E00;&#x6B21;&#x6A21;&#x62DF;&#x8FD0;&#x884C;&#xFF0C;&#x4E0D;&#x7F16;&#x8F91;&#x4EFB;&#x4F55;&#x4EE3;&#x7801;</li>
+<li><code>--print</code> - &#x6253;&#x5370;&#x6539;&#x53D8;&#x540E;&#x7684;&#x8F93;&#x51FA;&#xFF0C;&#x4EE5;&#x4F9B;&#x6BD4;&#x8F83;</li>
+</ul>
+<h2 id="turborepo-1x">Turborepo 1.x</h2>
+<h3 id="add-package-manager"><code>add-package-manager</code></h3>
+<p>&#x8F6C;&#x6362;&#x6839;<code>package.json</code>&#xFF0C;&#x4F7F;<code>packageManager</code>&#x5173;&#x952E;&#x5B57;&#x6210;&#x4E3A;&#x68C0;&#x6D4B;&#x5230;&#x7684;&#x8F6F;&#x4EF6;&#x5305;&#x7BA1;&#x7406;&#x5668;&#xFF08;<code>yarn</code>&#x3001;<code>npm</code>&#x3001;<code>pnpm</code>&#xFF09;&#x548C;&#x7248;&#x672C;&#xFF08;&#x4F8B;&#x5982;<code>yarn@1.22.17</code>&#xFF09;&#x3002;&#x73B0;&#x5728;<a href="https://nodejs.org/dist/latest-v17.x/docs/api/packages.html#packagemanager" target="_blank">Node.js&#x652F;&#x6301;</a>&#x8FD9;&#x4E2A;&#x952E;&#xFF0C;Turborepo&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x952E;&#x6765;&#x5FEB;&#x901F;&#x68C0;&#x6D4B;&#x8F6F;&#x4EF6;&#x5305;&#x7BA1;&#x7406;&#x5668;&#xFF08;&#x800C;&#x4E0D;&#x662F;&#x4EC5;&#x4EC5;&#x4ECE;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x4E2D;&#x63A8;&#x65AD;&#xFF09;&#x3002;</p>
+<p>&#x4F8B;&#x5982;, &#x6765;&#x81EA; Yarn v1:</p>
+<pre><code class="lang-json"><span class="hljs-comment">// Before</span>
+{
+  <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;turborepo-basic&quot;</span>,
+  <span class="hljs-string">&quot;version&quot;</span>: <span class="hljs-string">&quot;0.0.0&quot;</span>,
+  <span class="hljs-string">&quot;private&quot;</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-string">&quot;workspaces&quot;</span>: [<span class="hljs-string">&quot;apps/*&quot;</span>, <span class="hljs-string">&quot;packages/*&quot;</span>]
+  <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+<pre><code class="lang-diff">{
+  &quot;name&quot;: &quot;turborepo-basic&quot;,
+  &quot;version&quot;: &quot;0.0.0&quot;,
+  &quot;private&quot;: true,
+<span class="hljs-addition">+  &quot;packageManager&quot;: &quot;yarn@1.22.17&quot;,</span>
+  &quot;workspaces&quot;: [
+    &quot;apps/*&quot;,
+    &quot;packages/*&quot;
+  ]
+}
+</code></pre>
+<h4 id="&#x4F7F;&#x7528;&#x65B9;&#x6CD5;">&#x4F7F;&#x7528;&#x65B9;&#x6CD5;</h4>
+<p>&#x8F6C;&#x5230;&#x4F60;&#x7684;&#x9879;&#x76EE;:</p>
+<pre><code class="lang-sh"><span class="hljs-built_in">cd</span> path-to-your-turborepo/
+</code></pre>
+<p>&#x8FD0;&#x884C; codemod:</p>
+<pre><code class="lang-sh">npx @turbo/codemod add-package-manager
+</code></pre>
+<h3 id="create-turbo-config"><code>create-turbo-config</code></h3>
+<p>&#x6839;&#x636E;<code>package.json</code>&#x4E2D;&#x7684; <code>&quot;turbo&quot;</code>&#x952E;&#xFF0C;&#x5728;&#x9879;&#x76EE;&#x7684;&#x6839;&#x90E8;&#x521B;&#x5EFA;<code>turbo.json</code>&#x6587;&#x4EF6;&#x3002;&#x968F;&#x540E;&#xFF0C;<code>&quot;turbo&quot;</code>&#x952E;&#x5C06;&#x4ECE;<code>package.json</code>&#x4E2D;&#x5220;&#x9664;&#x3002;</p>
+<p>&#x6BD4;&#x5982;&#x8BF4;:</p>
+<pre><code class="lang-json"><span class="hljs-comment">// Before, package.json</span>
+{
+  <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Monorepo root&quot;</span>,
+  <span class="hljs-string">&quot;private&quot;</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-string">&quot;turbo&quot;</span>: {
+    <span class="hljs-string">&quot;pipeline&quot;</span>: {
+      ...
+    }
+  },
+  ...
+}
+</code></pre>
+<pre><code class="lang-diff">// After, package.json
+{
+  &quot;name&quot;: &quot;Monorepo root&quot;,
+  &quot;private&quot;: true,
+<span class="hljs-deletion">-  &quot;turbo&quot;: {</span>
+<span class="hljs-deletion">-    &quot;pipeline&quot;: {</span>
+<span class="hljs-deletion">-      ...</span>
+<span class="hljs-deletion">-    }</span>
+<span class="hljs-deletion">-  },</span>
+  ...
+}
+
+// After, turbo.json
+<span class="hljs-addition">+{</span>
+<span class="hljs-addition">+  &quot;$schema&quot;: &quot;https://turborepo.org/schema.json&quot;,</span>
+<span class="hljs-addition">+  &quot;pipeline&quot;: {</span>
+<span class="hljs-addition">+    ...</span>
+<span class="hljs-addition">+  }</span>
+<span class="hljs-addition">+}</span>
+</code></pre>
+<h4 id="&#x4F7F;&#x7528;&#x8BF4;&#x660E;">&#x4F7F;&#x7528;&#x8BF4;&#x660E;</h4>
+<p>&#x8F6C;&#x5230;&#x4F60;&#x7684;&#x9879;&#x76EE;:</p>
+<pre><code class="lang-sh"><span class="hljs-built_in">cd</span> path-to-your-turborepo/
+</code></pre>
+<p>&#x8FD0;&#x884C; codemod:</p>
+<pre><code class="lang-sh">npx @turbo/codemod create-turbo-config
+</code></pre>
+<h3 id="migrate-env-var-dependencies"><code>migrate-env-var-dependencies</code></h3>
+<p>Migrates all environment variable dependencies in <code>turbo.json</code> from <code>dependsOn</code> and <code>globalDependencies</code> to <code>env</code> and <code>globalEnv</code> respectively.</p>
+<p>&#x5C06;<code>turbo.json</code>&#x4E2D;&#x7684;&#x6240;&#x6709;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x4F9D;&#x8D56;&#x4ECE; <code>dependsOn</code> &#x548C; <code>globalDependencies</code> &#x5206;&#x522B;&#x8FC1;&#x79FB;&#x5230; <code>env</code> &#x548C; <code>globalEnv</code>&#x3002;</p>
+<p>&#x6BD4;&#x5982;&#x8BF4;:</p>
+<pre><code class="lang-json"><span class="hljs-comment">// Before, turbo.json</span>
+{
+  <span class="hljs-string">&quot;$schema&quot;</span>: <span class="hljs-string">&quot;https://turborepo.org/schema.json&quot;</span>,
+  <span class="hljs-string">&quot;globalDependencies&quot;</span>: [<span class="hljs-string">&quot;.env&quot;</span>, <span class="hljs-string">&quot;$CI_ENV&quot;</span>],
+  <span class="hljs-string">&quot;pipeline&quot;</span>: {
+    <span class="hljs-string">&quot;build&quot;</span>: {
+      <span class="hljs-string">&quot;dependsOn&quot;</span>: [<span class="hljs-string">&quot;^build&quot;</span>, <span class="hljs-string">&quot;$API_BASE&quot;</span>],
+      <span class="hljs-string">&quot;outputs&quot;</span>: [<span class="hljs-string">&quot;.next/**&quot;</span>]
+    },
+    <span class="hljs-string">&quot;lint&quot;</span>: {
+      <span class="hljs-string">&quot;outputs&quot;</span>: []
+    },
+    <span class="hljs-string">&quot;dev&quot;</span>: {
+      <span class="hljs-string">&quot;cache&quot;</span>: <span class="hljs-literal">false</span>
+    }
+  }
+}
+</code></pre>
+<pre><code class="lang-diff">// After, turbo.json
+{
+  &quot;$schema&quot;: &quot;https://turborepo.org/schema.json&quot;,
+<span class="hljs-deletion">- &quot;globalDependencies&quot;: [&quot;.env&quot;, &quot;$CI_ENV&quot;],</span>
+<span class="hljs-addition">+ &quot;globalDependencies&quot;: [&quot;.env&quot;],</span>
+<span class="hljs-addition">+ &quot;globalEnv&quot;: [&quot;CI_ENV&quot;],</span>
+  &quot;pipeline&quot;: {
+    &quot;build&quot;: {
+<span class="hljs-deletion">-     &quot;dependsOn&quot;: [&quot;^build&quot;, &quot;$API_BASE&quot;],</span>
+<span class="hljs-addition">+     &quot;dependsOn&quot;: [&quot;^build&quot;],</span>
+<span class="hljs-addition">+     &quot;env&quot;: [&quot;API_BASE&quot;],</span>
+      &quot;outputs&quot;: [&quot;.next/**&quot;],
+    },
+    &quot;lint&quot;: {
+      &quot;outputs&quot;: []
+    },
+    &quot;dev&quot;: {
+      &quot;cache&quot;: false
+    }
+  }
+}
+
+#### &#x4F7F;&#x7528;&#x8BF4;&#x660E;
+
+&#x8F6C;&#x5230;&#x4F60;&#x7684;&#x9879;&#x76EE;:
+
+```sh
+cd path-to-your-turborepo/
+</code></pre>
+<p>&#x8FD0;&#x884C; codemod:</p>
+<pre><code class="lang-sh">npx @turbo/codemod migrate-env-var-dependencies
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="CLIUsage.html" class="navigation navigation-prev " aria-label="Previous page: CLI 使用">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Changelog/" class="navigation navigation-next " aria-label="Next page: 更新日志">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"编码方式","level":"1.7.3","depth":2,"next":{"title":"更新日志","level":"1.8","depth":1,"path":"Turborepo/Changelog/README.md","ref":"Turborepo/Changelog/README.md","articles":[]},"previous":{"title":"CLI 使用","level":"1.7.2","depth":2,"path":"Turborepo/API/CLIUsage.md","ref":"Turborepo/API/CLIUsage.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Turborepo 中文文档","gitbook":"*"},"file":{"path":"Turborepo/API/Codemods.md","mtime":"2022-10-31T09:45:08.572Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-03T10:46:57.137Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

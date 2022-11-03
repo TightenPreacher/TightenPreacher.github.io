@@ -1,0 +1,843 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>ESLint · Turborepo 中文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Testing.html" />
+    
+    
+    <link rel="prev" href="TypeScript.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    开始
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../GettingStarted/AddtoExistingProject.html">
+            
+                <a href="../../GettingStarted/AddtoExistingProject.html">
+            
+                    
+                    兼容构建工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../GettingStarted/CreateANewMonorepo.html">
+            
+                <a href="../../GettingStarted/CreateANewMonorepo.html">
+            
+                    
+                    创建新的项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../GettingStarted/AddtoExistingMonorepo.html">
+            
+                <a href="../../GettingStarted/AddtoExistingMonorepo.html">
+            
+                    
+                    替换构建工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    核心概念
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../CoreConcepts/CachingTasks.html">
+            
+                <a href="../../CoreConcepts/CachingTasks.html">
+            
+                    
+                    缓存任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../CoreConcepts/RemoteCaching.html">
+            
+                <a href="../../CoreConcepts/RemoteCaching.html">
+            
+                    
+                    远程缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../CoreConcepts/Monorepos.html">
+            
+                <a href="../../CoreConcepts/Monorepos.html">
+            
+                    
+                    项目
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../../CoreConcepts/Monorepos/RunningTasks.html">
+            
+                <a href="../../CoreConcepts/Monorepos/RunningTasks.html">
+            
+                    
+                    运行任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../../CoreConcepts/Monorepos/FilteringWorkspaces.html">
+            
+                <a href="../../CoreConcepts/Monorepos/FilteringWorkspaces.html">
+            
+                    
+                    筛选工作空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    项目手册
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../WhatIsAMonorepo.html">
+            
+                <a href="../WhatIsAMonorepo.html">
+            
+                    
+                    什么是单体项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../PackageInstallation.html">
+            
+                <a href="../PackageInstallation.html">
+            
+                    
+                    依赖安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../Workspaces.html">
+            
+                <a href="../Workspaces.html">
+            
+                    
+                    工作空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../MigratingToAMonorepo.html">
+            
+                <a href="../MigratingToAMonorepo.html">
+            
+                    
+                    迁移项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../DevelopmentTasks.html">
+            
+                <a href="../DevelopmentTasks.html">
+            
+                    
+                    开发任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../BuildingYourApp.html">
+            
+                <a href="../BuildingYourApp.html">
+            
+                    
+                    构建应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../DeployingWithDocker.html">
+            
+                <a href="../DeployingWithDocker.html">
+            
+                    
+                    部署Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../SharingCode/">
+            
+                <a href="../SharingCode/">
+            
+                    
+                    共享代码
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.8.1" data-path="../SharingCode/InternalPackages.html">
+            
+                <a href="../SharingCode/InternalPackages.html">
+            
+                    
+                    内部代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Lint
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.9.1" data-path="TypeScript.html">
+            
+                <a href="TypeScript.html">
+            
+                    
+                    TypeScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.9.2" data-path="ESLint.html">
+            
+                <a href="ESLint.html">
+            
+                    
+                    ESLint
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../Testing.html">
+            
+                <a href="../Testing.html">
+            
+                    
+                    测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../PublishingPackages/">
+            
+                <a href="../PublishingPackages/">
+            
+                    
+                    发布依赖
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.11.1" data-path="../PublishingPackages/Bundling.html">
+            
+                <a href="../PublishingPackages/Bundling.html">
+            
+                    
+                    构建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11.2" data-path="../PublishingPackages/VersioningAndPublishing.html">
+            
+                <a href="../PublishingPackages/VersioningAndPublishing.html">
+            
+                    
+                    版本管理和发布
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="../Troubleshooting.html">
+            
+                <a href="../Troubleshooting.html">
+            
+                    
+                    故障排除
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../CIRecipes/">
+            
+                <a href="../../CIRecipes/">
+            
+                    
+                    CI专题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../CIRecipes/CircleCI.html">
+            
+                <a href="../../CIRecipes/CircleCI.html">
+            
+                    
+                    CircleCI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../CIRecipes/GitHubActions.html">
+            
+                <a href="../../CIRecipes/GitHubActions.html">
+            
+                    
+                    GitHub Actions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../CIRecipes/GitLabCI.html">
+            
+                <a href="../../CIRecipes/GitLabCI.html">
+            
+                    
+                    GitLab CI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../CIRecipes/TravisCI.html">
+            
+                <a href="../../CIRecipes/TravisCI.html">
+            
+                    
+                    Travis CI
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    API参考
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../API/ConfigurationOptions.html">
+            
+                <a href="../../API/ConfigurationOptions.html">
+            
+                    
+                    配置选项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../API/CLIUsage.html">
+            
+                <a href="../../API/CLIUsage.html">
+            
+                    
+                    CLI 使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../API/Codemods.html">
+            
+                <a href="../../API/Codemods.html">
+            
+                    
+                    编码方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../Changelog/">
+            
+                <a href="../../Changelog/">
+            
+                    
+                    更新日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../Upgrading/">
+            
+                <a href="../../Upgrading/">
+            
+                    
+                    升级到v1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../Troubleshooting/">
+            
+                <a href="../../Troubleshooting/">
+            
+                    
+                    故障排除
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../../Acknowledgements/">
+            
+                <a href="../../Acknowledgements/">
+            
+                    
+                    鸣谢
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../../FAQ/">
+            
+                <a href="../../FAQ/">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >ESLint</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="eslint">ESLint</h1>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="TypeScript.html" class="navigation navigation-prev " aria-label="Previous page: TypeScript">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Testing.html" class="navigation navigation-next " aria-label="Next page: 测试">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"ESLint","level":"1.5.9.2","depth":3,"next":{"title":"测试","level":"1.5.10","depth":2,"path":"Turborepo/Handbook/Testing.md","ref":"Turborepo/Handbook/Testing.md","articles":[]},"previous":{"title":"TypeScript","level":"1.5.9.1","depth":3,"path":"Turborepo/Handbook/Linting/TypeScript.md","ref":"Turborepo/Handbook/Linting/TypeScript.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Turborepo 中文文档","gitbook":"*"},"file":{"path":"Turborepo/Handbook/Linting/ESLint.md","mtime":"2022-10-31T08:45:34.895Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-03T10:46:57.137Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

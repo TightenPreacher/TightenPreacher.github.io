@@ -1,0 +1,886 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>升级到v1 · Turborepo 中文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Troubleshooting/" />
+    
+    
+    <link rel="prev" href="../Changelog/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    开始
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../GettingStarted/AddtoExistingProject.html">
+            
+                <a href="../GettingStarted/AddtoExistingProject.html">
+            
+                    
+                    兼容构建工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../GettingStarted/CreateANewMonorepo.html">
+            
+                <a href="../GettingStarted/CreateANewMonorepo.html">
+            
+                    
+                    创建新的项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../GettingStarted/AddtoExistingMonorepo.html">
+            
+                <a href="../GettingStarted/AddtoExistingMonorepo.html">
+            
+                    
+                    替换构建工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    核心概念
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../CoreConcepts/CachingTasks.html">
+            
+                <a href="../CoreConcepts/CachingTasks.html">
+            
+                    
+                    缓存任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../CoreConcepts/RemoteCaching.html">
+            
+                <a href="../CoreConcepts/RemoteCaching.html">
+            
+                    
+                    远程缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../CoreConcepts/Monorepos.html">
+            
+                <a href="../CoreConcepts/Monorepos.html">
+            
+                    
+                    项目
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../CoreConcepts/Monorepos/RunningTasks.html">
+            
+                <a href="../CoreConcepts/Monorepos/RunningTasks.html">
+            
+                    
+                    运行任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../CoreConcepts/Monorepos/FilteringWorkspaces.html">
+            
+                <a href="../CoreConcepts/Monorepos/FilteringWorkspaces.html">
+            
+                    
+                    筛选工作空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Handbook/">
+            
+                <a href="../Handbook/">
+            
+                    
+                    项目手册
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Handbook/WhatIsAMonorepo.html">
+            
+                <a href="../Handbook/WhatIsAMonorepo.html">
+            
+                    
+                    什么是单体项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../Handbook/PackageInstallation.html">
+            
+                <a href="../Handbook/PackageInstallation.html">
+            
+                    
+                    依赖安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../Handbook/Workspaces.html">
+            
+                <a href="../Handbook/Workspaces.html">
+            
+                    
+                    工作空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../Handbook/MigratingToAMonorepo.html">
+            
+                <a href="../Handbook/MigratingToAMonorepo.html">
+            
+                    
+                    迁移项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../Handbook/DevelopmentTasks.html">
+            
+                <a href="../Handbook/DevelopmentTasks.html">
+            
+                    
+                    开发任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../Handbook/BuildingYourApp.html">
+            
+                <a href="../Handbook/BuildingYourApp.html">
+            
+                    
+                    构建应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../Handbook/DeployingWithDocker.html">
+            
+                <a href="../Handbook/DeployingWithDocker.html">
+            
+                    
+                    部署Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../Handbook/SharingCode/">
+            
+                <a href="../Handbook/SharingCode/">
+            
+                    
+                    共享代码
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.8.1" data-path="../Handbook/SharingCode/InternalPackages.html">
+            
+                <a href="../Handbook/SharingCode/InternalPackages.html">
+            
+                    
+                    内部代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../Handbook/Linting/">
+            
+                <a href="../Handbook/Linting/">
+            
+                    
+                    Lint
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.9.1" data-path="../Handbook/Linting/TypeScript.html">
+            
+                <a href="../Handbook/Linting/TypeScript.html">
+            
+                    
+                    TypeScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9.2" data-path="../Handbook/Linting/ESLint.html">
+            
+                <a href="../Handbook/Linting/ESLint.html">
+            
+                    
+                    ESLint
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../Handbook/Testing.html">
+            
+                <a href="../Handbook/Testing.html">
+            
+                    
+                    测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../Handbook/PublishingPackages/">
+            
+                <a href="../Handbook/PublishingPackages/">
+            
+                    
+                    发布依赖
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.11.1" data-path="../Handbook/PublishingPackages/Bundling.html">
+            
+                <a href="../Handbook/PublishingPackages/Bundling.html">
+            
+                    
+                    构建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11.2" data-path="../Handbook/PublishingPackages/VersioningAndPublishing.html">
+            
+                <a href="../Handbook/PublishingPackages/VersioningAndPublishing.html">
+            
+                    
+                    版本管理和发布
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="../Handbook/Troubleshooting.html">
+            
+                <a href="../Handbook/Troubleshooting.html">
+            
+                    
+                    故障排除
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../CIRecipes/">
+            
+                <a href="../CIRecipes/">
+            
+                    
+                    CI专题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../CIRecipes/CircleCI.html">
+            
+                <a href="../CIRecipes/CircleCI.html">
+            
+                    
+                    CircleCI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../CIRecipes/GitHubActions.html">
+            
+                <a href="../CIRecipes/GitHubActions.html">
+            
+                    
+                    GitHub Actions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../CIRecipes/GitLabCI.html">
+            
+                <a href="../CIRecipes/GitLabCI.html">
+            
+                    
+                    GitLab CI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../CIRecipes/TravisCI.html">
+            
+                <a href="../CIRecipes/TravisCI.html">
+            
+                    
+                    Travis CI
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    API参考
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../API/ConfigurationOptions.html">
+            
+                <a href="../API/ConfigurationOptions.html">
+            
+                    
+                    配置选项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../API/CLIUsage.html">
+            
+                <a href="../API/CLIUsage.html">
+            
+                    
+                    CLI 使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../API/Codemods.html">
+            
+                <a href="../API/Codemods.html">
+            
+                    
+                    编码方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../Changelog/">
+            
+                <a href="../Changelog/">
+            
+                    
+                    更新日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    升级到v1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../Troubleshooting/">
+            
+                <a href="../Troubleshooting/">
+            
+                    
+                    故障排除
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../Acknowledgements/">
+            
+                <a href="../Acknowledgements/">
+            
+                    
+                    鸣谢
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../FAQ/">
+            
+                <a href="../FAQ/">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >升级到v1</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5347;&#x7EA7;&#x5230;-to-turborepo-v1x">&#x5347;&#x7EA7;&#x5230; to Turborepo v1.x</h1>
+<p>Turborepo&#x5DF2;&#x88AB;Vercel&#x6536;&#x8D2D;!&#x968F;&#x7740;&#x8FD9;&#x4E00;&#x6D88;&#x606F;&#x7684;&#x516C;&#x5E03;, <strong>Vercel&#x6B63;&#x5728;&#x5F00;&#x6E90;<code>turbo</code> CLI&#xFF0C;&#x5E76;&#x5728;&#x8FC7;&#x6E21;&#x671F;&#x5185;&#x4E3A;&#x6240;&#x6709;&#x8D26;&#x6237;&#x514D;&#x8D39;&#x63D0;&#x4F9B;&#x8FDC;&#x7A0B;&#x7F13;&#x5B58;</strong></p>
+<p>&#x73B0;&#x6709;&#x7684;Turborepo&#x5BA2;&#x6237;&#x5E94;&#x5C3D;&#x5FEB;&#x5C06;&#x4ED6;&#x4EEC;&#x7684;<code>turbo</code> CLI&#x5347;&#x7EA7;&#x5230;v1.x&#xFF0C;&#x5E76;&#x8FC1;&#x79FB;&#x5230;Vercel&#xFF08;&#x8BF4;&#x660E;&#x5982;&#x4E0B;&#xFF09;&#x3002;1.x&#x4E4B;&#x524D;&#x7684;<code>turbo</code> CLI&#x7684;&#x65E9;&#x671F;&#x7248;&#x672C;&#x5C06;&#x4E0D;&#x518D;&#x88AB;&#x7EF4;&#x62A4;&#x3002;beta.turborepo.com&#x4E0A;&#x7684;&#x65B0;&#x8D26;&#x6237;&#x521B;&#x5EFA;&#x5DF2;&#x88AB;&#x7981;&#x7528;&#x3002;beta.turborepo.com&#x7684;&#x4EEA;&#x8868;&#x677F;&#x548C;&#x8FDC;&#x7A0B;&#x7F13;&#x5B58;&#x670D;&#x52A1;&#x5C06;&#x5728;2022&#x5E74;1&#x6708;15&#x65E5;&#x5173;&#x95ED;&#xFF0C;&#x65E7;&#x7248;&#x672C;&#x5C06;&#x65E0;&#x6CD5;&#x5B89;&#x88C5;&#x3002;</p>
+<p><strong>&#x6240;&#x6709;&#x73B0;&#x6709;&#x7684;&#x8FDC;&#x7A0B;&#x7F13;&#x5B58;&#x5DE5;&#x4EF6;&#x4E5F;&#x5C06;&#x5728;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x88AB;&#x5220;&#x9664;</strong>&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x662F;Turborepo&#x73B0;&#x6709;&#x7528;&#x6237;&#x7684;&#x8FC1;&#x79FB;&#x6B65;&#x9AA4;&#x6307;&#x5357;&#x3002;&#x5982;&#x679C;&#x60A8;&#x9047;&#x5230;&#x56F0;&#x96BE;&#xFF0C;&#x8BF7;&#x5728;&#x793E;&#x533A; <a href="https://turbo.build/discord" target="_blank">Discord</a> &#x4E2D;&#x8054;&#x7CFB;&#x6211;&#x4EEC;&#xFF0C;&#x6216;&#x8005;&#x5728; <a href="https://github.com/vercel/turbo" target="_blank">GitHub</a> &#x4E0A;&#x63D0;&#x4EA4;&#x95EE;&#x9898;&#x3002;&#x518D;&#x6B21;&#x611F;&#x8C22;&#x60A8;&#x4E00;&#x76F4;&#x4EE5;&#x6765;&#x7684;&#x652F;&#x6301;&#xFF0C;&#x6211;&#x4EEC;&#x4E00;&#x8D77;&#x5F00;&#x59CB;&#x4E86;Turborepo&#x7684;&#x7CBE;&#x5F69;&#x65B0;&#x7BC7;&#x7AE0;&#x3002;</p>
+<hr>
+<h2 id="1-&#x6E05;&#x7406;&#x5DE5;&#x4F5C;-cleaning-up">1. &#x6E05;&#x7406;&#x5DE5;&#x4F5C; //Cleaning up</h2>
+<p>&#x4E3A;&#x4E86;&#x4FDD;&#x6301;&#x826F;&#x597D;&#x7684;&#x536B;&#x751F;&#xFF0C;&#x786E;&#x4FDD;&#x4F60;&#x6CE8;&#x9500;<code>Turbo</code>&#x4EE5;&#x5220;&#x9664;&#x65E7;&#x7684;&#x8BC1;&#x4E66;:</p>
+<pre><code class="lang-sh">yarn turbo <span class="hljs-built_in">logout</span>
+</code></pre>
+<p>&#x5982;&#x679C;&#x5B83;&#x5B58;&#x5728;&#xFF0C;&#x4E5F;&#x4ECE;&#x4F60;&#x7684;monorepo&#x6839;&#x90E8;&#x5220;&#x9664;<code>.turbo</code>&#x76EE;&#x5F55;</p>
+<pre><code class="lang-sh">rm -rf .turbo
+</code></pre>
+<h2 id="2-&#x5B89;&#x88C5;&#x6700;&#x65B0;&#x7248;&#x672C;&#x7684;turbo-install-the-latest-release-of-turbo">2. &#x5B89;&#x88C5;&#x6700;&#x65B0;&#x7248;&#x672C;&#x7684;<code>Turbo</code> //Install the latest release of <code>turbo</code></h2>
+<p>&#x5B89;&#x88C5;&#x6700;&#x65B0;&#x7248;&#x672C;&#x7684;<code>turbo</code>:</p>
+<pre><code class="lang-sh">yarn add turbo --save-dev --ignore-workspace-root-check
+</code></pre>
+<h2 id="3-&#x8BBE;&#x7F6E;&#x8FDC;&#x7A0B;&#x7F13;&#x5B58;-setup-remote-caching">3. &#x8BBE;&#x7F6E;&#x8FDC;&#x7A0B;&#x7F13;&#x5B58; //Setup Remote Caching</h2>
+<p>&#x5982;&#x524D;&#x6240;&#x8FF0;&#xFF0C;Turborepo&#x73B0;&#x5728;&#x901A;&#x8FC7;<a href="https://vercel.com?utm_source=turbo.build&amp;utm_medium=referral&amp;utm_campaign=docs-link" target="_blank">Vercel</a>&#x63D0;&#x4F9B;&#x96F6;&#x914D;&#x7F6E;&#x7684;&#x8FDC;&#x7A0B;&#x7F13;&#x5B58;&#x3002;&#x5728;&#x8FD9;&#x4E2A;&#x8FC7;&#x6E21;&#x65F6;&#x671F;&#xFF0C;&#x6240;&#x6709;Vercel&#x8BA1;&#x5212;&#x7684;&#x8FDC;&#x7A0B;&#x7F13;&#x5B58;&#x90FD;&#x662F;&#x514D;&#x8D39;&#x7684;&#x3002;&#x6BCF;&#x4E2A;Vercel&#x8D26;&#x6237;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x5171;&#x4EAB;&#x7684;&#x8FDC;&#x7A0B;&#x7F13;&#x5B58;&#x3002;&#x8FD9;&#x4E2A;&#x7F13;&#x5B58;&#x5728;&#x6240;&#x6709;&#x73AF;&#x5883;&#xFF08;&#x5F00;&#x53D1;&#x3001;&#x9884;&#x89C8;&#x548C;&#x751F;&#x4EA7;&#xFF09;&#x4E2D;&#x5171;&#x4EAB;&#x3002;</p>
+<p><strong>&#x91CD;&#x8981;&#x63D0;&#x793A;</strong>&#xFF1A;turborepo.com&#x5141;&#x8BB8;&#x6BCF;&#x4E2A;&#x56E2;&#x961F;&#x6709;&#x591A;&#x4E2A;&#x7F13;&#x5B58;&#xFF08;&#x5373;&#x9879;&#x76EE;&#xFF09;&#xFF08;&#x901A;&#x8FC7;<code>--project</code>&#x6807;&#x5FD7;&#x8868;&#x793A;&#xFF09;&#x3002;&#x901A;&#x8FC7;Vercel&#x4E0A;&#x7684;V1.x&#x7F13;&#x5B58;&#xFF0C;&#x6BCF;&#x4E2A;Vercel&#x8D26;&#x6237;&#xFF08;&#x7528;&#x6237;&#x6216;&#x56E2;&#x961F;&#xFF09;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x5171;&#x4EAB;&#x7684;&#x8FDC;&#x7A0B;&#x7F13;&#x5B58;&#x3002;&#x5982;&#x679C;&#x4F60;&#x7684;&#x56E2;&#x961F;&#x79EF;&#x6781;&#x4F7F;&#x7528;&#x591A;&#x4E2A;turborepo.com&#x9879;&#x76EE;&#xFF0C;&#x8BF7;&#x5728;<a href="https://turbo.build/discord" target="_blank">Discord</a>&#x544A;&#x8BC9;&#x6211;&#x4EEC;&#x3002;</p>
+<p>&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x6211;&#x4EEC;&#x4E0D;&#x4F1A;&#x5C06;&#x7F13;&#x5B58;&#x5DE5;&#x4EF6;&#x8FC1;&#x79FB;&#x5230;Vercel&#x3002;&#x5728;&#x60A8;&#x8FC1;&#x79FB;&#x671F;&#x95F4;&#xFF0C;&#x5F53;&#x60A8;&#x5728;Vercel&#x6216;&#x81EA;&#x5B9A;&#x4E49;&#x7F13;&#x5B58;infra&#x4E0A;&#x4E3A;&#x60A8;&#x7684;&#x8FDC;&#x7A0B;&#x7F13;&#x5B58;&#x91CD;&#x65B0;&#x6CE8;&#x6C34;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x5BF9;&#x6784;&#x5EFA;&#x901F;&#x5EA6;&#x8F83;&#x6162;&#x8868;&#x793A;&#x6B49;&#x610F;&#x3002;</p>
+<h2 id="4-&#x672C;&#x5730;&#x5F00;&#x53D1;-local-development">4. &#x672C;&#x5730;&#x5F00;&#x53D1; //Local Development</h2>
+<p>&#x5982;&#x679C;&#x4F60;&#x662F;&#x4F7F;&#x7528;&#x8FDC;&#x7A0B;&#x7F13;&#x5B58;&#x8FDB;&#x884C;&#x672C;&#x5730;&#x5F00;&#x53D1;&#xFF0C;&#x5347;&#x7EA7;&#x5C06;&#x9700;&#x8981;&#x4E00;&#x4E24;&#x5206;&#x949F;&#x3002;&#x8981;&#x5F00;&#x59CB;&#xFF0C;&#x8BF7;&#x767B;&#x5F55;Vercel CLI:</p>
+<pre><code class="lang-sh">npx turbo login
+</code></pre>
+<p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8FD0;&#x884C; Vercel &#x8BBE;&#x7F6E;&#x8FDC;&#x7A0B;&#x7F13;&#x5B58;:</p>
+<pre><code class="lang-sh">npx turbo link
+</code></pre>
+<p>&#x6309;&#x7167;&#x63D0;&#x793A;&#xFF0C;&#x9009;&#x62E9;&#x5E0C;&#x671B;&#x8FDE;&#x63A5;&#x7684;Vercel&#x8D26;&#x6237;&#xFF08;&#x7528;&#x6237;&#x6216;&#x56E2;&#x961F;&#xFF09;.</p>
+<h3 id="&#x5728;vercel-on-vercel">&#x5728;Vercel //On Vercel</h3>
+<ul>
+<li><p>&#x5982;&#x679C;&#x4F60;&#x5DF2;&#x7ECF;&#x540C;&#x65F6;&#x4F7F;&#x7528;&#x4E86;Turborepo&#x548C;Vercel&#xFF0C;&#x8BF7;&#x4ECE;&#x6240;&#x6709;&#x9879;&#x76EE;&#x4E2D;&#x5220;&#x9664;<code>TURBO_TOKEN</code>&#x3001;<code>TURBO_TEAM</code>&#x548C;<code>TURBO_PROJECT</code>&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x3002;&#x8FD9;&#x4E9B;&#x53D8;&#x91CF;&#x73B0;&#x5728;&#x7531;Vercel&#x81EA;&#x52A8;&#x66FF;&#x4F60;&#x8BBE;&#x7F6E;</p>
+</li>
+<li><p>&#x5728;&#x4F60;&#x7684;Vercel&#x9879;&#x76EE;&#x8BBE;&#x7F6E;&#x548C;/&#x6216;<code>package.json</code>&#x811A;&#x672C;&#x4E2D;&#x5220;&#x9664;&#x4F7F;&#x7528;<code>--team</code>&#x3001;<code>--token</code>&#x548C;<code>--project</code> CLI&#x6807;&#x5FD7;&#x3002;</p>
+</li>
+</ul>
+<h3 id="&#x5728;&#x5176;&#x4ED6;cicd-on-other-cicd">&#x5728;&#x5176;&#x4ED6;CI/CD //On other CI/CD</h3>
+<ul>
+<li>&#x7528;&#x4E00;&#x4E2A;&#x65B0;&#x7684;<a href="https://vercel.com/account/tokens" target="_blank">Vercel&#x4E2A;&#x4EBA;&#x8BBF;&#x95EE;&#x4EE4;&#x724C;</a>&#x66FF;&#x6362;&#x4F60;&#x7684;turborepo.com&#x4E2A;&#x4EBA;&#x8BBF;&#x95EE;&#x4EE4;&#x724C;&#xFF0C;&#x5E76;&#x66F4;&#x65B0;<code>TURBO_TOKEN</code>&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x6216;&#x4F7F;&#x7528;<code>-token</code> CLI&#x6807;&#x5FD7;&#x7684;&#x540C;&#x7B49;&#x7528;&#x6CD5;&#x3002;</li>
+<li>&#x79FB;&#x9664;<code>TURBO_PROJECT</code>&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF0C;&#x5E76;&#x79FB;&#x9664;&#x6240;&#x6709;&#x5BF9;<code>--project</code> CLI&#x6807;&#x5FD7;&#x7684;&#x4F7F;&#x7528;&#x3002;&#x8FD9;&#x5DF2;&#x7ECF;&#x88AB;&#x5E9F;&#x5F03;&#x4E86;</li>
+<li>&#x66F4;&#x65B0;<code>TURBO_TEAM</code>&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x548C;<code>--team</code> CLI&#x6807;&#x5FD7;&#x7684;&#x503C;&#x4E3A;&#x4F60;&#x7684;Vercel&#x8D26;&#x6237;&#x7684;slug&#xFF08;&#x5373;<code>https://vercel.com/&lt;slug&gt;</code>&#xFF09;</li>
+</ul>
+<h3 id="&#x83B7;&#x5F97;&#x5E2E;&#x52A9;-getting-help">&#x83B7;&#x5F97;&#x5E2E;&#x52A9; //Getting Help</h3>
+<p>&#x5982;&#x679C;&#x4F60;&#x5728;&#x5347;&#x7EA7;&#x65F6;&#x9047;&#x5230;&#x56F0;&#x96BE;&#xFF0C;&#x8BF7;&#x5728;<a href="https://github.com/vercel/turbo" target="_blank">GitHub</a>&#x4E0A;&#x63D0;&#x4EA4;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#x3002;&#x5982;&#x679C;&#x4F60;&#x5728;Vercel&#x7684;&#x8FDC;&#x7A0B;&#x7F13;&#x5B58;&#x4E2D;&#x9047;&#x5230;&#x56F0;&#x96BE;&#xFF0C;&#x8BF7;&#x5728;<a href="https://turbo.build/discord" target="_blank">Discord</a>&#x4E2D;&#x8054;&#x7CFB;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../Changelog/" class="navigation navigation-prev " aria-label="Previous page: 更新日志">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Troubleshooting/" class="navigation navigation-next " aria-label="Next page: 故障排除">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"升级到v1","level":"1.9","depth":1,"next":{"title":"故障排除","level":"1.10","depth":1,"path":"Turborepo/Troubleshooting/README.md","ref":"Turborepo/Troubleshooting/README.md","articles":[]},"previous":{"title":"更新日志","level":"1.8","depth":1,"path":"Turborepo/Changelog/README.md","ref":"Turborepo/Changelog/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Turborepo 中文文档","gitbook":"*"},"file":{"path":"Turborepo/Upgrading/README.md","mtime":"2022-10-31T12:19:00.134Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-03T10:46:57.137Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
