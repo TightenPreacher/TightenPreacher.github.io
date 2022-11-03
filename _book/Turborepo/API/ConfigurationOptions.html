@@ -1,0 +1,1070 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>配置选项 · Turborepo 中文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="CLIUsage.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    开始
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../GettingStarted/AddtoExistingProject.html">
+            
+                <a href="../GettingStarted/AddtoExistingProject.html">
+            
+                    
+                    兼容构建工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../GettingStarted/CreateANewMonorepo.html">
+            
+                <a href="../GettingStarted/CreateANewMonorepo.html">
+            
+                    
+                    创建新的项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../GettingStarted/AddtoExistingMonorepo.html">
+            
+                <a href="../GettingStarted/AddtoExistingMonorepo.html">
+            
+                    
+                    替换构建工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    核心概念
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../CoreConcepts/CachingTasks.html">
+            
+                <a href="../CoreConcepts/CachingTasks.html">
+            
+                    
+                    缓存任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../CoreConcepts/RemoteCaching.html">
+            
+                <a href="../CoreConcepts/RemoteCaching.html">
+            
+                    
+                    远程缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../CoreConcepts/Monorepos.html">
+            
+                <a href="../CoreConcepts/Monorepos.html">
+            
+                    
+                    项目
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../CoreConcepts/Monorepos/RunningTasks.html">
+            
+                <a href="../CoreConcepts/Monorepos/RunningTasks.html">
+            
+                    
+                    运行任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../CoreConcepts/Monorepos/FilteringWorkspaces.html">
+            
+                <a href="../CoreConcepts/Monorepos/FilteringWorkspaces.html">
+            
+                    
+                    筛选工作空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Handbook/">
+            
+                <a href="../Handbook/">
+            
+                    
+                    项目手册
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Handbook/WhatIsAMonorepo.html">
+            
+                <a href="../Handbook/WhatIsAMonorepo.html">
+            
+                    
+                    什么是单体项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../Handbook/PackageInstallation.html">
+            
+                <a href="../Handbook/PackageInstallation.html">
+            
+                    
+                    依赖安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../Handbook/Workspaces.html">
+            
+                <a href="../Handbook/Workspaces.html">
+            
+                    
+                    工作空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../Handbook/MigratingToAMonorepo.html">
+            
+                <a href="../Handbook/MigratingToAMonorepo.html">
+            
+                    
+                    迁移项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../Handbook/DevelopmentTasks.html">
+            
+                <a href="../Handbook/DevelopmentTasks.html">
+            
+                    
+                    开发任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../Handbook/BuildingYourApp.html">
+            
+                <a href="../Handbook/BuildingYourApp.html">
+            
+                    
+                    构建应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../Handbook/DeployingWithDocker.html">
+            
+                <a href="../Handbook/DeployingWithDocker.html">
+            
+                    
+                    部署Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../Handbook/SharingCode/">
+            
+                <a href="../Handbook/SharingCode/">
+            
+                    
+                    共享代码
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.8.1" data-path="../Handbook/SharingCode/InternalPackages.html">
+            
+                <a href="../Handbook/SharingCode/InternalPackages.html">
+            
+                    
+                    内部代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../Handbook/Linting/">
+            
+                <a href="../Handbook/Linting/">
+            
+                    
+                    Lint
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.9.1" data-path="../Handbook/Linting/TypeScript.html">
+            
+                <a href="../Handbook/Linting/TypeScript.html">
+            
+                    
+                    TypeScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9.2" data-path="../Handbook/Linting/ESLint.html">
+            
+                <a href="../Handbook/Linting/ESLint.html">
+            
+                    
+                    ESLint
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../Handbook/Testing.html">
+            
+                <a href="../Handbook/Testing.html">
+            
+                    
+                    测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../Handbook/PublishingPackages/">
+            
+                <a href="../Handbook/PublishingPackages/">
+            
+                    
+                    发布依赖
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.11.1" data-path="../Handbook/PublishingPackages/Bundling.html">
+            
+                <a href="../Handbook/PublishingPackages/Bundling.html">
+            
+                    
+                    构建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11.2" data-path="../Handbook/PublishingPackages/VersioningAndPublishing.html">
+            
+                <a href="../Handbook/PublishingPackages/VersioningAndPublishing.html">
+            
+                    
+                    版本管理和发布
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="../Handbook/Troubleshooting.html">
+            
+                <a href="../Handbook/Troubleshooting.html">
+            
+                    
+                    故障排除
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../CIRecipes/">
+            
+                <a href="../CIRecipes/">
+            
+                    
+                    CI专题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../CIRecipes/CircleCI.html">
+            
+                <a href="../CIRecipes/CircleCI.html">
+            
+                    
+                    CircleCI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../CIRecipes/GitHubActions.html">
+            
+                <a href="../CIRecipes/GitHubActions.html">
+            
+                    
+                    GitHub Actions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../CIRecipes/GitLabCI.html">
+            
+                <a href="../CIRecipes/GitLabCI.html">
+            
+                    
+                    GitLab CI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../CIRecipes/TravisCI.html">
+            
+                <a href="../CIRecipes/TravisCI.html">
+            
+                    
+                    Travis CI
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    API参考
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.7.1" data-path="ConfigurationOptions.html">
+            
+                <a href="ConfigurationOptions.html">
+            
+                    
+                    配置选项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="CLIUsage.html">
+            
+                <a href="CLIUsage.html">
+            
+                    
+                    CLI 使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="Codemods.html">
+            
+                <a href="Codemods.html">
+            
+                    
+                    编码方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../Changelog/">
+            
+                <a href="../Changelog/">
+            
+                    
+                    更新日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../Upgrading/">
+            
+                <a href="../Upgrading/">
+            
+                    
+                    升级到v1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../Troubleshooting/">
+            
+                <a href="../Troubleshooting/">
+            
+                    
+                    故障排除
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../Acknowledgements/">
+            
+                <a href="../Acknowledgements/">
+            
+                    
+                    鸣谢
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../FAQ/">
+            
+                <a href="../FAQ/">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >配置选项</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x914D;&#x7F6E;&#x9009;&#x9879;-configuration-options-turbojson">&#x914D;&#x7F6E;&#x9009;&#x9879; //Configuration Options (<code>turbo.json</code>)</h1>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5728;&#x4F60;&#x7684;monorepo&#x7684;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;<code>turbo.json</code>&#x6587;&#x4EF6;&#x6765;&#x914D;&#x7F6E;<code>turbo</code>&#x7684;&#x884C;&#x4E3A;&#xFF08;&#x5373;&#x4F60;&#x6307;&#x5B9A;&#x4F60;&#x7684;<code>workspaces</code>&#x5BC6;&#x94A5;&#x4E3A;Yarn&#x548C;npm&#x7528;&#x6237;&#x8BBE;&#x7F6E;&#x7684;&#x540C;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#xFF09;&#x3002;</p>
+<h2 id="globaldependencies"><code>globalDependencies</code></h2>
+<p><code>type: string[]</code></p>
+<p>A list of file globs for implicit global hash dependencies. The contents of these files will be included in the global hashing algorithm and affect the hashes of all tasks.
+This is useful for busting the cache based on <code>.env</code> files (not in Git) or any root level file that impacts workspace tasks (but are not represented in the traditional dependency graph (e.g. a root <code>tsconfig.json</code>, <code>jest.config.js</code>, <code>.eslintrc</code>, etc.)).
+&#x9690;&#x5F0F;&#x5168;&#x5C40;&#x6563;&#x5217;&#x4F9D;&#x8D56;&#x7684;&#x6587;&#x4EF6;globs&#x5217;&#x8868;&#x3002;&#x8FD9;&#x4E9B;&#x6587;&#x4EF6;&#x7684;&#x5185;&#x5BB9;&#x5C06;&#x88AB;&#x5305;&#x542B;&#x5728;&#x5168;&#x5C40;&#x6563;&#x5217;&#x7B97;&#x6CD5;&#x4E2D;&#xFF0C;&#x5E76;&#x5F71;&#x54CD;&#x6240;&#x6709;&#x4EFB;&#x52A1;&#x7684;&#x6563;&#x5217;&#x3002;&#x8FD9;&#x5BF9;&#x4E8E;&#x57FA;&#x4E8E;<code>.env</code>&#x6587;&#x4EF6;&#xFF08;&#x4E0D;&#x5728;Git&#x4E2D;&#xFF09;&#x6216;&#x4EFB;&#x4F55;&#x5F71;&#x54CD;&#x5DE5;&#x4F5C;&#x533A;&#x4EFB;&#x52A1;&#x7684;&#x6839;&#x7EA7;&#x6587;&#x4EF6;&#xFF08;&#x4F46;&#x4E0D;&#x5728;&#x4F20;&#x7EDF;&#x7684;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#x56FE;&#x4E2D;&#x8868;&#x793A;&#xFF08;&#x4F8B;&#x5982;&#x6839;&#x76EE;&#x5F55;<code>tsconfig.json</code>&#x3001;<code>jest.config.js</code>&#x3001;<code>.eslintrc</code>&#x7B49;&#xFF09;&#x7684;&#x7834;&#x574F;&#x7F13;&#x5B58;&#x5F88;&#x6709;&#x7528;&#x3002;&#xFF09;</p>
+<p><strong>&#x5217;&#x5B50;</strong></p>
+<pre><code class="lang-jsonc">{
+  &quot;$schema&quot;: &quot;https://turborepo.org/schema.json&quot;,
+  &quot;pipeline&quot;: {
+    // ... omitted for brevity
+  },
+
+  &quot;globalDependencies&quot;: [
+    &quot;.env&quot;, // contents will impact hashes of all tasks
+    &quot;tsconfig.json&quot; // contents will impact hashes of all tasks
+  ]
+}
+</code></pre>
+<h2 id="globalenv"><code>globalEnv</code></h2>
+<p><code>type: string[]</code></p>
+<p>&#x9690;&#x542B;&#x5168;&#x5C40;&#x54C8;&#x5E0C;&#x4F9D;&#x8D56;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x5217;&#x8868;&#x3002;&#x8FD9;&#x4E9B;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x7684;&#x5185;&#x5BB9;&#x5C06;&#x5305;&#x62EC;&#x5728;&#x5168;&#x5C40;&#x6563;&#x5217;&#x7B97;&#x6CD5;&#x4E2D;&#xFF0C;&#x5E76;&#x5F71;&#x54CD;&#x6240;&#x6709;&#x4EFB;&#x52A1;&#x7684;&#x6563;&#x5217;&#x3002;</p>
+<p><strong>&#x4F8B;&#x5B50;</strong></p>
+<pre><code class="lang-jsonc">{
+  &quot;$schema&quot;: &quot;https://turborepo.org/schema.json&quot;,
+  &quot;pipeline&quot;: {
+    // ... omitted for brevity
+  },
+
+  &quot;globalEnv&quot;: [&quot;GITHUB_TOKEN&quot;] // value will impact the hashes of all tasks
+}
+</code></pre>
+<h2 id="pipeline"><code>pipeline</code></h2>
+<p>&#x4E00;&#x4E2A;&#x4EE3;&#x8868;&#x4F60;&#x7684;&#x9879;&#x76EE;&#x7684;&#x4EFB;&#x52A1;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#x56FE;&#x7684;&#x5BF9;&#x8C61;&#x3002;<code>turbo</code>&#x89E3;&#x91CA;&#x8FD9;&#x4E9B;&#x7EA6;&#x5B9A;&#xFF0C;&#x4EE5;&#x6B63;&#x786E;&#x5B89;&#x6392;&#x3001;&#x6267;&#x884C;&#x548C;&#x7F13;&#x5B58;&#x4F60;&#x7684;&#x9879;&#x76EE;&#x4E2D;&#x7684;&#x4EFB;&#x52A1;&#x7684;&#x8F93;&#x51FA;&#x3002;</p>
+<p><code>&#x7BA1;&#x9053;</code>&#x5BF9;&#x8C61;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x952E;&#x90FD;&#x662F;&#x53EF;&#x4EE5;&#x88AB;<code>turbo run</code>&#x6267;&#x884C;&#x7684;&#x4EFB;&#x52A1;&#x7684;&#x540D;&#x79F0;&#x3002;&#x5982;&#x679C;<code>turbo</code>&#x53D1;&#x73B0;&#x4E00;&#x4E2A;&#x5DE5;&#x4F5C;&#x533A;&#x7684;<code>package.json</code> <code>scripts</code>&#x5BF9;&#x8C61;&#x6709;&#x4E00;&#x4E2A;&#x5339;&#x914D;&#x7684;&#x952E;&#xFF0C;&#x5B83;&#x5C06;&#x5728;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#x628A;&#x7BA1;&#x9053;&#x4EFB;&#x52A1;&#x914D;&#x7F6E;&#x5E94;&#x7528;&#x5230;&#x8BE5;npm&#x811A;&#x672C;&#x3002;&#x8FD9;&#x5141;&#x8BB8;&#x4F60;&#x5728;&#x6574;&#x4E2A;Turborepo&#x4E2D;&#x4F7F;&#x7528;<code>&#x7BA1;&#x9053;</code>&#x6765;&#x8BBE;&#x7F6E;&#x60EF;&#x4F8B;&#x3002;</p>
+<pre><code class="lang-jsonc">{
+  &quot;$schema&quot;: &quot;https://turborepo.org/schema.json&quot;,
+  &quot;pipeline&quot;: {
+    &quot;build&quot;: {
+      &quot;dependsOn&quot;: [&quot;^build&quot;]
+    },
+    &quot;test&quot;: {
+      &quot;outputs&quot;: [&quot;coverage/**&quot;],
+      &quot;dependsOn&quot;: [&quot;build&quot;],
+      &quot;inputs&quot;: [&quot;src/**/*.tsx&quot;, &quot;src/**/*.ts&quot;, &quot;test/**/*.ts&quot;],
+      &quot;outputMode&quot;: &quot;full&quot;
+    },
+    &quot;dev&quot;: {
+      &quot;cache&quot;: false
+    }
+  }
+}
+</code></pre>
+<h3 id="dependson"><code>dependsOn</code></h3>
+<p><code>type: string[]</code></p>
+<p>&#x8FD9;&#x4E2A;&#x4EFB;&#x52A1;&#x6240;&#x4F9D;&#x8D56;&#x7684;&#x4EFB;&#x52A1;&#x5217;&#x8868;&#x3002;</p>
+<p>&#x5728;<code>dependOn</code>&#x4E2D;&#x7684;&#x9879;&#x76EE;&#x524D;&#x7F00;&#x4E3A;<code>^</code>&#xFF0C;&#x544A;&#x8BC9;<code>turbo</code>&#x8FD9;&#x4E2A;&#x7BA1;&#x9053;&#x4EFB;&#x52A1;&#x53D6;&#x51B3;&#x4E8E;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x7684;&#x62D3;&#x6251;&#x4F9D;&#x8D56;&#x9879;&#x662F;&#x5426;&#x5148;&#x5B8C;&#x6210;&#x4E86;<code>^</code>&#x524D;&#x7F00;&#x7684;&#x4EFB;&#x52A1;&#xFF08;&#x4F8B;&#x5982;&#xFF0C;&quot;&#x4E00;&#x4E2A;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x7684;<code>build</code>&#x4EFB;&#x52A1;&#x5E94;&#x8BE5;&#x53EA;&#x5728;&#x5176;&#x6240;&#x6709;&#x7684;<code>dependencies</code>&#x548C;<code>devDependencies</code>&#x5B8C;&#x6210;&#x81EA;&#x5DF1;&#x7684;<code>build</code>&#x547D;&#x4EE4;&#x540E;&#x8FD0;&#x884C;&quot;&#xFF09;&#x3002;</p>
+<p><code>dependsOn</code>&#x4E2D;&#x7684;&#x9879;&#x76EE;&#x6CA1;&#x6709;<code>^</code>&#x524D;&#x7F00;&#xFF0C;&#x8868;&#x8FBE;&#x4E86;&#x5DE5;&#x4F5C;&#x533A;&#x7EA7;&#x522B;&#x7684;&#x4EFB;&#x52A1;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#xFF08;&#x4F8B;&#x5982;&#xFF0C;&quot;&#x4E00;&#x4E2A;&#x5DE5;&#x4F5C;&#x533A;&#x7684;<code>test</code>&#x548C;<code>lint</code>&#x547D;&#x4EE4;&#x53D6;&#x51B3;&#x4E8E;&#x9996;&#x5148;&#x5B8C;&#x6210;&#x7684;<code>build</code>&quot;&#xFF09;&#x3002;</p>
+<p>&#x5728; <code>dependsOn</code> &#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x9879;&#x76EE;&#x524D;&#x52A0;&#x4E0A; <code>$</code>&#xFF0C;&#x544A;&#x8BC9; <code>turbo</code> &#x8FD9;&#x4E2A;&#x7BA1;&#x9053;&#x4EFB;&#x52A1;&#x4F9D;&#x8D56;&#x4E8E;&#x8BE5;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x3002;</p>
+<p>&#x5728; <code>dependsOn</code> &#x914D;&#x7F6E;&#x4E2D;&#x4F7F;&#x7528; <code>$</code> &#x6765;&#x58F0;&#x660E;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x7684;&#x505A;&#x6CD5;&#x5DF2;&#x88AB;&#x5F03;&#x7528;&#x3002;&#x8BF7;&#x4F7F;&#x7528; <code>env</code> &#x952E;&#x6765;&#x4EE3;&#x66FF;&#x3002;</p>
+<p><strong>&#x4F8B;&#x5B50;</strong></p>
+<pre><code class="lang-jsonc">{
+  &quot;$schema&quot;: &quot;https://turborepo.org/schema.json&quot;,
+  &quot;pipeline&quot;: {
+    &quot;build&quot;: {
+      // &quot;A workspace&apos;s `build` command depends on its dependencies&apos;
+      // or devDependencies&apos; `build` command being completed first&quot;
+      &quot;dependsOn&quot;: [&quot;^build&quot;]
+    },
+    &quot;test&quot;: {
+      // &quot;A workspace&apos;s `test` command depends on its own `lint` and
+      // `build` commands first being completed&quot;
+      &quot;dependsOn&quot;: [&quot;lint&quot;, &quot;build&quot;]
+    },
+    &quot;deploy&quot;: {
+      // &quot;A workspace&apos;s `deploy` command, depends on its own `build`
+      // and `test` commands first being completed&quot;
+      &quot;dependsOn&quot;: [&quot;build&quot;, &quot;test&quot;]
+    },
+    // A workspace&apos;s `lint` command has no dependencies
+    &quot;lint&quot;: {}
+  }
+}
+</code></pre>
+<h3 id="env"><code>env</code></h3>
+<p><code>type: string[]</code></p>
+<p>&#x4E00;&#x4E2A;&#x4EFB;&#x52A1;&#x6240;&#x4F9D;&#x8D56;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x5217;&#x8868;&#x3002;</p>
+<p><strong>&#x4F8B;&#x5B50;</strong></p>
+<pre><code class="lang-jsonc">{
+  &quot;$schema&quot;: &quot;https://turborepo.org/schema.json&quot;,
+  &quot;pipeline&quot;: {
+    &quot;build&quot;: {
+      &quot;dependsOn&quot;: [&quot;^build&quot;],
+      &quot;env&quot;: [&quot;SOMETHING_ELSE&quot;], // value will impact the hashes of all build tasks
+      &quot;outputs&quot;: [&quot;dist/**&quot;, &quot;.next/**&quot;]
+    },
+    &quot;web#build&quot;: {
+      &quot;dependsOn&quot;: [&quot;^build&quot;],
+      &quot;env&quot;: [&quot;STRIPE_SECRET_KEY&quot;], // value will impact hash of only web&apos;s build task
+      &quot;outputs&quot;: [&quot;.next/**&quot;]
+    }
+  },
+  &quot;globalEnv&quot;: [
+    &quot;GITHUB_TOKEN&quot; // value will impact the hashes of all tasks
+  ]
+}
+</code></pre>
+<p>&#x5F53;Turborepo&#x68C0;&#x6D4B;&#x5230;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x4E2D;&#x7684;&#x901A;&#x7528;&#x524D;&#x7AEF;&#x6846;&#x67B6;&#x65F6;&#xFF0C;&#x5B83;&#x5C06;&#x81EA;&#x52A8;&#x4F9D;&#x8D56;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF0C;&#x8FD9;&#x4E9B;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x5C06;&#x5728;&#x4F60;&#x7684;&#x6784;&#x5EFA;&#x4E2D;&#x88AB;&#x5185;&#x8054;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C; <code>web</code> &#x5DE5;&#x4F5C;&#x533A;&#x5305;&#x542B; Next.js &#x9879;&#x76EE;&#xFF0C;&#x4F60;&#x4E0D;&#x9700;&#x8981;&#x5728; <code>dependsOn</code> &#x914D;&#x7F6E;&#x4E2D;&#x6307;&#x5B9A;&#x4EFB;&#x4F55;&#x4EE5; <a href="https://nextjs.org/docs/basic-features/environment-variables#exposing-environment-variables-to-the-browser" target="_blank"><code>NEXT_PUBLIC_</code> &#x5F00;&#x59CB;</a>&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x3002;Turborepo &#x5DF2;&#x7ECF;&#x77E5;&#x9053;&#xFF0C;&#x5F53;&#x8FD9;&#x4E9B;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x65F6;&#xFF0C;&#x6784;&#x5EFA;&#x8F93;&#x51FA;&#x4F1A;&#x53D1;&#x751F;&#x53D8;&#x5316;&#xFF0C;&#x6240;&#x4EE5;&#x5B83;&#x4F1A;&#x81EA;&#x52A8;&#x4F9D;&#x8D56;&#x8FD9;&#x4E9B;&#x53D8;&#x91CF;&#x3002;&#x8BF7;&#x770B;&#x66F4;&#x591A;&#x5173;&#x4E8E;<a href="https://turbo.build/repo/docs/core-concepts/caching#automatic-environment-variable-inclusion" target="_blank">&#x7F13;&#x5B58;&#x7684;&#x6587;&#x6863;</a>&#x3002;</p>
+<h3 id="outputs"><code>outputs</code></h3>
+<p><code>type: string[]</code></p>
+<p>&#x9ED8;&#x8BA4;&#x4E3A;<code>[&quot;dist/**&quot;, &quot;build/**&quot;]</code>&#x3002;&#x4E00;&#x4E2A;&#x4EFB;&#x52A1;&#x7684;&#x53EF;&#x7F13;&#x5B58;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x8F93;&#x51FA;&#x7684;glob&#x6A21;&#x5F0F;&#x96C6;&#x5408;&#x3002;</p>
+<p>&#x6CE8;&#x610F;&#xFF1A;<code>turbo</code>&#x81EA;&#x52A8;&#x5C06;<code>stderr</code>/<code>stdout</code>&#x8BB0;&#x5F55;&#x5230;<code>.turbo/run-&lt;task&gt;.log</code>&#x3002;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6; <em>&#x603B;&#x662F;</em> &#x88AB;&#x89C6;&#x4E3A;&#x4E00;&#x4E2A;&#x53EF;&#x7F13;&#x5B58;&#x7684;&#x5DE5;&#x4EF6;&#xFF0C;&#x6C38;&#x8FDC;&#x4E0D;&#x9700;&#x8981;&#x88AB;&#x6307;&#x5B9A;&#x3002;</p>
+<p>&#x4F20;&#x9012;&#x4E00;&#x4E2A;&#x7A7A;&#x6570;&#x7EC4;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x544A;&#x8BC9;<code>turbo</code>&#xFF0C;&#x4E00;&#x4E2A;&#x4EFB;&#x52A1;&#x662F;&#x4E00;&#x4E2A;&#x526F;&#x4F5C;&#x7528;&#xFF0C;&#x56E0;&#x6B64;&#x4E0D;&#x4F1A;&#x53D1;&#x51FA;&#x4EFB;&#x4F55;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x5DE5;&#x4EF6;&#xFF08;&#x4F8B;&#x5982;&#x50CF;linter&#xFF09;&#xFF0C;&#x4F46;&#x4F60;&#x4ECD;&#x7136;&#x60F3;&#x7F13;&#x5B58;&#x5B83;&#x7684;&#x65E5;&#x5FD7;&#xFF08;&#x5E76;&#x628A;&#x5B83;&#x4EEC;&#x5F53;&#x4F5C;&#x4E00;&#x4E2A;&#x5DE5;&#x4EF6;&#xFF09;&#x3002;</p>
+<p><strong>&#x4F8B;&#x5B50;</strong></p>
+<pre><code class="lang-jsonc">{
+  &quot;$schema&quot;: &quot;https://turborepo.org/schema.json&quot;,
+  &quot;pipeline&quot;: {
+    &quot;build&quot;: {
+      // &quot;Cache all files emitted to workspace&apos;s dist/** or .next
+      // directories by a `build` task&quot;
+      &quot;outputs&quot;: [&quot;dist/**&quot;, &quot;.next/**&quot;],
+      &quot;dependsOn&quot;: [&quot;^build&quot;]
+    },
+    &quot;test&quot;: {
+      // &quot;Don&apos;t cache any artifacts of `test` tasks (aside from
+      // logs)&quot;
+      &quot;outputs&quot;: [],
+      &quot;dependsOn&quot;: [&quot;build&quot;]
+    },
+    &quot;test:ci&quot;: {
+      // &quot;Cache the coverage report of a `test:ci` command&quot;
+      &quot;outputs&quot;: [&quot;coverage/**&quot;],
+      &quot;dependsOn&quot;: [&quot;build&quot;]
+    },
+    &quot;dev&quot;: {
+      // Never cache anything (including logs) emitted by a
+      // `dev` task
+      &quot;cache&quot;: false
+    }
+  }
+}
+</code></pre>
+<h3 id="cache"><code>cache</code></h3>
+<p><code>type: boolean</code></p>
+<p>&#x9ED8;&#x8BA4;&#x4E3A;<code>true</code>&#x3002;&#x662F;&#x5426;&#x5BF9;&#x4EFB;&#x52A1;<a href="https://turbo.build/repo/docs/reference/configuration#outputs" target="_blank"><code>&#x8F93;&#x51FA;</code></a>&#x8FDB;&#x884C;&#x7F13;&#x5B58;&#x3002;&#x5C06;<code>cache</code>&#x8BBE;&#x7F6E;&#x4E3A;false&#x5BF9;&#x4E8E;daemon&#x6216;&#x957F;&#x671F;&#x8FD0;&#x884C;&#x7684; &quot;watch &quot;&#x6216;&#x5F00;&#x53D1;&#x6A21;&#x5F0F;&#x7684;&#x4EFB;&#x52A1;&#x662F;&#x6709;&#x7528;&#x7684;&#xFF0C;&#x4F60;&#x4E0D;&#x5E0C;&#x671B;&#x7F13;&#x5B58;&#x3002;</p>
+<p><strong>&#x4F8B;&#x5B50;</strong></p>
+<pre><code class="lang-jsonc">{
+  &quot;$schema&quot;: &quot;https://turborepo.org/schema.json&quot;,
+  &quot;pipeline&quot;: {
+    &quot;build&quot;: {
+      &quot;dependsOn&quot;: [&quot;^build&quot;]
+    },
+    &quot;test&quot;: {
+      &quot;outputs&quot;: [],
+      &quot;dependsOn&quot;: [&quot;build&quot;]
+    },
+    &quot;dev&quot;: {
+      &quot;cache&quot;: false
+    }
+  }
+}
+</code></pre>
+<h3 id="inputs"><code>inputs</code></h3>
+<p><code>type: string[]</code></p>
+<p>&#x9ED8;&#x8BA4;&#x4E3A;<code>[]</code>&#x3002;&#x544A;&#x8BC9;<code>turbo</code>&#x5728;&#x786E;&#x5B9A;&#x67D0;&#x9879;&#x4EFB;&#x52A1;&#x7684;&#x5DE5;&#x4F5C;&#x533A;&#x662F;&#x5426;&#x6709;&#x53D8;&#x5316;&#x65F6;&#x8981;&#x8003;&#x8651;&#x7684;&#x6587;&#x4EF6;&#x96C6;&#x3002;&#x5C06;&#x6B64;&#x8BBE;&#x7F6E;&#x4E3A;globs&#x5217;&#x8868;&#x5C06;&#x5BFC;&#x81F4;&#x4EFB;&#x52A1;&#x53EA;&#x5728;&#x4E0E;&#x8FD9;&#x4E9B;globs&#x5339;&#x914D;&#x7684;&#x6587;&#x4EF6;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x65F6;&#x624D;&#x88AB;&#x91CD;&#x65B0;&#x8FD0;&#x884C;&#x3002;&#x5982;&#x679C;&#x4F60;&#x60F3;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;&#x8DF3;&#x8FC7;&#x8FD0;&#x884C;&#x6D4B;&#x8BD5;&#xFF0C;&#x9664;&#x975E;&#x4E00;&#x4E2A;&#x6E90;&#x6587;&#x4EF6;&#x6539;&#x53D8;&#x4E86;&#xFF0C;&#x8FD9;&#x53EF;&#x80FD;&#x662F;&#x6709;&#x5E2E;&#x52A9;&#x7684;&#x3002;</p>
+<p>&#x6307;&#x5B9A;<code>[]</code>&#x5C06;&#x5BFC;&#x81F4;&#x4EFB;&#x52A1;&#x5728;&#x5DE5;&#x4F5C;&#x533A;&#x7684;&#x4EFB;&#x4F55;&#x6587;&#x4EF6;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x65F6;&#x88AB;&#x91CD;&#x65B0;&#x8FD0;&#x884C;&#x3002;</p>
+<p><strong>&#x4F8B;&#x5B50;</strong></p>
+<pre><code class="lang-jsonc">{
+  &quot;$schema&quot;: &quot;https://turborepo.org/schema.json&quot;,
+  &quot;pipeline&quot;: {
+    // ... omitted for brevity
+
+    &quot;test&quot;: {
+      // A workspace&apos;s `test` task depends on that workspace&apos;s
+      // own `build` task being completed first.
+      &quot;dependsOn&quot;: [&quot;build&quot;],
+      &quot;outputs&quot;: [&quot;&quot;],
+      // A workspace&apos;s `test` task should only be rerun when
+      // either a `.tsx` or `.ts` file has changed.
+      &quot;inputs&quot;: [&quot;src/**/*.tsx&quot;, &quot;src/**/*.ts&quot;, &quot;test/**/*.ts&quot;]
+    }
+  }
+}
+</code></pre>
+<p>&#x6CE8;&#x610F;&#xFF1A;<code>turbo.json</code><em>&#x603B;&#x662F;</em>&#x88AB;&#x8BA4;&#x4E3A;&#x662F;&#x4E00;&#x4E2A;&#x8F93;&#x5165;&#x3002;&#x5982;&#x679C;&#x4F60;&#x4FEE;&#x6539;&#x4E86;<code>turbo.json</code>&#xFF0C;&#x6240;&#x6709;&#x7684;&#x7F13;&#x5B58;&#x90FD;&#x4F1A;&#x88AB;&#x5E9F;&#x6B62;&#x3002;</p>
+<h3 id="outputmode"><code>outputMode</code></h3>
+<p><code>type: &quot;full&quot; | &quot;hash-only&quot; | &quot;new-only&quot; | &quot;none&quot;</code></p>
+<p>&#x8BBE;&#x7F6E;&#x8F93;&#x51FA;&#x8BB0;&#x5F55;&#x7684;&#x7C7B;&#x578B;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>option</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>full</td>
+<td>&#x8FD9;&#x662F;&#x9ED8;&#x8BA4;&#x7684;&#x3002;&#x663E;&#x793A;&#x6240;&#x6709;&#x8F93;&#x51FA;</td>
+</tr>
+<tr>
+<td>hash-only</td>
+<td>&#x53EA;&#x663E;&#x793A;&#x4EFB;&#x52A1;&#x7684;&#x54C8;&#x5E0C;&#x503C;</td>
+</tr>
+<tr>
+<td>new-only</td>
+<td>&#x53EA;&#x663E;&#x793A;&#x7F13;&#x5B58;&#x7F3A;&#x5931;&#x7684;&#x8F93;&#x51FA;</td>
+</tr>
+<tr>
+<td>none</td>
+<td>&#x9690;&#x85CF;&#x6240;&#x6709;&#x7684;&#x4EFB;&#x52A1;&#x8F93;&#x51FA;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x4F8B;&#x5B50;</strong></p>
+<pre><code class="lang-jsonc">{
+  &quot;$schema&quot;: &quot;https://turborepo.org/schema.json&quot;,
+  &quot;pipeline&quot;: {
+    &quot;build&quot;: {
+      &quot;dependsOn&quot;: [&quot;^build&quot;],
+      &quot;outputMode&quot;: &quot;new-only&quot;
+    },
+    &quot;test&quot;: {
+      &quot;outputs&quot;: [],
+      &quot;dependsOn&quot;: [&quot;build&quot;]
+    }
+  }
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="CLIUsage.html" class="navigation navigation-next navigation-unique" aria-label="Next page: CLI 使用">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"配置选项","level":"1.7.1","depth":2,"next":{"title":"CLI 使用","level":"1.7.2","depth":2,"path":"Turborepo/API/CLIUsage.md","ref":"Turborepo/API/CLIUsage.md","articles":[]},"previous":{"title":"API参考","level":"1.7","depth":1,"ref":"","articles":[{"title":"配置选项","level":"1.7.1","depth":2,"path":"Turborepo/API/ConfigurationOptions.md","ref":"Turborepo/API/ConfigurationOptions.md","articles":[]},{"title":"CLI 使用","level":"1.7.2","depth":2,"path":"Turborepo/API/CLIUsage.md","ref":"Turborepo/API/CLIUsage.md","articles":[]},{"title":"编码方式","level":"1.7.3","depth":2,"path":"Turborepo/API/Codemods.md","ref":"Turborepo/API/Codemods.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Turborepo 中文文档","gitbook":"*"},"file":{"path":"Turborepo/API/ConfigurationOptions.md","mtime":"2022-11-01T06:20:43.542Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-03T10:15:35.071Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

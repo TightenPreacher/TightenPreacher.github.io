@@ -1,2 +1,1 @@
-# TightenPreacher.github.io
-docs and cn
+# Turborepo 中文文档
