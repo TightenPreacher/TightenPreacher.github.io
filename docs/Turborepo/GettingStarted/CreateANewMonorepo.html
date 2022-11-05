@@ -760,7 +760,371 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x9879;&#x76EE;">&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x9879;&#x76EE;</h1>
+                                <h1 id="&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;monorepo-creating-a-new-monorepo">&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;monorepo //Creating a new monorepo</h1>
+<h2 id="&#x5FEB;&#x901F;&#x5165;&#x95E8;">&#x5FEB;&#x901F;&#x5165;&#x95E8;</h2>
+<p>&#x8981;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;monorepo&#xFF0C;&#x4F7F;&#x7528;&#x6211;&#x4EEC;&#x7684;<a href="https://www.npmjs.com/package/create-turbo" target="_blank"><code>create-turbo</code></a>npm&#x5305;</p>
+<pre><code class="lang-sh">npx create-turbo@latest
+</code></pre>
+<p>&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x514B;&#x9686;&#x4E00;&#x4E2A;Turborepo&#x542F;&#x52A8;&#x5E93;&#xFF0C;&#x4E3A;&#x4F60;&#x7684;monorepo&#x5F00;&#x4E2A;&#x5934;&#x3002;&#x8981;&#x770B;Turborepo&#x7684;&#x4F8B;&#x5B50;&#x548C;&#x542F;&#x52A8;&#x7A0B;&#x5E8F;&#xFF0C;&#x8BF7;&#x770B;<a href="https://github.com/vercel/turbo/tree/main/examples" target="_blank">GitHub&#x4E0A;&#x7684;Turborepo&#x4F8B;&#x5B50;&#x76EE;&#x5F55;</a>&#x3002;</p>
+<h2 id="&#x5B8C;&#x6574;&#x6559;&#x7A0B;">&#x5B8C;&#x6574;&#x6559;&#x7A0B;</h2>
+<p>&#x672C;&#x6559;&#x7A0B;&#x5C06;&#x6307;&#x5BFC;&#x4F60;&#x4F7F;&#x7528;Turborepo&#x7684;<a href="https://github.com/vercel/turbo/tree/main/examples/basic" target="_blank"><code>&#x57FA;&#x672C;</code>&#x4F8B;&#x5B50;</a>&#x3002;&#x5230;&#x6700;&#x540E;&#xFF0C;&#x4F60;&#x4F1A;&#x5BF9;&#x4F7F;&#x7528;Turbo&#x5145;&#x6EE1;&#x4FE1;&#x5FC3;&#xFF0C;&#x5E76;&#x77E5;&#x9053;&#x6240;&#x6709;&#x7684;&#x57FA;&#x672C;&#x529F;&#x80FD;&#x3002;</p>
+<p>&#x5728;&#x672C;&#x6559;&#x7A0B;&#x4E2D;&#xFF0C;&#x4E00;&#x4E9B;&#x4EE3;&#x7801;&#x884C;&#x4ECE;&#x4EE3;&#x7801;&#x6837;&#x672C;&#x4E2D;&#x88AB;&#x7701;&#x7565;&#x4E86;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5F53;&#x663E;&#x793A;<code>package.json</code>&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x4E0D;&#x4F1A;&#x663E;&#x793A; <em>&#x6240;&#x6709;</em> &#x7684;&#x952E;-&#x53EA;&#x6709;&#x90A3;&#x4E9B;&#x91CD;&#x8981;&#x7684;&#x952E;&#x3002;</p>
+<h3 id="1-&#x8FD0;&#x884C;-create-turbo">1. &#x8FD0;&#x884C; <code>create-turbo</code></h3>
+<p>&#x7B2C;&#x4E00;, &#x8FD0;&#x884C;:</p>
+<pre><code class="lang-sh">npx create-turbo@latest
+</code></pre>
+<p>&#x8FD9;&#x5C31;&#x5B89;&#x88C5;&#x4E86;<a href="https://www.npmjs.com/package/create-turbo" target="_blank">create-turbo</a> CLI&#xFF0C;&#x5E76;&#x8FD0;&#x884C;&#x5B83;&#x3002;&#x4F60;&#x4F1A;&#x88AB;&#x95EE;&#x5230;&#x51E0;&#x4E2A;&#x95EE;&#x9898;</p>
+<h4 id="&#x4F60;&#x60F3;&#x5728;&#x54EA;&#x91CC;&#x521B;&#x5EFA;&#x4F60;&#x7684;turborepo-where-would-you-like-to-create-your-turborepo">&#x4F60;&#x60F3;&#x5728;&#x54EA;&#x91CC;&#x521B;&#x5EFA;&#x4F60;&#x7684;Turborepo //Where would you like to create your turborepo?</h4>
+<p>&#x9009;&#x62E9;&#x4F60;&#x559C;&#x6B22;&#x7684;&#x4EFB;&#x4F55;&#x5730;&#x65B9;&#x3002;&#x9ED8;&#x8BA4;&#x662F;<code>./my-turborepo</code></p>
+<h4 id="&#x4F60;&#x60F3;&#x4F7F;&#x7528;&#x54EA;&#x4E2A;&#x8F6F;&#x4EF6;&#x5305;&#x7BA1;&#x7406;&#x5668;-which-package-manager-do-you-want-to-use">&#x4F60;&#x60F3;&#x4F7F;&#x7528;&#x54EA;&#x4E2A;&#x8F6F;&#x4EF6;&#x5305;&#x7BA1;&#x7406;&#x5668; //Which package manager do you want to use?</h4>
+<p>Turborepo&#x5E76;&#x4E0D;&#x5904;&#x7406;&#x5B89;&#x88C5;&#x8F6F;&#x4EF6;&#x5305;&#xFF0C;&#x6240;&#x4EE5;&#x4F60;&#x9700;&#x8981;&#x9009;&#x62E9;&#x5176;&#x4E2D;&#x4E4B;&#x4E00;</p>
+<ul>
+<li><a href="https://www.npmjs.com//" target="_blank">npm</a></li>
+<li><a href="https://pnpm.io/" target="_blank">pnpm</a></li>
+<li><a href="https://yarnpkg.com/" target="_blank">yarn</a></li>
+</ul>
+<p>&#x5982;&#x679C;&#x4F60;&#x4E0D;&#x786E;&#x5B9A;&#xFF0C;&#x6211;&#x4EEC;&#x5EFA;&#x8BAE;&#x9009;&#x62E9;<code>pnpm</code>&#x3002;&#x5982;&#x679C;&#x4F60;&#x6CA1;&#x6709;&#x5B89;&#x88C5;&#x5B83;&#xFF0C;&#x53D6;&#x6D88;<code>create-turbo</code>&#xFF08;&#x901A;&#x8FC7;<code>ctrl-C</code>&#xFF09;&#xFF0C;&#x770B;&#x770B;<a href="https://pnpm.io/installation" target="_blank">&#x5B89;&#x88C5;&#x8BF4;&#x660E;</a></p>
+<h4 id="&#x5B89;&#x88C5;-installation">&#x5B89;&#x88C5; //Installation</h4>
+<p>&#x4E00;&#x65E6;&#x4F60;&#x9009;&#x62E9;&#x4E86;&#x4E00;&#x4E2A;&#x8F6F;&#x4EF6;&#x5305;&#x7BA1;&#x7406;&#x5668;&#xFF0C;<code>create-turbo</code>&#x5C06;&#x5728;&#x4F60;&#x9009;&#x62E9;&#x7684;&#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x521B;&#x5EFA;&#x4E00;&#x5806;&#x65B0;&#x7684;&#x6587;&#x4EF6;&#x3002;&#x5B83;&#x8FD8;&#x4F1A;&#x9ED8;&#x8BA4;&#x5B89;&#x88C5;<code>&#x57FA;&#x672C;</code>&#x4F8B;&#x5B50;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x4F9D;&#x8D56;&#x9879;</p>
+<h3 id="2-&#x63A2;&#x7D22;&#x4F60;&#x7684;&#x65B0;-repo-exploring-your-new-repo">2. &#x63A2;&#x7D22;&#x4F60;&#x7684;&#x65B0; repo //Exploring your new repo</h3>
+<p>&#x4F60;&#x53EF;&#x80FD;&#x5DF2;&#x7ECF;&#x6CE8;&#x610F;&#x5230;&#x7EC8;&#x7AEF;&#x4E2D;&#x7684;&#x4E00;&#x4E9B;&#x4E1C;&#x897F;&#x3002; <code>create-turbo</code>&#x7ED9;&#x4F60;&#x63CF;&#x8FF0;&#x4E86;&#x5B83;&#x6B63;&#x5728;&#x6DFB;&#x52A0;&#x7684;&#x6240;&#x6709;&#x4E1C;&#x897F;&#x3002;</p>
+<pre><code>&gt;&gt;&gt; Creating a new turborepo with the following:
+
+ - apps/web: Next.js with TypeScript
+ - apps/docs: Next.js with TypeScript
+ - packages/ui: Shared React component library
+ - packages/eslint-config-custom: Shared configuration (ESLint)
+ - packages/tsconfig: Shared TypeScript `tsconfig.json`
+</code></pre><p>&#x6BCF;&#x4E00;&#x4E2A;&#x90FD;&#x662F;&#x4E00;&#x4E2A; <em>&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;</em> -&#x4E00;&#x4E2A;&#x5305;&#x542B;<code>package.json</code>&#x7684;&#x6587;&#x4EF6;&#x5939;&#x3002;&#x6BCF;&#x4E2A;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x53EF;&#x4EE5;&#x58F0;&#x660E;&#x81EA;&#x5DF1;&#x7684;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#xFF0C;&#x8FD0;&#x884C;&#x81EA;&#x5DF1;&#x7684;&#x811A;&#x672C;&#xFF0C;&#x5E76;&#x5BFC;&#x51FA;&#x4EE3;&#x7801;&#x4F9B;&#x5176;&#x4ED6;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x4F7F;&#x7528;&#x3002;</p>
+<p>Open the root folder - <code>./my-turborepo</code> - in your favourite code editor.
+&#x5728;&#x4F60;&#x559C;&#x6B22;&#x7684;&#x4EE3;&#x7801;&#x7F16;&#x8F91;&#x5668;&#x4E2D;&#x6253;&#x5F00;&#x6839;&#x6587;&#x4EF6;&#x5939;-<code>./my-turborepo</code>&#x3002;</p>
+<h4 id="&#x4E86;&#x89E3;-packagesui">&#x4E86;&#x89E3; <code>packages/ui</code></h4>
+<p>&#x9996;&#x5148;&#xFF0C;&#x6253;&#x5F00;<code>./packages/ui/package.json</code>&#x3002;&#x4F60;&#x4F1A;&#x6CE8;&#x610F;&#x5230;&#x5305;&#x7684;&#x540D;&#x5B57;&#x662F; <code>&quot;name&quot;: &quot;ui&quot;</code> - &#x5C31;&#x5728;&#x6587;&#x4EF6;&#x7684;&#x9876;&#x90E8;&#x3002;</p>
+<p>&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x6253;&#x5F00;<code>./apps/web/package.json</code>&#x3002;&#x4F60;&#x4F1A;&#x6CE8;&#x610F;&#x5230;&#xFF0C;&#x8FD9;&#x4E2A;&#x5305;&#x7684;&#x540D;&#x5B57;&#x662F; <code>&quot;name&quot;: &quot;web&quot;</code>&#x3002;&#x4F46;&#x540C;&#x65F6;--&#x770B;&#x4E00;&#x4E0B;&#x5B83;&#x7684;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#x3002;</p>
+<p>&#x4F60;&#x4F1A;&#x770B;&#x5230;&#xFF0C;<code>&quot;web&quot;</code>&#x4F9D;&#x8D56;&#x4E8E;&#x4E00;&#x4E2A;&#x53EB;&#x505A;<code>&quot;ui&quot;</code>&#x7684;&#x5305;&#x3002;&#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528;&#x7684;&#x662F;<code>pnpm</code>&#xFF0C;&#x4F60;&#x4F1A;&#x770B;&#x5230;&#x5B83;&#x662F;&#x8FD9;&#x6837;&#x58F0;&#x660E;&#x7684;:</p>
+<pre><code class="lang-json">filename=<span class="hljs-string">&quot;apps/web/package.json&quot;</span>
+{
+  <span class="hljs-string">&quot;dependencies&quot;</span>: {
+    <span class="hljs-string">&quot;ui&quot;</span>: <span class="hljs-string">&quot;workspace:*&quot;</span>
+  }
+}
+</code></pre>
+<p>&#x8FD9;&#x610F;&#x5473;&#x7740;&#x6211;&#x4EEC;&#x7684;<strong>&#x7F51;&#x7EDC;&#x5E94;&#x7528;&#x4F9D;&#x8D56;&#x4E8E;&#x6211;&#x4EEC;&#x7684;&#x672C;&#x5730;<code>ui</code>&#x5305;</strong>&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x770B;&#x770B;<code>apps/docs/package.json</code>&#x91CC;&#x9762;&#xFF0C;&#x4F60;&#x4F1A;&#x770B;&#x5230;&#x540C;&#x6837;&#x7684;&#x60C5;&#x51B5;&#x3002;<code>web</code>&#x548C;<code>docs</code>&#x90FD;&#x4F9D;&#x8D56;&#x4E8E;<code>ui</code>-&#x4E00;&#x4E2A;&#x5171;&#x4EAB;&#x7EC4;&#x4EF6;&#x5E93;&#x3002;</p>
+<p>&#x8FD9;&#x79CD;&#x8DE8;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5171;&#x4EAB;&#x4EE3;&#x7801;&#x7684;&#x6A21;&#x5F0F;&#x5728;monorepos&#x4E2D;&#x6781;&#x4E3A;&#x5E38;&#x89C1;-&#x8FD9;&#x610F;&#x5473;&#x7740;&#x591A;&#x4E2A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x5171;&#x4EAB;&#x4E00;&#x4E2A;&#x8BBE;&#x8BA1;&#x7CFB;&#x7EDF;&#x3002;</p>
+<h4 id="&#x4E86;&#x89E3;&#x5BFC;&#x5165;&#x548C;&#x5BFC;&#x51FA;">&#x4E86;&#x89E3;&#x5BFC;&#x5165;&#x548C;&#x5BFC;&#x51FA;</h4>
+<p>&#x770B;&#x4E00;&#x4E0B;<code>./apps/docs/pages/index.tsx</code>&#x91CC;&#x9762;&#x3002;<code>docs</code>&#x548C;<code>web</code>&#x90FD;&#x662F;<a href="https://nextjs.org/" target="_blank">Next.js</a> &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x5B83;&#x4EEC;&#x90FD;&#x4EE5;&#x7C7B;&#x4F3C;&#x7684;&#x65B9;&#x5F0F;&#x4F7F;&#x7528;<code>ui</code>&#x5E93;</p>
+<pre><code class="lang-tsx">filename=&quot;apps/docs/pages/index.tsx&quot;
+import { Button } from &quot;ui&quot;;
+//       ^^^^^^         ^^
+
+export default function Docs() {
+  return (
+    &lt;div&gt;
+      &lt;h1&gt;Docs&lt;/h1&gt;
+      &lt;Button /&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<p>&#x4ED6;&#x4EEC;&#x76F4;&#x63A5;&#x4ECE;&#x4E00;&#x4E2A;&#x53EB;<code>ui</code>&#x7684;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#x4E2D;&#x5BFC;&#x5165;<code>Butto</code>n!&#x90A3;&#x662F;&#x600E;&#x4E48;&#x505A;&#x5230;&#x7684;&#xFF1F;<code>Button</code>&#x662F;&#x4ECE;&#x54EA;&#x91CC;&#x6765;&#x7684;&#xFF1F;</p>
+<p>&#x6253;&#x5F00; <code>packages/ui/package.json</code>&#x3002;&#x4F60;&#x4F1A;&#x6CE8;&#x610F;&#x5230;&#x8FD9;&#x4E24;&#x4E2A;&#x5C5E;&#x6027;:</p>
+<pre><code class="lang-json">filename=<span class="hljs-string">&quot;packages/ui/package.json&quot;</span>
+{
+  <span class="hljs-string">&quot;main&quot;</span>: <span class="hljs-string">&quot;./index.tsx&quot;</span>,
+  <span class="hljs-string">&quot;types&quot;</span>: <span class="hljs-string">&quot;./index.tsx&quot;</span>
+}
+</code></pre>
+<p>&#x5F53;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x4ECE;<code>ui</code>&#x5BFC;&#x5165;&#x65F6;&#xFF0C;<code>main</code>&#x544A;&#x8BC9;&#x4ED6;&#x4EEC;&#x5728;&#x54EA;&#x91CC;&#x8BBF;&#x95EE;&#x4ED6;&#x4EEC;&#x8981;&#x5BFC;&#x5165;&#x7684;&#x4EE3;&#x7801;&#x3002; <code>types</code>&#x544A;&#x8BC9;&#x4ED6;&#x4EEC;TypeScript&#x7C7B;&#x578B;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x770B;&#x770B;<code>packages/ui/index.tsx</code>&#x91CC;&#x9762;:</p>
+<pre><code class="lang-tsx">filename=&quot;packages/ui/index.tsx&quot;
+import * as React from &quot;react&quot;;
+export * from &quot;./Button&quot;;
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x5185;&#x5BB9;&#x90FD;&#x5C06;&#x80FD;&#x591F;&#x88AB;&#x4F9D;&#x8D56;<code>ui</code>&#x7684;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x4F7F;&#x7528;&#x3002;</p>
+<p><code>index.tsx</code>&#x4ECE;&#x4E00;&#x4E2A;&#x53EB;&#x505A;<code>./Button</code>&#x7684;&#x6587;&#x4EF6;&#x4E2D;&#x5BFC;&#x51FA;&#x6240;&#x6709;&#x4E1C;&#x897F;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x53BB;&#x90A3;&#x91CC;:</p>
+<pre><code class="lang-tsx">filename=&quot;packages/ui/Button.tsx&quot;
+import * as React from &quot;react&quot;;
+
+export const Button = () =&gt; {
+  return &lt;button&gt;Boop&lt;/button&gt;;
+};
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x627E;&#x5230;&#x4E86;&#x6211;&#x4EEC;&#x7684;&#x6309;&#x94AE;!&#x6211;&#x4EEC;&#x5728;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x4EFB;&#x4F55;&#x6539;&#x52A8;&#x90FD;&#x4F1A;&#x5728;<code>web</code> &#x548C; <code>docs</code>&#x4E2D;&#x5171;&#x4EAB;&#x3002;&#x76F8;&#x5F53;&#x9177;!</p>
+<p>&#x8BD5;&#x7740;&#x4ECE;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#x5BFC;&#x51FA;&#x4E00;&#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x51FD;&#x6570;&#x6765;&#x8FDB;&#x884C;&#x5B9E;&#x9A8C;&#x3002;&#x4E5F;&#x8BB8;&#x53EF;&#x4EE5;&#x7528;<code>add(a, b)</code>&#x5C06;&#x4E24;&#x4E2A;&#x6570;&#x5B57;&#x76F8;&#x52A0;&#x3002;</p>
+<p>&#x7136;&#x540E;&#xFF0C;&#x8FD9;&#x53EF;&#x4EE5;&#x7531;<code>web</code> &#x548C; <code>docs</code>&#x5BFC;&#x5165;&#x3002;</p>
+<h4 id="&#x4E86;&#x89E3;-tsconfig">&#x4E86;&#x89E3; <code>tsconfig</code></h4>
+<p>&#x6211;&#x4EEC;&#x8FD8;&#x6709;&#x4E24;&#x4E2A;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x8981;&#x770B;&#xFF0C;<code>tsconfig</code>&#x548C;<code>eslint-config-custom</code>&#x3002;&#x8FD9;&#x4E24;&#x4E2A;&#x5DE5;&#x4F5C;&#x533A;&#x90FD;&#x5141;&#x8BB8;&#x5728;&#x6574;&#x4E2A;monorepo&#x4E2D;&#x8FDB;&#x884C;&#x5171;&#x4EAB;&#x914D;&#x7F6E;&#x3002;&#x8BA9;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x770B;<code>tsconfig</code>&#x7684;&#x60C5;&#x51B5;&#x3002;</p>
+<pre><code class="lang-json">filename=<span class="hljs-string">&quot;packages/tsconfig/package.json&quot;</span>
+{
+  <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;tsconfig&quot;</span>,
+  <span class="hljs-string">&quot;files&quot;</span>: [<span class="hljs-string">&quot;base.json&quot;</span>, <span class="hljs-string">&quot;nextjs.json&quot;</span>, <span class="hljs-string">&quot;react-library.json&quot;</span>]
+}
+</code></pre>
+<p>&#x5728;&#x8FD9;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x6307;&#x5B9A;&#x4E86;&#x4E09;&#x4E2A;&#x8981;&#x5BFC;&#x51FA;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x5728;<code>&#x6587;&#x4EF6;</code>&#x91CC;&#x9762;&#x3002;&#x7136;&#x540E;&#xFF0C;&#x4F9D;&#x8D56;<code>tsconfig</code>&#x7684;&#x8F6F;&#x4EF6;&#x5305;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5BFC;&#x5165;&#x5B83;&#x4EEC;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;<code>packages/ui</code> &#x4F9D;&#x8D56;&#x4E8E; <code>tsconfig</code></p>
+<pre><code class="lang-json">filename=<span class="hljs-string">&quot;packages/ui/package.json&quot;</span>
+{
+  <span class="hljs-string">&quot;devDependencies&quot;</span>: {
+    <span class="hljs-string">&quot;tsconfig&quot;</span>: <span class="hljs-string">&quot;workspace:*&quot;</span>
+  }
+}
+</code></pre>
+<p>&#x5728;&#x5B83;&#x7684;<code>tsconfig.json</code>&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x5B83;&#x4F7F;&#x7528; <code>extends</code>&#x6765;&#x5BFC;&#x5165;&#x5B83;:</p>
+<pre><code class="lang-json">filename=<span class="hljs-string">&quot;packages/ui/tsconfig.json&quot;</span>
+{
+  <span class="hljs-string">&quot;extends&quot;</span>: <span class="hljs-string">&quot;tsconfig/react-library.json&quot;</span>
+}
+</code></pre>
+<p>&#x8FD9;&#x79CD;&#x6A21;&#x5F0F;&#x5141;&#x8BB8;&#x5355;&#x673A;&#x7248;&#x5728;&#x5176;&#x6240;&#x6709;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x4E2D;&#x5171;&#x4EAB;&#x4E00;&#x4E2A;<code>tsconfig.json</code>&#xFF0C;&#x51CF;&#x5C11;&#x4EE3;&#x7801;&#x7684;&#x91CD;&#x590D;</p>
+<h4 id="&#x4E86;&#x89E3;-eslint-config-custom">&#x4E86;&#x89E3; <code>eslint-config-custom</code></h4>
+<p>&#x6211;&#x4EEC;&#x6700;&#x540E;&#x7684;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x662F;<code>eslint-config-custom</code>&#x3002;</p>
+<p>&#x4F60;&#x4F1A;&#x6CE8;&#x610F;&#x5230;&#x5B83;&#x7684;&#x547D;&#x540D;&#x4E0E;&#x5176;&#x4ED6;&#x5DE5;&#x4F5C;&#x533A;&#x7565;&#x6709;&#x4E0D;&#x540C;&#x3002;&#x5B83;&#x4E0D;&#x50CF;<code>ui</code>&#x6216;<code>tsconfig</code>&#x90A3;&#x6837;&#x7B80;&#x660E;&#x3002;&#x8BA9;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x770B;&#x5728;monorepo&#x6839;&#x76EE;&#x5F55;&#x7684;<code>.eslintrc.js</code>&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x4EE5;&#x627E;&#x51FA;&#x539F;&#x56E0;</p>
+<p><code>``ts filename=&quot;.eslintrc.js&quot;
+module.exports = {
+  // This tells ESLint to load the config from the workspace</code>eslint-config-custom`
+  extends: [&quot;custom&quot;],
+};</p>
+<pre><code>
+[ESLint](https://eslint.org/)&#x901A;&#x8FC7;&#x5BFB;&#x627E;&#x540D;&#x79F0;&#x4E3A;`eslint-config-*`&#x7684;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x6765;&#x89E3;&#x6790;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x3002;&#x8FD9;&#x8BA9;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5199;`extends:[&apos;custom&apos;]` &#x5E76;&#x8BA9;ESLint&#x627E;&#x5230;&#x6211;&#x4EEC;&#x7684;&#x672C;&#x5730;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x3002;
+
+&#x4F46;&#x662F;&#xFF0C;&#x4E3A;&#x4EC0;&#x4E48;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x5728;monorepo&#x7684;&#x6839;&#x76EE;&#x5F55;&#x4E0B;?
+
+ESLint&#x627E;&#x5230;&#x5B83;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x65B9;&#x5F0F;&#x662F;&#x901A;&#x8FC7;&#x5BFB;&#x627E;&#x6700;&#x63A5;&#x8FD1;&#x7684;`.eslintrc.js`&#x3002;&#x5982;&#x679C;&#x5B83;&#x5728;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E0B;&#x627E;&#x4E0D;&#x5230;&#xFF0C;&#x5B83;&#x5C31;&#x4F1A;&#x5728;&#x4E0A;&#x9762;&#x7684;&#x76EE;&#x5F55;&#x4E0B;&#x5BFB;&#x627E;&#xFF0C;&#x76F4;&#x5230;&#x627E;&#x5230;&#x4E3A;&#x6B62;
+
+&#x56E0;&#x6B64;&#xFF0C;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x5728;`packages/ui`&#x4E2D;&#x5DE5;&#x4F5C;&#x7684;&#x4EE3;&#x7801;&#xFF08;&#x5B83;&#x6CA1;&#x6709;&#x4E00;&#x4E2A;`.eslintrc.js`&#xFF09;&#xFF0C;&#x5B83;&#x5C31;&#x4F1A;&#x5F15;&#x7528; _&#x6839;&#x76EE;&#x5F55;_ &#x6765;&#x4EE3;&#x66FF;
+
+&#x6709;`.eslintrc.js`&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x4EE5;&#x540C;&#x6837;&#x7684;&#x65B9;&#x5F0F;&#x5F15;&#x7528;`custom`&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5728;`docs`&#x4E2D;
+
+```ts filename=&quot;apps/docs/.eslintrc.js&quot;
+module.exports = {
+  root: true,
+  extends: [&quot;custom&quot;],
+};
+</code></pre><p>&#x5C31;&#x50CF;<code>tsconfig</code>&#x4E00;&#x6837;&#xFF0C;<code>eslint-config-custom</code>&#x8BA9;&#x6211;&#x4EEC;&#x5728;&#x6574;&#x4E2A;monorepo&#x4E2D;&#x5171;&#x4EAB;ESLint&#x914D;&#x7F6E;&#xFF0C;&#x65E0;&#x8BBA;&#x4F60;&#x5728;&#x54EA;&#x4E2A;&#x9879;&#x76EE;&#x4E0A;&#x5DE5;&#x4F5C;&#xFF0C;&#x90FD;&#x80FD;&#x4FDD;&#x6301;&#x4E00;&#x81F4;&#x3002;</p>
+<h4 id="&#x6458;&#x8981;">&#x6458;&#x8981;</h4>
+<p>&#x4E86;&#x89E3;&#x8FD9;&#x4E9B;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x4E4B;&#x95F4;&#x7684;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#x5F88;&#x91CD;&#x8981;&#x3002;&#x8BA9;&#x6211;&#x4EEC;&#x628A;&#x5B83;&#x4EEC;&#x7ED8;&#x5236;&#x51FA;&#x6765;:</p>
+<p>{/<em> Could be worth a diagram here? </em>/}</p>
+<ul>
+<li><code>web</code> - &#x4F9D;&#x8D56;&#x4E8E;<code>ui</code>&#x3001;<code>tsconfig</code>&#x548C;<code>eslint-config-custom</code></li>
+<li><code>docs</code> - &#x4F9D;&#x8D56;&#x4E8E;<code>ui</code>&#x3001;<code>tsconfig</code>&#x548C;<code>eslint-config-custom</code></li>
+<li><code>ui</code> - &#x4F9D;&#x8D56;&#x4E8E;<code>tsconfig</code>&#x548C;<code>eslint-config-custom</code></li>
+<li><code>tsconfig</code> - &#x65E0;&#x4F9D;&#x8D56;&#x6027;</li>
+<li><code>eslint-config-custom</code> - &#x65E0;&#x4F9D;&#x8D56;&#x6027;</li>
+</ul>
+<p>&#x6CE8;&#x610F;&#xFF0C;<strong>Turborepo CLI &#x4E0D;&#x8D1F;&#x8D23;&#x7BA1;&#x7406;&#x8FD9;&#x4E9B;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;</strong>&#x3002;&#x4E0A;&#x9762;&#x6240;&#x6709;&#x7684;&#x4E8B;&#x60C5;&#x90FD;&#x7531;&#x4F60;&#x9009;&#x62E9;&#x7684;&#x8F6F;&#x4EF6;&#x5305;&#x7BA1;&#x7406;&#x5668;&#xFF08;<code>npm</code>&#x3001;<code>pnpm</code>&#x6216;<code>yarn</code>&#xFF09;&#x6765;&#x5904;&#x7406;&#x3002;</p>
+<h3 id="3-&#x4E86;&#x89E3;-turbojson">3. &#x4E86;&#x89E3; <code>turbo.json</code></h3>
+<p>&#x6211;&#x4EEC;&#x73B0;&#x5728;&#x4E86;&#x89E3;&#x4E86;&#x6211;&#x4EEC;&#x7684;&#x7248;&#x672C;&#x5E93;&#x548C;&#x5B83;&#x7684;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#x3002;Turborepo&#x5982;&#x4F55;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;?</p>
+<p>Turborepo&#x7684;&#x5E2E;&#x52A9;&#x662F;&#x4F7F;&#x8FD0;&#x884C;&#x4EFB;&#x52A1;&#x66F4;&#x7B80;&#x5355;&#x3001;&#x66F4;&#x9AD8;&#x6548;&#x3002;</p>
+<p>&#x8BA9;&#x6211;&#x4EEC;&#x770B;&#x770B;&#x6839;&#x76EE;&#x5F55;<code>package.json</code>&#x7684;&#x5185;&#x5BB9;:</p>
+<pre><code class="lang-json">filename=<span class="hljs-string">&quot;package.json&quot;</span>
+{
+  <span class="hljs-string">&quot;scripts&quot;</span>: {
+    <span class="hljs-string">&quot;build&quot;</span>: <span class="hljs-string">&quot;turbo run build&quot;</span>,
+    <span class="hljs-string">&quot;dev&quot;</span>: <span class="hljs-string">&quot;turbo run dev&quot;</span>,
+    <span class="hljs-string">&quot;lint&quot;</span>: <span class="hljs-string">&quot;turbo run lint&quot;</span>
+  }
+}
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x5728;&#x8FD9;&#x91CC;&#x6709;&#x4E09;&#x4E2A;&#x4F7F;&#x7528;<code>turbo run</code>&#x7684;<code>scripts</code>&#x6307;&#x5B9A;&#x7684;&#x4EFB;&#x52A1;&#x3002;&#x4F60;&#x4F1A;&#x6CE8;&#x610F;&#x5230;&#xFF0C;&#x6BCF;&#x4E2A;&#x4EFB;&#x52A1;&#x90FD;&#x5728;<code>turbo.jso</code>n&#x4E2D;&#x88AB;&#x6307;&#x5B9A;&#x3002;</p>
+<pre><code class="lang-json">filename=<span class="hljs-string">&quot;turbo.json&quot;</span>
+{
+  <span class="hljs-string">&quot;pipeline&quot;</span>: {
+    <span class="hljs-string">&quot;build&quot;</span>: {
+      <span class="hljs-comment">//   ^^^^^</span>
+      <span class="hljs-string">&quot;dependsOn&quot;</span>: [<span class="hljs-string">&quot;^build&quot;</span>],
+      <span class="hljs-string">&quot;outputs&quot;</span>: [<span class="hljs-string">&quot;dist/**&quot;</span>, <span class="hljs-string">&quot;.next/**&quot;</span>]
+    },
+    <span class="hljs-string">&quot;lint&quot;</span>: {
+      <span class="hljs-comment">//   ^^^^</span>
+      <span class="hljs-string">&quot;outputs&quot;</span>: []
+    },
+    <span class="hljs-string">&quot;dev&quot;</span>: {
+      <span class="hljs-comment">//   ^^^</span>
+      <span class="hljs-string">&quot;cache&quot;</span>: <span class="hljs-literal">false</span>
+    }
+  }
+}
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x5728;&#x8FD9;&#x91CC;&#x770B;&#x5230;&#x7684;&#x662F;&#xFF0C;&#x6211;&#x4EEC;&#x5728; <code>turbo</code> <em>&#x6CE8;&#x518C;</em> &#x4E86;&#x4E09;&#x4E2A;&#x4EFB;&#x52A1;-<code>lint</code>&#x3001;<code>dev</code> &#x548C; <code>build</code>&#x3002;&#x6BCF;&#x4E2A;&#x5728; <code>turbo.json</code> &#x4E2D;&#x6CE8;&#x518C;&#x7684;&#x4EFB;&#x52A1;&#x90FD;&#x53EF;&#x4EE5;&#x7528; <code>turbo run &lt;task&gt;</code> &#x8FD0;&#x884C;&#x3002;</p>
+<p>&#x8BA9;&#x6211;&#x4EEC;&#x5728;&#x6839;&#x76EE;&#x5F55;<code>package.json</code>&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x811A;&#x672C;&#xFF0C;&#x6765;&#x770B;&#x770B;&#x5B83;&#x7684;&#x5B9E;&#x9645;&#x6548;&#x679C;&#x5427;:</p>
+<pre><code class="lang-diff">filename=&quot;package.json&quot;
+{
+  &quot;scripts&quot;: {
+    &quot;build&quot;: &quot;turbo run build&quot;,
+    &quot;dev&quot;: &quot;turbo run dev --parallel&quot;,
+    &quot;lint&quot;: &quot;turbo run lint&quot;,
+<span class="hljs-addition">+   &quot;hello&quot;: &quot;turbo run hello&quot;</span>
+  }
+}
+</code></pre>
+<p>&#x73B0;&#x5728;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x8FD0;&#x884C; <code>hello</code>.</p>
+<h3 id="npm">npm</h3>
+<pre><code class="lang-bash">  npm run hello
+</code></pre>
+<h3 id="yarn">yarn</h3>
+<pre><code class="lang-bash">  yarn hello
+</code></pre>
+<h3 id="pnpm">pnpm</h3>
+<pre><code class="lang-bash">  pnpm run hello
+</code></pre>
+<p>&#x4F60;&#x4F1A;&#x5728;&#x63A7;&#x5236;&#x53F0;&#x770B;&#x5230;&#x8FD9;&#x4E2A;&#x9519;&#x8BEF;:</p>
+<pre><code>task `hello` not found in turbo `pipeline` in &quot;turbo.json&quot;.
+Are you sure you added it?
+</code></pre><p>&#x8FD9;&#x4E00;&#x70B9;&#x503C;&#x5F97;&#x8BB0;&#x4F4F;-<strong>&#x4E3A;&#x4E86;&#x8BA9;<code>turbo</code>&#x8FD0;&#x884C;&#x4E00;&#x4E2A;&#x4EFB;&#x52A1;&#xFF0C;&#x5B83;&#x5FC5;&#x987B;&#x5728;<code>turbo.json</code>&#x4E2D;&#x51FA;&#x73B0;</strong></p>
+<p>&#x8BA9;&#x6211;&#x4EEC;&#x7814;&#x7A76;&#x4E00;&#x4E0B;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x6709;&#x7684;&#x811A;&#x672C;.</p>
+<h3 id="4-linting-with-turborepo">4. Linting with Turborepo</h3>
+<p>&#x5C1D;&#x8BD5;&#x8FD0;&#x884C;&#x6211;&#x4EEC;&#x7684; <code>lint</code> &#x811A;&#x672C;:</p>
+<h3 id="npm">npm</h3>
+<pre><code class="lang-bash">  npm run lint
+</code></pre>
+<h3 id="yarn">yarn</h3>
+<pre><code class="lang-bash">  yarn lint
+</code></pre>
+<h3 id="pnpm">pnpm</h3>
+<pre><code class="lang-bash">  pnpm run lint
+</code></pre>
+<p>&#x4F60;&#x4F1A;&#x6CE8;&#x610F;&#x5230;&#x5728;&#x7EC8;&#x7AEF;&#x53D1;&#x751F;&#x7684;&#x51E0;&#x4EF6;&#x4E8B;&#x3002;</p>
+<ol>
+<li>&#x51E0;&#x4E2A;&#x811A;&#x672C;&#x5C06;&#x540C;&#x65F6;&#x8FD0;&#x884C;&#xFF0C;&#x6BCF;&#x4E2A;&#x811A;&#x672C;&#x7684;&#x524D;&#x7F00;&#x662F;<code>docs:lint</code>, <code>ui:lint</code> &#x6216; <code>web:lint</code>&#x3002;</li>
+<li>&#x4ED6;&#x4EEC;&#x4F1A;&#x5404;&#x81EA;&#x6210;&#x529F;&#xFF0C;&#x4F60;&#x4F1A;&#x5728;&#x7EC8;&#x7AEF;&#x770B;&#x5230;<code>3&#x4E2A;&#x6210;&#x529F;</code>&#x3002;</li>
+<li>&#x4F60;&#x8FD8;&#x4F1A;&#x770B;&#x5230;<code>0&#x4E2A;&#x7F13;&#x5B58;&#xFF0C;&#x5171;3&#x4E2A;</code>&#x3002;&#x6211;&#x4EEC;&#x7A0D;&#x540E;&#x5C06;&#x4ECB;&#x7ECD;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x4EC0;&#x4E48;&#x3002;</li>
+</ol>
+<p>&#x6BCF;&#x4E2A;&#x8FD0;&#x884C;&#x7684;&#x811A;&#x672C;&#x90FD;&#x6765;&#x81EA;&#x6BCF;&#x4E2A;&#x5DE5;&#x4F5C;&#x533A;&#x7684;<code>package.json</code>&#x3002;&#x6BCF;&#x4E2A;&#x5DE5;&#x4F5C;&#x533A;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x6307;&#x5B9A;&#x81EA;&#x5DF1;&#x7684;<code>lint</code>&#x811A;&#x672C;:</p>
+<pre><code class="lang-json">filename=<span class="hljs-string">&quot;apps/web/package.json&quot;</span>
+{
+  <span class="hljs-string">&quot;scripts&quot;</span>: {
+    <span class="hljs-string">&quot;lint&quot;</span>: <span class="hljs-string">&quot;next lint&quot;</span>
+  }
+}
+</code></pre>
+<pre><code class="lang-json">filename=<span class="hljs-string">&quot;apps/docs/package.json&quot;</span>
+{
+  <span class="hljs-string">&quot;scripts&quot;</span>: {
+    <span class="hljs-string">&quot;lint&quot;</span>: <span class="hljs-string">&quot;next lint&quot;</span>
+  }
+}
+</code></pre>
+<pre><code class="lang-json">filename=<span class="hljs-string">&quot;packages/ui/package.json&quot;</span>
+{
+  <span class="hljs-string">&quot;scripts&quot;</span>: {
+    <span class="hljs-string">&quot;lint&quot;</span>: <span class="hljs-string">&quot;eslint *.ts*&quot;</span>
+  }
+}
+</code></pre>
+<p>&#x5F53;&#x6211;&#x4EEC;&#x8FD0;&#x884C;<code>turbo run lint</code>&#x65F6;&#xFF0C;Turborepo&#x4F1A;&#x67E5;&#x770B;&#x6BCF;&#x4E2A;&#x5DE5;&#x4F5C;&#x533A;&#x7684;&#x6BCF;&#x4E2A;<code>lint</code>&#x811A;&#x672C;&#x5E76;&#x8FD0;&#x884C;&#x5B83;&#x3002;&#x66F4;&#x591A;&#x7EC6;&#x8282;&#xFF0C;&#x8BF7;&#x770B;&#x6211;&#x4EEC;&#x7684;<a href="https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks#defining-a-pipeline" target="_blank">&#x7BA1;&#x9053;&#x6587;&#x6863;</a>&#x3002;</p>
+<h4 id="&#x4F7F;&#x7528;&#x7F13;&#x5B58;-using-the-cache">&#x4F7F;&#x7528;&#x7F13;&#x5B58; //Using the cache</h4>
+<p>&#x8BA9;&#x6211;&#x4EEC;&#x518D;&#x8FD0;&#x884C;&#x4E00;&#x6B21;&#x6211;&#x4EEC;&#x7684;<code>lint</code>&#x811A;&#x672C;&#x3002;&#x4F60;&#x4F1A;&#x53D1;&#x73B0;&#x7EC8;&#x7AEF;&#x4E2D;&#x51FA;&#x73B0;&#x4E86;&#x4E00;&#x4E9B;&#x65B0;&#x7684;&#x4E1C;&#x897F;</p>
+<ol>
+<li><code>cache hit</code>, <code>replaying output</code>&#x51FA;&#x73B0;&#x5728;<code>docs:lint</code>, <code>web:lint</code> &#x548C; <code>ui:lint</code>&#x3002;</li>
+<li>&#x4F60;&#x4F1A;&#x770B;&#x5230;<code>3&#x4E2A;&#x7F13;&#x5B58;</code>&#xFF0C;`&#x603B;&#x5171;3&#x4E2A;&#x3002;</li>
+<li>&#x603B;&#x7684;&#x8FD0;&#x884C;&#x65F6;&#x95F4;&#x5E94;&#x8BE5;&#x5728;<code>100ms</code>&#x4EE5;&#x4E0B;&#xFF0C;&#x5E76;&#x4E14;&#x51FA;&#x73B0;<code>&gt;&gt;&gt;FULL TURBOThe</code>&#x3002;</li>
+</ol>
+<p>&#x6709;&#x8DA3;&#x7684;&#x4E8B;&#x60C5;&#x521A;&#x521A;&#x53D1;&#x751F;&#x3002;Turborepo&#x610F;&#x8BC6;&#x5230;<strong>&#x6211;&#x4EEC;&#x7684;&#x4EE3;&#x7801;&#x5728;&#x4E0A;&#x6B21;&#x8FD0;&#x884C;lint&#x811A;&#x672C;&#x540E;&#x6CA1;&#x6709;&#x6539;&#x53D8;</strong>&#x3002;</p>
+<p>&#x5B83;&#x4FDD;&#x5B58;&#x4E86;&#x4E0A;&#x4E00;&#x6B21;&#x8FD0;&#x884C;&#x7684;&#x65E5;&#x5FD7;&#xFF0C;&#x6240;&#x4EE5;&#x5B83;&#x53EA;&#x662F;&#x91CD;&#x65B0;&#x64AD;&#x653E;&#x4E86;&#x8FD9;&#x4E9B;&#x65E5;&#x5FD7;&#x3002;</p>
+<p>&#x8BA9;&#x6211;&#x4EEC;&#x8BD5;&#x7740;&#x6539;&#x53D8;&#x4E00;&#x4E9B;&#x4EE3;&#x7801;&#xFF0C;&#x770B;&#x770B;&#x4F1A;&#x53D1;&#x751F;&#x4EC0;&#x4E48;&#x3002;&#x5BF9;<code>app/docs</code>&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x4FEE;&#x6539;</p>
+<p>```diff filename=&quot;apps/docs/pages/index.tsx&quot;
+import { Button } from &quot;ui&quot;;</p>
+<p>export default function Docs() {
+  return (
+    <div></div></p>
+<ul>
+<li><h1 id="docs">Docs</h1></li>
+<li><h1 id="my-great-docs">My great docs</h1>
+<button>
+&lt;/div&gt;
+);
+}
+```</button></li>
+</ul>
+<p>&#x73B0;&#x5728;&#xFF0C;&#x518D;&#x6B21;&#x8FD0;&#x884C;<code>lint</code>&#x811A;&#x672C;&#x3002;&#x4F60;&#x4F1A;&#x6CE8;&#x610F;&#x5230;:</p>
+<ol>
+<li><code>docs:lint</code> &#x6709;&#x4E00;&#x79CD;&#x6CE8;&#x91CA;&#x8BF4; <code>cache miss, executing</code>&#x3002;&#x8FD9;&#x610F;&#x5473;&#x7740;<code>docs</code>&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x5B83;&#x7684;linting&#x3002;</li>
+<li><code>2 cached, 3 total</code> &#x51FA;&#x73B0;&#x5728;&#x5E95;&#x90E8;&#x3002;</li>
+</ol>
+<p>&#x8FD9;&#x610F;&#x5473;&#x7740;<strong>&#x6211;&#x4EEC;&#x4E4B;&#x524D;&#x4EFB;&#x52A1;&#x7684;&#x7ED3;&#x679C;&#x4ECD;&#x7136;&#x88AB;&#x7F13;&#x5B58;&#x7740;</strong>&#x3002;&#x53EA;&#x6709;<code>docs</code>&#x91CC;&#x9762;&#x7684;<code>lint</code>&#x811A;&#x672C;&#x624D;&#x771F;&#x6B63;&#x8FD0;&#x884C;-&#x8FD9;&#x518D;&#x6B21;&#x52A0;&#x5FEB;&#x4E86;&#x4E8B;&#x60C5;&#x7684;&#x901F;&#x5EA6;&#x3002;&#x8981;&#x4E86;&#x89E3;&#x66F4;&#x591A;&#xFF0C;&#x8BF7;&#x67E5;&#x770B;&#x6211;&#x4EEC;&#x7684;<a href="https://turbo.build/repo/docs/core-concepts/caching" target="_blank">&#x7F13;&#x5B58;&#x6587;&#x6863;</a>&#x3002;</p>
+<h3 id="5-building-with-turborepo">5. Building with Turborepo</h3>
+<p>&#x8BA9;&#x6211;&#x4EEC;&#x5C1D;&#x8BD5;&#x8FD0;&#x884C; <code>build</code> &#x811A;&#x672C;:</p>
+<h3 id="npm">npm</h3>
+<pre><code class="lang-bash">  npm run build
+</code></pre>
+<h3 id="yarn">yarn</h3>
+<pre><code class="lang-bash">  yarn build
+</code></pre>
+<h3 id="pnpm">pnpm</h3>
+<pre><code class="lang-bash">  pnpm run build
+</code></pre>
+<p>&#x4F60;&#x4F1A;&#x770B;&#x5230;&#x4E0E;&#x6211;&#x4EEC;&#x8FD0;&#x884C;lint&#x811A;&#x672C;&#x65F6;&#x7C7B;&#x4F3C;&#x7684;&#x8F93;&#x51FA;&#x3002;&#x53EA;&#x6709; <code>apps/docs</code> &#x548C; <code>apps/web</code> &#x5728;&#x5B83;&#x4EEC;&#x7684; <code>package.json</code> &#x4E2D;&#x6307;&#x5B9A;&#x4E86;&#x4E00;&#x4E2A;<code>build</code>&#x811A;&#x672C;&#xFF0C;&#x6240;&#x4EE5;&#x53EA;&#x8FD0;&#x884C;&#x8FD9;&#x4E9B;&#x811A;&#x672C;&#x3002;</p>
+<p>&#x770B;&#x4E00;&#x4E0B;<code>turbo.json</code>&#x4E2D;&#x7684;<code>build</code>&#x90E8;&#x5206;&#x3002;&#x90A3;&#x91CC;&#x6709;&#x4E00;&#x4E9B;&#x6709;&#x8DA3;&#x7684;&#x914D;&#x7F6E;&#x3002;</p>
+<pre><code class="lang-json">filename=<span class="hljs-string">&quot;turbo.json&quot;</span>
+{
+  <span class="hljs-string">&quot;pipeline&quot;</span>: {
+    <span class="hljs-string">&quot;build&quot;</span>: {
+      <span class="hljs-string">&quot;outputs&quot;</span>: [<span class="hljs-string">&quot;.next/**&quot;</span>]
+    }
+  }
+}
+</code></pre>
+<p>&#x4F60;&#x4F1A;&#x6CE8;&#x610F;&#x5230;&#x6709;&#x4E9B;<code>&#x8F93;&#x51FA;</code>&#x5DF2;&#x7ECF;&#x88AB;&#x6307;&#x5B9A;&#x3002;&#x58F0;&#x660E;&#x8F93;&#x51FA;&#x5C06;&#x610F;&#x5473;&#x7740;&#x5F53;<code>turbo</code>&#x5B8C;&#x6210;&#x8FD0;&#x884C;&#x4F60;&#x7684;&#x4EFB;&#x52A1;&#x65F6;&#xFF0C;&#x5B83;&#x5C06;&#x628A;&#x4F60;&#x6307;&#x5B9A;&#x7684;&#x8F93;&#x51FA;&#x4FDD;&#x5B58;&#x5728;&#x5B83;&#x7684;&#x7F13;&#x5B58;&#x4E2D;&#x3002;</p>
+<p><code>apps/docs</code>&#x548C; <code>apps/web</code> &#x90FD;&#x662F; Next.js &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x5B83;&#x4EEC;&#x4F1A;&#x5C06;&#x6784;&#x5EFA;&#x7ED3;&#x679C;&#x8F93;&#x51FA;&#x5230; <code>./.next</code> &#x6587;&#x4EF6;&#x5939;&#x3002;</p>
+<p>&#x8BA9;&#x6211;&#x4EEC;&#x8BD5;&#x4E00;&#x8BD5;&#x3002;&#x5220;&#x9664;<code>apps/docs/.next</code> build&#x6587;&#x4EF6;&#x5939;&#x3002;</p>
+<p>&#x518D;&#x6B21;&#x8FD0;&#x884C;<code>build</code>&#x811A;&#x672C;&#x3002;&#x4F60;&#x4F1A;&#x53D1;&#x73B0;:</p>
+<ol>
+<li>&#x6211;&#x4EEC;&#x8FBE;&#x5230;&#x4E86;<code>FULL TURBO</code>-&#x6784;&#x5EFA;&#x5728;<code>100ms</code>&#x5185;&#x5B8C;&#x6210;&#x3002;</li>
+<li><code>.next</code> &#x6587;&#x4EF6;&#x5939;&#x91CD;&#x65B0;&#x51FA;&#x73B0;&#x4E86;!</li>
+</ol>
+<p>Turborepo cached the result of our previous build. When we ran the <code>build</code> command again, it restored the entire <code>.next/**</code> folder from the cache. To learn more, check out our docs on <a href="../../repo/docs/core-concepts/caching#configuring-cache-outputs">cache outputs</a>.</p>
+<p>Turborepo &#x7F13;&#x5B58;&#x4E86;&#x6211;&#x4EEC;&#x4E4B;&#x524D;&#x6784;&#x5EFA;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x5F53;&#x6211;&#x4EEC;&#x518D;&#x6B21;&#x8FD0;&#x884C;<code>build</code>&#x547D;&#x4EE4;&#x65F6;&#xFF0C;&#x5B83;&#x4ECE;&#x7F13;&#x5B58;&#x4E2D;&#x6062;&#x590D;&#x4E86;&#x6574;&#x4E2A;<code>.next/**</code>&#x6587;&#x4EF6;&#x5939;&#x3002;&#x60F3;&#x4E86;&#x89E3;&#x66F4;&#x591A;&#xFF0C;&#x8BF7;&#x67E5;&#x770B;&#x6211;&#x4EEC;&#x5173;&#x4E8E;<a href="https://turbo.build/repo/docs/core-concepts/caching#configuring-cache-outputs" target="_blank">&#x7F13;&#x5B58;&#x8F93;&#x51FA;</a>&#x7684;&#x6587;&#x6863;&#x3002;</p>
+<h3 id="6-&#x8FD0;&#x884C;-dev-&#x811A;&#x672C;">6. &#x8FD0;&#x884C; dev &#x811A;&#x672C;</h3>
+<p>&#x73B0;&#x5728;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x5C1D;&#x8BD5;&#x8FD0;&#x884C; <code>dev</code>.</p>
+<h3 id="npm">npm</h3>
+<pre><code class="lang-bash">  npm run dev
+</code></pre>
+<h3 id="yarn">yarn</h3>
+<pre><code class="lang-bash">  yarn dev
+</code></pre>
+<h3 id="pnpm">pnpm</h3>
+<pre><code class="lang-bash">  pnpm run dev
+</code></pre>
+<p>&#x4F60;&#x4F1A;&#x6CE8;&#x610F;&#x5230;&#x7EC8;&#x7AEF;&#x7684;&#x4E00;&#x4E9B;&#x4FE1;&#x606F;:</p>
+<ol>
+<li>&#x53EA;&#x6709;&#x4E24;&#x4E2A;&#x811A;&#x672C;&#x4F1A;&#x88AB;&#x6267;&#x884C; - <code>docs:dev</code> &#x548C; <code>web:dev</code>&#x3002;&#x8FD9;&#x662F;&#x4EC5;&#x6709;&#x7684;&#x4E24;&#x4E2A;&#x6307;&#x5B9A; <code>dev</code> &#x7684;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x3002;</li>
+<li>&#x4E24;&#x4E2A;<code>dev</code>&#x811A;&#x672C;&#x540C;&#x65F6;&#x8FD0;&#x884C;&#xFF0C;&#x5728;<code>3000</code>&#x548C;<code>3001</code>&#x7AEF;&#x53E3;&#x542F;&#x52A8;&#x4F60;&#x7684;Next.js&#x5E94;&#x7528;&#x3002;&#x5728;&#x7EC8;&#x7AEF;&#xFF0C;&#x4F60;&#x4F1A;&#x770B;&#x5230;cache bypass&#xFF0C;&#x5F3A;&#x5236;&#x6267;&#x884C;</li>
+<li>&#x5728;&#x7EC8;&#x7AEF;&#xFF0C;&#x4F60;&#x4F1A;&#x770B;&#x5230;<code>&#x7F13;&#x5B58;&#x65C1;&#x8DEF;&#xFF0C;&#x5F3A;&#x5236;&#x6267;&#x884C;</code>&#x3002;</li>
+</ol>
+<p>&#x8BD5;&#x7740;&#x4ECE;&#x811A;&#x672C;&#x4E2D;&#x9000;&#x51FA;&#xFF0C;&#x7136;&#x540E;&#x91CD;&#x65B0;&#x8FD0;&#x884C;&#x3002;&#x4F60;&#x4F1A;&#x6CE8;&#x610F;&#x5230;&#x6211;&#x4EEC;&#x5E76;&#x6CA1;&#x6709;<code>FULL TURBO</code>&#x3002;&#x8FD9;&#x662F;&#x4E3A;&#x4EC0;&#x4E48;&#x5462;&#xFF1F;</p>
+<p>&#x770B;&#x4E00;&#x4E0B; <code>turbo.json</code>:</p>
+<pre><code class="lang-json">filename=<span class="hljs-string">&quot;turbo.json&quot;</span>
+{
+  <span class="hljs-string">&quot;pipeline&quot;</span>: {
+    <span class="hljs-string">&quot;dev&quot;</span>: {
+      <span class="hljs-string">&quot;cache&quot;</span>: <span class="hljs-literal">false</span>
+    }
+  }
+}
+</code></pre>
+<p>&#x5728;<code>dev</code>&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x6307;&#x5B9A;&#x4E86; <code>&quot;cache&quot;: false</code>&#x3002;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x6211;&#x4EEC;&#x544A;&#x8BC9; Turborepo <em>&#x4E0D;</em> &#x8981;&#x7F13;&#x5B58; <code>dev</code> &#x811A;&#x672C;&#x7684;&#x7ED3;&#x679C;&#x3002;<code>dev</code> &#x8FD0;&#x884C;&#x4E00;&#x4E2A;&#x6301;&#x4E45;&#x7684; dev &#x670D;&#x52A1;&#x5668;&#xFF0C;&#x4E0D;&#x4EA7;&#x751F;&#x4EFB;&#x4F55;&#x8F93;&#x51FA;&#xFF0C;&#x6240;&#x4EE5;&#x7F13;&#x5B58;&#x6CA1;&#x6709;&#x610F;&#x4E49;&#x3002;&#x5728;&#x6211;&#x4EEC;&#x7684;&#x6587;&#x6863;&#x4E2D;&#x4E86;&#x89E3;&#x66F4;&#x591A;&#x5173;&#x4E8E;<a href="https://turbo.build/repo/docs/core-concepts/caching#turn-off-caching" target="_blank">&#x5173;&#x95ED;&#x7F13;&#x5B58;</a>&#x7684;&#x4FE1;&#x606F;&#x3002;</p>
+<h4 id="&#x4E00;&#x6B21;&#x53EA;&#x5728;&#x4E00;&#x4E2A;&#x5DE5;&#x4F5C;&#x533A;&#x8FD0;&#x884C;dev-running-dev-on-only-one-workspace-at-a-time">&#x4E00;&#x6B21;&#x53EA;&#x5728;&#x4E00;&#x4E2A;&#x5DE5;&#x4F5C;&#x533A;&#x8FD0;&#x884C;<code>dev</code> //Running <code>dev</code> on only one workspace at a time</h4>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;<code>turbo run dev</code>&#x4F1A;&#x540C;&#x65F6;&#x5728;&#x6240;&#x6709;&#x5DE5;&#x4F5C;&#x533A;&#x8FD0;&#x884C;<code>dev</code>&#x3002;&#x4F46;&#x6709;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x80FD;&#x53EA;&#x60F3;&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x5DE5;&#x4F5C;&#x533A;&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x5904;&#x7406;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x6211;&#x4EEC;&#x7684;&#x547D;&#x4EE4;&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;<code>--filter</code>&#x6807;&#x5FD7;&#x3002;&#x8FD9;&#x4E2A;<code>--filter</code>&#x4F1A;&#x4F20;&#x9012;&#x7ED9;<code>turbo</code> CLI&#x3002;</p>
+<h3 id="npm">npm</h3>
+<pre><code class="lang-bash">  npm run dev --filter docs (&#x6E90;&#x6587;&#x6863;&#x662F; `-- --filter docs`)
+</code></pre>
+<h3 id="yarn">yarn</h3>
+<pre><code class="lang-bash">  yarn dev --filter docs
+</code></pre>
+<h3 id="pnpm">pnpm</h3>
+<pre><code class="lang-bash">  pnpm run dev --filter docs
+</code></pre>
+<p>&#x4F60;&#x4F1A;&#x6CE8;&#x610F;&#x5230;&#xFF0C;&#x73B0;&#x5728;&#x5B83;&#x53EA;&#x8FD0;&#x884C;<code>docs:dev</code>&#x3002;&#x4ECE;&#x6211;&#x4EEC;&#x7684;&#x6587;&#x6863;&#x4E2D;&#x4E86;&#x89E3;&#x66F4;&#x591A;&#x5173;&#x4E8E;<a href="https://turbo.build/repo/docs/core-concepts/monorepos/filtering" target="_blank">&#x8FC7;&#x6EE4;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;</a>&#x7684;&#x4FE1;&#x606F;&#x3002;</p>
+<h3 id="&#x6458;&#x8981;">&#x6458;&#x8981;</h3>
+<p>&#x5E72;&#x5F97;&#x597D;!&#x4F60;&#x5DF2;&#x7ECF;&#x4E86;&#x89E3;&#x4E86;&#x6240;&#x6709;&#x5173;&#x4E8E;&#x4F60;&#x7684;&#x65B0;monorepo&#xFF0C;&#x4EE5;&#x53CA;Turborepo&#x662F;&#x5982;&#x4F55;&#x8BA9;&#x4F60;&#x7684;&#x4EFB;&#x52A1;&#x5904;&#x7406;&#x5F97;&#x66F4;&#x7B80;&#x5355;&#x7684;&#x3002;</p>
+<h4 id="&#x63A5;&#x4E0B;&#x6765;&#x7684;&#x6B65;&#x9AA4;">&#x63A5;&#x4E0B;&#x6765;&#x7684;&#x6B65;&#x9AA4;</h4>
+<ul>
+<li>&#x9700;&#x8981;&#x6DFB;&#x52A0;&#x66F4;&#x591A;&#x4EFB;&#x52A1;&#xFF1F;&#x4E86;&#x89E3;&#x66F4;&#x591A;&#x5173;&#x4E8E;&#x4F7F;&#x7528;[&#x7BA1;&#x9053;]&#x7684;&#x4FE1;&#x606F;</li>
+<li>&#x60F3;&#x52A0;&#x5FEB;CI&#x7684;&#x901F;&#x5EA6;&#xFF1F;&#x8BBE;&#x7F6E;<a href="https://turbo.build/repo/docs/core-concepts/remote-caching" target="_blank">&#x8FDC;&#x7A0B;&#x7F13;&#x5B58;</a>&#x5427;&#x3002;</li>
+<li>&#x60F3;&#x8981;&#x4E00;&#x4E9B;&#x7075;&#x611F;&#x5417;&#xFF1F;&#x770B;&#x770B;&#x6211;&#x4EEC;&#x7684;<a href="https://github.com/vercel/turbo/tree/main/examples" target="_blank">&#x4F8B;&#x5B50;</a>&#x76EE;&#x5F55;&#x5427;</li>
+</ul>
 
                                 
                                 </section>
@@ -804,7 +1168,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"创建新的项目","level":"1.3.2","depth":2,"next":{"title":"替换构建工具","level":"1.3.3","depth":2,"path":"Turborepo/GettingStarted/AddtoExistingMonorepo.md","ref":"Turborepo/GettingStarted/AddtoExistingMonorepo.md","articles":[]},"previous":{"title":"兼容构建工具","level":"1.3.1","depth":2,"path":"Turborepo/GettingStarted/AddtoExistingProject.md","ref":"Turborepo/GettingStarted/AddtoExistingProject.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Turborepo 中文文档","gitbook":"*"},"file":{"path":"Turborepo/GettingStarted/CreateANewMonorepo.md","mtime":"2022-10-31T07:29:45.865Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-03T10:46:57.137Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"创建新的项目","level":"1.3.2","depth":2,"next":{"title":"替换构建工具","level":"1.3.3","depth":2,"path":"Turborepo/GettingStarted/AddtoExistingMonorepo.md","ref":"Turborepo/GettingStarted/AddtoExistingMonorepo.md","articles":[]},"previous":{"title":"兼容构建工具","level":"1.3.1","depth":2,"path":"Turborepo/GettingStarted/AddtoExistingProject.md","ref":"Turborepo/GettingStarted/AddtoExistingProject.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Turborepo 中文文档","gitbook":"*"},"file":{"path":"Turborepo/GettingStarted/CreateANewMonorepo.md","mtime":"2022-11-04T10:24:43.720Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-05T01:34:57.562Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

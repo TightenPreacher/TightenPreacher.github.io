@@ -44,7 +44,8 @@ npm create vite@latest
 
 ### Next.js
 
-```json filename="turbo.json"
+```json 
+filename="turbo.json"
   {
     "pipeline": {
       "build": {
@@ -58,7 +59,8 @@ npm create vite@latest
 ```
 
 ### Vite
-```json filename="turbo.json"
+```json 
+filename="turbo.json"
   {
     "pipeline": {
       "build": {
@@ -73,7 +75,8 @@ npm create vite@latest
 
 一些Vite启动器的`package.json`看起来像这样:
 
-```json filename="package.json"
+```json 
+filename="package.json"
 {
   "scripts": {
     "build": "tsc && vite build"
@@ -83,7 +86,8 @@ npm create vite@latest
 
 我们建议将这些内容拆分为`lint`和`build`脚本。
 
-```json filename="package.json"
+```json 
+filename="package.json"
 {
   "scripts": {
     "build": "vite build",
