@@ -760,7 +760,123 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x7B5B;&#x9009;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;">&#x7B5B;&#x9009;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;</h1>
+                                <h1 id="&#x7B5B;&#x9009;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;-filtering-workspaces">&#x7B5B;&#x9009;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4; //Filtering Workspaces</h1>
+<p>&#x4E00;&#x4E2A;monorepo&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x6210;&#x767E;&#x4E0A;&#x5343;&#x7684;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8FD0;&#x884C;<code>turbo run test</code>&#x5C06;&#x5728;<strong>&#x6240;&#x6709;&#x53EF;&#x7528;&#x7684;&#x5DE5;&#x4F5C;&#x533A;</strong>&#x6267;&#x884C;<code>test</code>&#x4EFB;&#x52A1;&#x3002;</p>
+<p><img src="https://turbo.build/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fno-filter.54c37943.png&amp;w=1920&amp;q=75" alt="Without using a filter, test will be run across all packages"></p>
+<p>Turborepo&#x652F;&#x6301;&#x4E00;&#x4E2A;<code>--filter</code>&#x6807;&#x5FD7;&#xFF0C;&#x8BA9;&#x4F60;<strong>&#x9009;&#x62E9;&#x4F60;&#x60F3;&#x6267;&#x884C;&#x4EFB;&#x52A1;&#x7684;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;</strong>&#x3002;</p>
+<p><img src="https://turbo.build/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fwith-filter.d1f5c746.png&amp;w=1920&amp;q=75" alt="With a filter on shared, only the shared package runs test"></p>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x7528;&#x5B83;&#x6765;:</p>
+<ul>
+<li>&#x6309;<a href="https://turbo.build/repo/docs/core-concepts/monorepos/filtering#filter-by-workspace-name" target="_blank">&#x5DE5;&#x4F5C;&#x533A;&#x540D;&#x79F0;</a>&#x8FC7;&#x6EE4;</li>
+<li>&#x6309;<a href="https://turbo.build/repo/docs/core-concepts/monorepos/filtering#filter-by-directory" target="_blank">&#x5DE5;&#x4F5C;&#x533A;&#x76EE;&#x5F55;</a>&#x8FC7;&#x6EE4;</li>
+<li>&#x5305;&#x62EC;&#x5339;&#x914D;&#x7684;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x7684;<a href="https://turbo.build/repo/docs/core-concepts/monorepos/filtering#include-dependents-of-matched-workspaces" target="_blank">&#x4F9D;&#x8D56;</a>&#x548C;<a href="https://turbo.build/repo/docs/core-concepts/monorepos/filtering#include-dependencies-of-matched-workspaces" target="_blank">&#x4F9D;&#x9644;&#x5173;&#x7CFB;</a></li>
+<li>&#x4ECE;<a href="https://turbo.build/repo/docs/core-concepts/monorepos/filtering#the-workspace-root" target="_blank">&#x5DE5;&#x4F5C;&#x533A;&#x6839;&#x76EE;&#x5F55;</a>&#x6267;&#x884C;&#x4EFB;&#x52A1;</li>
+<li>&#x6839;&#x636E;<a href="https://turbo.build/repo/docs/core-concepts/monorepos/filtering#filter-by-changed-workspaces" target="_blank">git&#x5386;&#x53F2;&#x4E2D;&#x7684;&#x53D8;&#x5316;</a>&#x8FDB;&#x884C;&#x8FC7;&#x6EE4;</li>
+<li>&#x4ECE;&#x9009;&#x62E9;&#x4E2D;<a href="https://turbo.build/repo/docs/core-concepts/monorepos/filtering#excluding-workspaces" target="_blank">&#x6392;&#x9664;&#x5DE5;&#x4F5C;&#x533A;</a></li>
+</ul>
+<p>Turborepo&#x5C06;&#x9488;&#x5BF9;&#x6BCF;&#x4E2A;&#x5339;&#x914D;&#x7684;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x8FD0;&#x884C;&#x6BCF;&#x4E2A;&#x4EFB;&#x52A1;&#xFF0C;&#x786E;&#x4FDD;&#x6839;&#x636E;<a href="https://turbo.build/repo/docs/reference/configuration#pipeline" target="_blank"><code>turbo.json</code></a>&#x4E2D;&#x7684;<code>&#x7BA1;&#x9053;</code>&#x89C4;&#x8303;&#xFF0C;&#x9996;&#x5148;&#x8FD0;&#x884C;&#x4EFB;&#x4F55;&#x4F9D;&#x8D56;&#x5B83;&#x7684;&#x4EFB;&#x52A1;&#x3002;</p>
+<h2 id="&#x8FC7;&#x6EE4;&#x5668;&#x8BED;&#x6CD5;-filter-syntax">&#x8FC7;&#x6EE4;&#x5668;&#x8BED;&#x6CD5; //Filter Syntax</h2>
+<h3 id="&#x591A;&#x4E2A;&#x8FC7;&#x6EE4;&#x5668;-multiple-filters">&#x591A;&#x4E2A;&#x8FC7;&#x6EE4;&#x5668; //Multiple filters</h3>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5411;&#x547D;&#x4EE4;&#x4F20;&#x9012;&#x591A;&#x4E2A;<code>--filter</code>&#x6807;&#x5FD7;&#x6765;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x4EE5;&#x4E0A;&#x7684;&#x8FC7;&#x6EE4;&#x5668;:</p>
+<pre><code class="lang-sh">turbo run build --filter=my-pkg --filter=my-app
+</code></pre>
+<h3 id="&#x6309;&#x5DE5;&#x4F5C;&#x533A;&#x540D;&#x79F0;&#x8FC7;&#x6EE4;-filter-by-workspace-name">&#x6309;&#x5DE5;&#x4F5C;&#x533A;&#x540D;&#x79F0;&#x8FC7;&#x6EE4; //Filter by workspace name</h3>
+<p>&#x5F53;&#x4F60;&#x60F3;&#x53EA;&#x5728;&#x4E00;&#x4E2A;&#x5DE5;&#x4F5C;&#x533A;&#x8FD0;&#x884C;&#x811A;&#x672C;&#x65F6;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x8FC7;&#x6EE4;&#x5668;&#xFF1A;<code>--filter=my-pkg</code>&#x3002;</p>
+<pre><code class="lang-sh"><span class="hljs-comment"># Build &apos;my-pkg&apos;, letting `turbo` infer task dependencies</span>
+<span class="hljs-comment"># from the pipeline defined in turbo.json</span>
+turbo run build --filter=my-pkg
+
+<span class="hljs-comment"># Build &apos;@acme/bar&apos;, letting `turbo` infer task dependencies</span>
+<span class="hljs-comment"># from the pipeline defined in turbo.json</span>
+turbo run build --filter=@acme/bar
+</code></pre>
+<p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x5728;&#x51E0;&#x4E2A;&#x540D;&#x5B57;&#x76F8;&#x4F3C;&#x7684;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x5185;&#x8FD0;&#x884C;&#x4EFB;&#x52A1;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;glob&#x8BED;&#x6CD5;: <code>--filter=*my-pkg*</code>.</p>
+<pre><code class="lang-sh"><span class="hljs-comment"># Build all workspaces that start with &apos;admin-&apos;, letting turbo infer task</span>
+<span class="hljs-comment"># dependencies from the pipeline defined in turbo.json</span>
+turbo run build --filter=admin-*
+</code></pre>
+<h4 id="&#x8303;&#x56F4;">&#x8303;&#x56F4;</h4>
+<p>&#x6709;&#x4E9B;&#x5355;&#x9009;&#x9898;&#x5728;&#x5176;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x540D;&#x79F0;&#x524D;&#x52A0;&#x4E0A;&#x4E00;&#x4E2A;&#x8303;&#x56F4;&#xFF0C;&#x5982;<code>@acme/ui</code>&#x548C;<code>@acme/app</code>&#x3002;&#x53EA;&#x8981;&#x8FD9;&#x4E2A;&#x8303;&#x56F4;&#xFF08;<code>@acme</code>&#xFF09;&#x5728;&#x6574;&#x4E2A;&#x4EE3;&#x7801;&#x5E93;&#x4E2D;&#x662F;&#x552F;&#x4E00;&#x7684;&#xFF0C;&#x4F60;&#x5C31;&#x53EF;&#x4EE5;&#x4ECE;&#x8FC7;&#x6EE4;&#x5668;&#x4E2D;&#x7701;&#x7565;&#x5B83;&#x3002;</p>
+<pre><code class="lang-diff"><span class="hljs-deletion">- turbo run build --filter=@acme/ui</span>
+<span class="hljs-addition">+ turbo run build --filter=ui</span>
+</code></pre>
+<h3 id="&#x5305;&#x62EC;&#x5339;&#x914D;&#x7684;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x7684;&#x4F9D;&#x8D56;-include-dependents-of-matched-workspaces">&#x5305;&#x62EC;&#x5339;&#x914D;&#x7684;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x7684;&#x4F9D;&#x8D56; //Include dependents of matched workspaces</h3>
+<p>&#x6709;&#x65F6;&#xFF0C;&#x4F60;&#x4F1A;&#x60F3;&#x786E;&#x4FDD;&#x4F60;&#x7684;&#x5171;&#x4EAB;&#x5305;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x4EFB;&#x4F55;&#x4E0B;&#x6E38;&#x7684;&#x4F9D;&#x8D56;&#x3002;&#x4E3A;&#x6B64;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>--filter=...my-lib</code>&#x3002;</p>
+<p>&#x5982;&#x679C;<code>my-app</code>&#x4F9D;&#x8D56;&#x4E8E;<code>my-lib</code>&#xFF0C; <code>...my-lib</code> &#x5C06;&#x9009;&#x62E9;<code>my-app</code>&#x548C;<code>my-lib</code>&#x3002;</p>
+<p>&#x5305;&#x62EC;&#x4E00;&#x4E2A;<code>^</code> (<code>...^my-lib</code>)&#x5C06;&#x9009;&#x62E9;&#x6240;&#x6709;<code>my-lib</code>&#x7684;&#x4F9D;&#x8D56;&#xFF0C;&#x4F46;&#x4E0D;&#x5305;&#x62EC;<code>my-lib</code>&#x672C;&#x8EAB;&#x3002;</p>
+<pre><code class="lang-sh"><span class="hljs-comment"># Test &apos;my-lib&apos; and everything that depends on &apos;my-lib&apos;</span>
+turbo run <span class="hljs-built_in">test</span> --filter=...my-lib
+
+<span class="hljs-comment"># Test everything that depends on &apos;my-lib&apos;, but not &apos;my-lib&apos; itself</span>
+turbo run <span class="hljs-built_in">test</span> --filter=...^my-lib
+</code></pre>
+<h3 id="&#x5305;&#x62EC;&#x5339;&#x914D;&#x7684;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x7684;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;-include-dependencies-of-matched-workspaces">&#x5305;&#x62EC;&#x5339;&#x914D;&#x7684;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x7684;&#x4F9D;&#x8D56;&#x5173;&#x7CFB; //Include dependencies of matched workspaces</h3>
+<p>&#x6709;&#x65F6;&#xFF0C;&#x4F60;&#x4F1A;&#x60F3;&#x786E;&#x4FDD;&#x5728;&#x4F60;&#x6240;&#x9488;&#x5BF9;&#x7684;lib&#x7684;&#x6240;&#x6709;&#x4F9D;&#x8D56;&#x4E2D;&#x8FD0;&#x884C;<code>build</code>&#x3002;&#x4E3A;&#x6B64;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>--filter=my-app...</code>&#x3002;</p>
+<p>If <code>my-app</code> depends on <code>my-lib</code>, <code>my-app...</code> will select <code>my-app</code> and <code>my-lib</code>.
+&#x5982;&#x679C;<code>my-app</code>&#x4F9D;&#x8D56;&#x4E8E;<code>my-lib</code>&#xFF0C;<code>my-app...</code>&#x5C06;&#x9009;&#x62E9;<code>my-app</code> &#x548C; <code>my-lib</code>&#x3002;</p>
+<p>&#x5305;&#x62EC;<code>^</code>&#xFF08;<code>my-app^...</code>&#xFF09;&#x5C06;&#x9009;&#x62E9;<code>my-app</code>&#x7684;&#x6240;&#x6709;&#x4F9D;&#x8D56;&#xFF0C;&#x4F46;&#x4E0D;&#x5305;&#x62EC;<code>my-app</code>&#x672C;&#x8EAB;&#x3002;</p>
+<pre><code class="lang-sh"><span class="hljs-comment"># Build &apos;my-app&apos; and its dependencies</span>
+turbo run build --filter=my-app...
+
+<span class="hljs-comment"># Build &apos;my-app&apos;s dependencies, but not &apos;my-app&apos; itself</span>
+turbo run build --filter=my-app^...
+</code></pre>
+<h3 id="&#x6309;&#x76EE;&#x5F55;&#x8FC7;&#x6EE4;-filter-by-directory">&#x6309;&#x76EE;&#x5F55;&#x8FC7;&#x6EE4; //Filter by directory</h3>
+<p>&#x5F53;&#x4F60;&#x60F3;&#x9488;&#x5BF9;&#x4E00;&#x4E2A;&#x7279;&#x5B9A;&#x7684;&#x76EE;&#x5F55;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x5DE5;&#x4F5C;&#x533A;&#x540D;&#x79F0;&#x65F6;&#xFF0C;&#x8FD9;&#x5F88;&#x6709;&#x7528;&#x3002;&#x5B83;&#x652F;&#x6301;&#x3002;</p>
+<ul>
+<li>&#x5B8C;&#x5168;&#x5339;&#x914D;: <code>--filter=./apps/docs</code></li>
+<li>&#x5168;&#x5C40;: <code>--filter=./apps/*</code></li>
+</ul>
+<pre><code class="lang-sh"><span class="hljs-comment"># Build all of the workspaces in the &apos;apps&apos; directory</span>
+turbo run build --filter=./apps/*
+</code></pre>
+<h4 id="&#x4E0E;&#x5176;&#x4ED6;&#x8BED;&#x6CD5;&#x7ED3;&#x5408;-combining-with-other-syntaxes">&#x4E0E;&#x5176;&#x4ED6;&#x8BED;&#x6CD5;&#x7ED3;&#x5408; //Combining with other syntaxes</h4>
+<p>&#x5F53;&#x628A;&#x76EE;&#x5F55;&#x8FC7;&#x6EE4;&#x5668;&#x4E0E;&#x5176;&#x4ED6;&#x8BED;&#x6CD5;&#x7ED3;&#x5408;&#x8D77;&#x6765;&#x65F6;&#xFF0C;&#x7528;<code>{}</code>&#x62EC;&#x8D77;&#x6765;&#x3002;&#x4F8B;&#x5982;:</p>
+<pre><code class="lang-sh"><span class="hljs-comment"># Build all of the workspaces in the &apos;libs&apos; directory,</span>
+<span class="hljs-comment"># and all the workspaces that depends on them</span>
+turbo run build --filter=...{./libs/*}
+</code></pre>
+<h3 id="&#x6309;&#x6539;&#x53D8;&#x7684;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x8FC7;&#x6EE4;-filter-by-changed-workspaces">&#x6309;&#x6539;&#x53D8;&#x7684;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x8FC7;&#x6EE4; //Filter by changed workspaces</h3>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x67D0;&#x6B21;&#x63D0;&#x4EA4;&#x540E;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x7684;&#x4EFB;&#x4F55;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x4E0A;&#x8FD0;&#x884C;&#x4EFB;&#x52A1;&#x3002;&#x8FD9;&#x4E9B;&#x4EFB;&#x52A1;&#x9700;&#x8981;&#x7528;<code>[]</code>&#x6765;&#x5305;&#x88C5;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;<code>--filter=[HEAD^1]</code>&#x5C06;&#x9009;&#x62E9;&#x6240;&#x6709;&#x5728;&#x6700;&#x8FD1;&#x4E00;&#x6B21;&#x63D0;&#x4EA4;&#x4E2D;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x7684;&#x5DE5;&#x4F5C;&#x533A;:</p>
+<pre><code class="lang-sh"><span class="hljs-comment"># Test everything that changed in the last commit</span>
+turbo run <span class="hljs-built_in">test</span> --filter=[HEAD^1]
+</code></pre>
+<h4 id="&#x68C0;&#x67E5;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x63D0;&#x4EA4;-check-a-range-of-commits">&#x68C0;&#x67E5;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x63D0;&#x4EA4; //Check a range of commits</h4>
+<p>&#x5982;&#x679C;&#x60A8;&#x9700;&#x8981;&#x68C0;&#x67E5;&#x7279;&#x5B9A;&#x8303;&#x56F4;&#x7684;&#x63D0;&#x4EA4;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4E0E;<code>HEAD</code>&#x6BD4;&#x8F83;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>[&lt;from commit&gt;...&lt;to commit&gt;]</code>&#x8BBE;&#x7F6E;&#x6BD4;&#x8F83;&#x7684;&#x4E24;&#x7AEF;</p>
+<pre><code class="lang-sh"><span class="hljs-comment"># Test each workspace that changed between &apos;main&apos; and &apos;my-feature&apos;</span>
+turbo run <span class="hljs-built_in">test</span> --filter=[main...my-feature]
+</code></pre>
+<h4 id="&#x5FFD;&#x7565;&#x5DF2;&#x66F4;&#x6539;&#x7684;&#x6587;&#x4EF6;-ignoring-changed-files">&#x5FFD;&#x7565;&#x5DF2;&#x66F4;&#x6539;&#x7684;&#x6587;&#x4EF6; //Ignoring changed files</h4>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<a href="https://turbo.build/repo/docs/reference/command-line-reference#--ignore" target="_blank"><code>--ignore</code></a>&#x6765;&#x6307;&#x5B9A;&#x5728;&#x8BA1;&#x7B97;&#x54EA;&#x4E9B;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x53D1;&#x751F;&#x4E86;&#x53D8;&#x5316;&#x65F6;&#x8981;&#x5FFD;&#x7565;&#x7684;&#x53D8;&#x5316;&#x7684;&#x6587;&#x4EF6;&#x3002;</p>
+<h4 id="&#x4E0E;&#x5176;&#x4ED6;&#x8BED;&#x6CD5;&#x7684;&#x7ED3;&#x5408;-combining-with-other-syntaxes">&#x4E0E;&#x5176;&#x4ED6;&#x8BED;&#x6CD5;&#x7684;&#x7ED3;&#x5408; //Combining with other syntaxes</h4>
+<p>&#x4F60;&#x8FD8;&#x53EF;&#x4EE5;&#x5728;&#x63D0;&#x4EA4;&#x5F15;&#x7528;&#x524D;&#x52A0;&#x4E0A;<code>...</code>&#xFF0C;&#x4EE5;&#x5339;&#x914D;&#x5176;&#x4ED6;&#x7EC4;&#x4EF6;&#x4E0E;&#x53D8;&#x66F4;&#x540E;&#x7684;&#x5DE5;&#x4F5C;&#x533A;&#x7684;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x8981;&#x9009;&#x62E9;<code>foo</code>&#x7684;&#x4EFB;&#x4F55;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#x5728;&#x4E0A;&#x6B21;&#x63D0;&#x4EA4;&#x4E2D;&#x53D1;&#x751F;&#x4E86;&#x53D8;&#x5316;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>--filter=foo...[HEAD^1]</code>&#x3002;</p>
+<pre><code class="lang-sh"><span class="hljs-comment"># Build everything that depends on changes in branch &apos;my-feature&apos;</span>
+turbo run build --filter=...[origin/my-feature]
+
+<span class="hljs-comment"># Build &apos;@foo/bar&apos; if it or any of its dependencies</span>
+<span class="hljs-comment"># changed in the last commit</span>
+turbo run build --filter=@foo/bar...[HEAD^1]
+</code></pre>
+<p>&#x4F60;&#x751A;&#x81F3;&#x53EF;&#x4EE5;&#x628A;<code>[]</code>&#x548C;{}&#x7684;&#x8BED;&#x6CD5;&#x7ED3;&#x5408;&#x5728;&#x4E00;&#x8D77;:</p>
+<pre><code class="lang-sh"><span class="hljs-comment"># Test each workspace in the &apos;@scope&apos; scope that</span>
+<span class="hljs-comment"># is in the &apos;packages&apos; directory, if it has</span>
+<span class="hljs-comment"># changed in the last commit</span>
+turbo run <span class="hljs-built_in">test</span> --filter=@scope/*{./packages/*}[HEAD^1]
+</code></pre>
+<h3 id="&#x5DE5;&#x4F5C;&#x533A;&#x7684;&#x6839;&#x76EE;&#x5F55;-the-workspace-root">&#x5DE5;&#x4F5C;&#x533A;&#x7684;&#x6839;&#x76EE;&#x5F55; //The workspace root</h3>
+<p>monorepo&apos;s&#x7684;&#x6839;&#x76EE;&#x5F55;&#x53EF;&#x4EE5;&#x7528;&#x6807;&#x8BB0;<code>//</code>&#x9009;&#x62E9;</p>
+<pre><code class="lang-sh"><span class="hljs-comment"># Run the format script from the root &quot;package.json&quot; file:</span>
+turbo run format --filter=//
+</code></pre>
+<h3 id="&#x6392;&#x9664;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;-excluding-workspaces">&#x6392;&#x9664;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4; //Excluding workspaces</h3>
+<p>&#x5728;&#x8FC7;&#x6EE4;&#x5668;&#x524D;&#x52A0;&#x4E0A; <code>!</code>&#x3002;&#x6574;&#x4E2A;&#x8FC7;&#x6EE4;&#x5668;&#x4E2D;&#x5339;&#x914D;&#x7684;&#x5DE5;&#x4F5C;&#x533A;&#x5C06;&#x4ECE;&#x76EE;&#x6807;&#x96C6;&#x5408;&#x4E2D;&#x6392;&#x9664;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5339;&#x914D;&#x9664; <code>@foo/bar</code>: <code>--filter=!@foo/bar</code>.&#x4E4B;&#x5916;&#x7684;&#x6240;&#x6709;&#x5185;&#x5BB9;&#x3002;&#x6CE8;&#x610F;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x6839;&#x636E;&#x4F60;&#x7684;shell&#x6765;&#x8F6C;&#x4E49;<code>!</code>&#xFF08;&#x4F8B;&#x5982;&#xFF1A;<code>\!</code>&#xFF01;&#xFF09;&#x3002;</p>
+<pre><code class="lang-sh"><span class="hljs-comment"># Build everything except &apos;@foo/bar&apos;</span>
+turbo run build --filter=!@foo/bar
+<span class="hljs-comment"># Build all of the workspaces in the &apos;apps&apos; directory, except the &apos;admin&apos; workspace</span>
+turbo run build --filter=./apps/* --filter=!admin
+</code></pre>
+<p>Turborepo&#x7684;Filter API&#x8BBE;&#x8BA1;&#x548C;&#x6587;&#x6863;&#x662F;/&#x662F;&#x53D7;&#x5230;&#x4E86;<a href="https://pnpm.io/filtering" target="_blank">pnpm</a>&#x7684;&#x542F;&#x53D1;</p>
 
                                 
                                 </section>
@@ -804,7 +920,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"筛选工作空间","level":"1.4.3.2","depth":3,"next":{"title":"项目手册","level":"1.5","depth":1,"path":"Turborepo/Handbook/README.md","ref":"Turborepo/Handbook/README.md","articles":[{"title":"什么是单体项目","level":"1.5.1","depth":2,"path":"Turborepo/Handbook/WhatIsAMonorepo.md","ref":"Turborepo/Handbook/WhatIsAMonorepo.md","articles":[]},{"title":"依赖安装","level":"1.5.2","depth":2,"path":"Turborepo/Handbook/PackageInstallation.md","ref":"Turborepo/Handbook/PackageInstallation.md","articles":[]},{"title":"工作空间","level":"1.5.3","depth":2,"path":"Turborepo/Handbook/Workspaces.md","ref":"Turborepo/Handbook/Workspaces.md","articles":[]},{"title":"迁移项目","level":"1.5.4","depth":2,"path":"Turborepo/Handbook/MigratingToAMonorepo.md","ref":"Turborepo/Handbook/MigratingToAMonorepo.md","articles":[]},{"title":"开发任务","level":"1.5.5","depth":2,"path":"Turborepo/Handbook/DevelopmentTasks.md","ref":"Turborepo/Handbook/DevelopmentTasks.md","articles":[]},{"title":"构建应用","level":"1.5.6","depth":2,"path":"Turborepo/Handbook/BuildingYourApp.md","ref":"Turborepo/Handbook/BuildingYourApp.md","articles":[]},{"title":"部署Docker","level":"1.5.7","depth":2,"path":"Turborepo/Handbook/DeployingWithDocker.md","ref":"Turborepo/Handbook/DeployingWithDocker.md","articles":[]},{"title":"共享代码","level":"1.5.8","depth":2,"path":"Turborepo/Handbook/SharingCode/README.md","ref":"Turborepo/Handbook/SharingCode/README.md","articles":[{"title":"内部代码","level":"1.5.8.1","depth":3,"path":"Turborepo/Handbook/SharingCode/InternalPackages.md","ref":"Turborepo/Handbook/SharingCode/InternalPackages.md","articles":[]}]},{"title":"Lint","level":"1.5.9","depth":2,"path":"Turborepo/Handbook/Linting/README.md","ref":"Turborepo/Handbook/Linting/README.md","articles":[{"title":"TypeScript","level":"1.5.9.1","depth":3,"path":"Turborepo/Handbook/Linting/TypeScript.md","ref":"Turborepo/Handbook/Linting/TypeScript.md","articles":[]},{"title":"ESLint","level":"1.5.9.2","depth":3,"path":"Turborepo/Handbook/Linting/ESLint.md","ref":"Turborepo/Handbook/Linting/ESLint.md","articles":[]}]},{"title":"测试","level":"1.5.10","depth":2,"path":"Turborepo/Handbook/Testing.md","ref":"Turborepo/Handbook/Testing.md","articles":[]},{"title":"发布依赖","level":"1.5.11","depth":2,"path":"Turborepo/Handbook/PublishingPackages/README.md","ref":"Turborepo/Handbook/PublishingPackages/README.md","articles":[{"title":"构建","level":"1.5.11.1","depth":3,"path":"Turborepo/Handbook/PublishingPackages/Bundling.md","ref":"Turborepo/Handbook/PublishingPackages/Bundling.md","articles":[]},{"title":"版本管理和发布","level":"1.5.11.2","depth":3,"path":"Turborepo/Handbook/PublishingPackages/VersioningAndPublishing.md","ref":"Turborepo/Handbook/PublishingPackages/VersioningAndPublishing.md","articles":[]}]},{"title":"故障排除","level":"1.5.12","depth":2,"path":"Turborepo/Handbook/Troubleshooting.md","ref":"Turborepo/Handbook/Troubleshooting.md","articles":[]}]},"previous":{"title":"运行任务","level":"1.4.3.1","depth":3,"path":"Turborepo/CoreConcepts/Monorepos/RunningTasks.md","ref":"Turborepo/CoreConcepts/Monorepos/RunningTasks.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Turborepo 中文文档","gitbook":"*"},"file":{"path":"Turborepo/CoreConcepts/Monorepos/FilteringWorkspaces.md","mtime":"2022-10-31T08:25:12.801Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-05T01:34:57.562Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"筛选工作空间","level":"1.4.3.2","depth":3,"next":{"title":"项目手册","level":"1.5","depth":1,"path":"Turborepo/Handbook/README.md","ref":"Turborepo/Handbook/README.md","articles":[{"title":"什么是单体项目","level":"1.5.1","depth":2,"path":"Turborepo/Handbook/WhatIsAMonorepo.md","ref":"Turborepo/Handbook/WhatIsAMonorepo.md","articles":[]},{"title":"依赖安装","level":"1.5.2","depth":2,"path":"Turborepo/Handbook/PackageInstallation.md","ref":"Turborepo/Handbook/PackageInstallation.md","articles":[]},{"title":"工作空间","level":"1.5.3","depth":2,"path":"Turborepo/Handbook/Workspaces.md","ref":"Turborepo/Handbook/Workspaces.md","articles":[]},{"title":"迁移项目","level":"1.5.4","depth":2,"path":"Turborepo/Handbook/MigratingToAMonorepo.md","ref":"Turborepo/Handbook/MigratingToAMonorepo.md","articles":[]},{"title":"开发任务","level":"1.5.5","depth":2,"path":"Turborepo/Handbook/DevelopmentTasks.md","ref":"Turborepo/Handbook/DevelopmentTasks.md","articles":[]},{"title":"构建应用","level":"1.5.6","depth":2,"path":"Turborepo/Handbook/BuildingYourApp.md","ref":"Turborepo/Handbook/BuildingYourApp.md","articles":[]},{"title":"部署Docker","level":"1.5.7","depth":2,"path":"Turborepo/Handbook/DeployingWithDocker.md","ref":"Turborepo/Handbook/DeployingWithDocker.md","articles":[]},{"title":"共享代码","level":"1.5.8","depth":2,"path":"Turborepo/Handbook/SharingCode/README.md","ref":"Turborepo/Handbook/SharingCode/README.md","articles":[{"title":"内部代码","level":"1.5.8.1","depth":3,"path":"Turborepo/Handbook/SharingCode/InternalPackages.md","ref":"Turborepo/Handbook/SharingCode/InternalPackages.md","articles":[]}]},{"title":"Lint","level":"1.5.9","depth":2,"path":"Turborepo/Handbook/Linting/README.md","ref":"Turborepo/Handbook/Linting/README.md","articles":[{"title":"TypeScript","level":"1.5.9.1","depth":3,"path":"Turborepo/Handbook/Linting/TypeScript.md","ref":"Turborepo/Handbook/Linting/TypeScript.md","articles":[]},{"title":"ESLint","level":"1.5.9.2","depth":3,"path":"Turborepo/Handbook/Linting/ESLint.md","ref":"Turborepo/Handbook/Linting/ESLint.md","articles":[]}]},{"title":"测试","level":"1.5.10","depth":2,"path":"Turborepo/Handbook/Testing.md","ref":"Turborepo/Handbook/Testing.md","articles":[]},{"title":"发布依赖","level":"1.5.11","depth":2,"path":"Turborepo/Handbook/PublishingPackages/README.md","ref":"Turborepo/Handbook/PublishingPackages/README.md","articles":[{"title":"构建","level":"1.5.11.1","depth":3,"path":"Turborepo/Handbook/PublishingPackages/Bundling.md","ref":"Turborepo/Handbook/PublishingPackages/Bundling.md","articles":[]},{"title":"版本管理和发布","level":"1.5.11.2","depth":3,"path":"Turborepo/Handbook/PublishingPackages/VersioningAndPublishing.md","ref":"Turborepo/Handbook/PublishingPackages/VersioningAndPublishing.md","articles":[]}]},{"title":"故障排除","level":"1.5.12","depth":2,"path":"Turborepo/Handbook/Troubleshooting.md","ref":"Turborepo/Handbook/Troubleshooting.md","articles":[]}]},"previous":{"title":"运行任务","level":"1.4.3.1","depth":3,"path":"Turborepo/CoreConcepts/Monorepos/RunningTasks.md","ref":"Turborepo/CoreConcepts/Monorepos/RunningTasks.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Turborepo 中文文档","gitbook":"*"},"file":{"path":"Turborepo/CoreConcepts/Monorepos/FilteringWorkspaces.md","mtime":"2022-11-05T06:43:14.242Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-08T09:55:47.835Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

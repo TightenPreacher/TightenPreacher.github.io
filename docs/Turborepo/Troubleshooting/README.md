@@ -25,7 +25,7 @@
     - [相关的内联环境变量是否被计算在内?](https://turbo.build/repo/docs/core-concepts/caching#alter-caching-based-on-environment-variables-and-files)
   - 为了验证，在`turbo run <task>`中加入`-vvv`，在verbose模式下运行`turbo`，看看哪些环境变量被包含在哈希值中。
 
-## 我看到了高速缓存的点击率，但我的构建被破坏了
+## 我看到了缓存的点击率，但我的构建被破坏了
 
 - 在你的Turborepo [管道](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks#defining-a-pipeline)中是否[正确指定了缓存输出](https://turbo.build/repo/docs/core-concepts/caching#configuring-cache-outputs)?
   - 管道设置不被继承或合并，所以它们需要在[特定工作区的任务](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks#specific-workspace-tasks)中重新指定（例如，`web#build`**不**继承`build`的管道设置）
