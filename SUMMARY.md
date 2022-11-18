@@ -1,7 +1,7 @@
 # Summary
 * [Turbo 中文文档](README.md)
 * [Turborepo 中文文档](Turborepo/README.md)
-  * [快速入门](Turborepo/Quickstart.md)
+  * [快速入门](Turborepo/Quickstart/README.md)
   * [开始](Turborepo/GettingStarted/README.md)
       * [兼容构建工具](Turborepo/GettingStarted/AddtoExistingProject.md)
       * [创建新的monorepo](Turborepo/GettingStarted/CreateANewMonorepo.md)

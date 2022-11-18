@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>远程缓存 · Turborepo 中文文档</title>
+        <title>快速入门 · Turborepo 中文文档</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="Monorepos.html" />
+    <link rel="next" href="../GettingStarted/" />
     
     
-    <link rel="prev" href="CachingTasks.html" />
+    <link rel="prev" href="../" />
     
 
     </head>
@@ -120,9 +120,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="../Quickstart/">
+        <li class="chapter active" data-level="1.2.1" data-path="./">
             
-                <a href="../Quickstart/">
+                <a href="./">
             
                     
                     快速入门
@@ -191,9 +191,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="./">
+        <li class="chapter " data-level="1.2.3" data-path="../CoreConcepts/">
             
-                <a href="./">
+                <a href="../CoreConcepts/">
             
                     
                     核心概念
@@ -205,9 +205,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.3.1" data-path="CachingTasks.html">
+        <li class="chapter " data-level="1.2.3.1" data-path="../CoreConcepts/CachingTasks.html">
             
-                <a href="CachingTasks.html">
+                <a href="../CoreConcepts/CachingTasks.html">
             
                     
                     缓存任务
@@ -218,9 +218,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.3.2" data-path="RemoteCaching.html">
+        <li class="chapter " data-level="1.2.3.2" data-path="../CoreConcepts/RemoteCaching.html">
             
-                <a href="RemoteCaching.html">
+                <a href="../CoreConcepts/RemoteCaching.html">
             
                     
                     远程缓存
@@ -231,9 +231,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3.3" data-path="Monorepos.html">
+        <li class="chapter " data-level="1.2.3.3" data-path="../CoreConcepts/Monorepos.html">
             
-                <a href="Monorepos.html">
+                <a href="../CoreConcepts/Monorepos.html">
             
                     
                     项目
@@ -245,9 +245,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.3.3.1" data-path="Monorepos/RunningTasks.html">
+        <li class="chapter " data-level="1.2.3.3.1" data-path="../CoreConcepts/Monorepos/RunningTasks.html">
             
-                <a href="Monorepos/RunningTasks.html">
+                <a href="../CoreConcepts/Monorepos/RunningTasks.html">
             
                     
                     运行任务
@@ -258,9 +258,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3.3.2" data-path="Monorepos/FilteringWorkspaces.html">
+        <li class="chapter " data-level="1.2.3.3.2" data-path="../CoreConcepts/Monorepos/FilteringWorkspaces.html">
             
-                <a href="Monorepos/FilteringWorkspaces.html">
+                <a href="../CoreConcepts/Monorepos/FilteringWorkspaces.html">
             
                     
                     筛选工作空间
@@ -801,7 +801,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >远程缓存</a>
+        <a href="../.." >快速入门</a>
     </h1>
 </div>
 
@@ -816,55 +816,27 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x8FDC;&#x7A0B;&#x7F13;&#x5B58;">&#x8FDC;&#x7A0B;&#x7F13;&#x5B58;</h1>
-<p>Turborepo&#x7684;<a href="https://turbo.build/repo/docs/core-concepts/caching" target="_blank">&#x4EFB;&#x52A1;&#x7F13;&#x5B58;</a>&#x53EF;&#x4EE5;&#x8282;&#x7701;&#x5927;&#x91CF;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x4E0D;&#x4F1A;&#x628A;&#x540C;&#x6837;&#x7684;&#x5DE5;&#x4F5C;&#x505A;&#x4E24;&#x6B21;&#x3002;</p>
-<p>&#x4F46;&#x662F;&#x6709;&#x4E00;&#x4E2A;&#x95EE;&#x9898; - <strong>&#x7F13;&#x5B58;&#x662F;&#x5728;&#x4F60;&#x7684;&#x673A;&#x5668;&#x4E0A;&#x7684;</strong>&#x3002;&#x5F53;&#x4F60;&#x5728;&#x4F7F;&#x7528;CI&#x65F6;&#xFF0C;&#x8FD9;&#x53EF;&#x80FD;&#x4F1A;&#x5BFC;&#x81F4;&#x5927;&#x91CF;&#x7684;&#x91CD;&#x590D;&#x5DE5;&#x4F5C;&#x3002;</p>
-<p><img src="https://turbo.build/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flocal-caching.d097807f.png&amp;w=1920&amp;q=75" alt=""></p>
-<p>&#x7531;&#x4E8E;Turborepo&#x9ED8;&#x8BA4;&#x53EA;&#x7F13;&#x5B58;&#x5230;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C;&#x6240;&#x4EE5;&#x5373;&#x4F7F;&#x6240;&#x6709;&#x7684;&#x4EFB;&#x52A1;&#x8F93;&#x5165;&#x90FD;&#x662F;&#x76F8;&#x540C;&#x7684;&#xFF0C;&#x540C;&#x4E00;&#x4E2A;&#x4EFB;&#x52A1;&#xFF08;<code>turbo run build</code>&#xFF09;&#x4E5F;&#x5FC5;&#x987B;&#x5728;<strong>&#x6BCF;&#x53F0;&#x673A;&#x5668;&#x4E0A;&#x91CD;&#x65B0;&#x6267;&#x884C;</strong>&#xFF08;&#x7531;&#x4F60;&#xFF0C;&#x7531;&#x4F60;&#x7684;&#x961F;&#x53CB;&#xFF0C;&#x7531;&#x4F60;&#x7684;CI&#xFF0C;&#x7531;&#x4F60;&#x7684;PaaS&#x7B49;&#x7B49;&#xFF09;-&#x8FD9;&#x5C31;<strong>&#x6D6A;&#x8D39;&#x4E86;&#x65F6;&#x95F4;&#x548C;&#x8D44;&#x6E90;</strong>&#x3002;</p>
-<h2 id="&#x4E00;&#x4E2A;&#x5355;&#x4E00;&#x7684;&#x3001;&#x5171;&#x4EAB;&#x7684;&#x7F13;&#x5B58;">&#x4E00;&#x4E2A;&#x5355;&#x4E00;&#x7684;&#x3001;&#x5171;&#x4EAB;&#x7684;&#x7F13;&#x5B58;</h2>
-<p>&#x5982;&#x679C;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x6574;&#x4E2A;&#x56E2;&#x961F;&#xFF08;&#x751A;&#x81F3;&#x662F;&#x4F60;&#x7684;CI&#xFF09;&#x4E2D;&#x5171;&#x4EAB;&#x4E00;&#x4E2A;Turborepo&#x7F13;&#x5B58;&#xFF0C;&#x4F1A;&#x600E;&#x4E48;&#x6837;&#xFF1F;</p>
-<p><img src="https://turbo.build/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fremote-caching.5c826549.png&amp;w=1920&amp;q=75" alt=""></p>
-<p>&#x901A;&#x8FC7;&#x4E0E;<a href="https://turbo.build/repo/docs/core-concepts/remote-caching#vercel" target="_blank">Vercel</a>&#x8FD9;&#x6837;&#x7684;&#x4F9B;&#x5E94;&#x5546;&#x5408;&#x4F5C;&#xFF0C;Turborepo&#x53EF;&#x4EE5;&#x5B89;&#x5168;&#x5730;&#x4E0E;&#x8FDC;&#x7A0B;&#x7F13;&#x5B58;--&#x5B58;&#x50A8;&#x4EFB;&#x52A1;&#x7ED3;&#x679C;&#x7684;&#x4E91;&#x670D;&#x52A1;&#x5668;&#x8FDB;&#x884C;&#x901A;&#x4FE1;&#x3002;</p>
-<p>This can save enormous amounts of time by <strong>preventing duplicated work across your entire organization</strong>.
-&#x8FD9;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<strong>&#x9632;&#x6B62;&#x6574;&#x4E2A;&#x7EC4;&#x7EC7;&#x7684;&#x91CD;&#x590D;&#x5DE5;&#x4F5C;</strong>&#x800C;&#x8282;&#x7701;&#x5927;&#x91CF;&#x7684;&#x65F6;&#x95F4;&#x3002;</p>
-<p>&#x8FDC;&#x7A0B;&#x7F13;&#x5B58;&#x662F;Turborepo&#x7684;&#x4E00;&#x4E2A;&#x5F3A;&#x5927;&#x529F;&#x80FD;&#xFF0C;&#x4F46;&#x5F3A;&#x5927;&#x7684;&#x529F;&#x80FD;&#x4E5F;&#x4F34;&#x968F;&#x7740;&#x5DE8;&#x5927;&#x7684;&#x8D23;&#x4EFB;&#x3002;&#x9996;&#x5148;&#x786E;&#x4FDD;&#x4F60;&#x7684;&#x7F13;&#x5B58;&#x662F;&#x6B63;&#x786E;&#x7684;&#xFF0C;&#x5E76;&#x4ED4;&#x7EC6;&#x68C0;&#x67E5;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x7684;&#x5904;&#x7406;&#x3002;&#x4E5F;&#x8BF7;&#x8BB0;&#x4F4F;Turborepo&#x5C06;&#x65E5;&#x5FD7;&#x4F5C;&#x4E3A;&#x4EBA;&#x5DE5;&#x5236;&#x54C1;&#x5904;&#x7406;&#xFF0C;&#x6240;&#x4EE5;&#x8981;&#x6CE8;&#x610F;&#x4F60;&#x5728;&#x63A7;&#x5236;&#x53F0;&#x6253;&#x5370;&#x7684;&#x5185;&#x5BB9;&#x3002;</p>
-<h2 id="vercel">Vercel</h2>
-<h3 id="&#x5BF9;&#x4E8E;&#x672C;&#x5730;&#x5F00;&#x53D1;-for-local-development">&#x5BF9;&#x4E8E;&#x672C;&#x5730;&#x5F00;&#x53D1; //For Local Development</h3>
-<p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x628A;&#x672C;&#x5730;&#x7684;turborepo&#x94FE;&#x63A5;&#x5230;&#x8FDC;&#x7A0B;&#x7F13;&#x5B58;&#xFF0C;&#x9996;&#x5148;&#x7528;&#x4F60;&#x7684;Vercel&#x8D26;&#x6237;&#x8BA4;&#x8BC1;Turborepo CLI:</p>
-<pre><code class="lang-sh">npx turbo login
-</code></pre>
-<p>&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x5C06;&#x4F60;&#x7684;Turborepo&#x4E0E;&#x4F60;&#x7684;&#x8FDC;&#x7A0B;&#x7F13;&#x5B58;&#x8FDE;&#x63A5;&#x8D77;&#x6765;:</p>
-<pre><code class="lang-sh">npx turbo link
-</code></pre>
-<p>&#x4E00;&#x65E6;&#x542F;&#x7528;&#xFF0C;&#x5BF9;&#x4F60;&#x76EE;&#x524D;&#x6B63;&#x5728;&#x7F13;&#x5B58;&#x7684;&#x5DE5;&#x4F5C;&#x533A;&#x505A;&#x4E00;&#x4E9B;&#x4FEE;&#x6539;&#xFF0C;&#x7136;&#x540E;&#x7528;<code>turbo run</code>&#x5BF9;&#x5176;&#x8FD0;&#x884C;&#x4EFB;&#x52A1;&#x3002;&#x4F60;&#x7684;&#x7F13;&#x5B58;&#x5DE5;&#x4EF6;&#x73B0;&#x5728;&#x5C06;&#x88AB;&#x50A8;&#x5B58;&#x5728;&#x672C;&#x5730; <em>&#x548C;</em> &#x4F60;&#x7684;&#x8FDC;&#x7A0B;&#x7F13;&#x5B58;&#x4E2D;&#x3002;</p>
-<p>&#x4E3A;&#x4E86;&#x9A8C;&#x8BC1;&#xFF0C;&#x8BF7;&#x7528;&#x4EE5;&#x4E0B;&#x65B9;&#x6CD5;&#x5220;&#x9664;&#x60A8;&#x7684;&#x672C;&#x5730;Turborepo&#x7F13;&#x5B58;:</p>
-<h3 id="unix">unix</h3>
-<pre><code class="lang-sh">  rm -rf ./node_modules/.cache/turbo
-</code></pre>
-<h3 id="win">win</h3>
-<pre><code class="lang-sh">  rd /s /q <span class="hljs-string">&quot;./node_modules/.cache/turbo&quot;</span>
-</code></pre>
-<p>&#x7136;&#x540E;&#x518D;&#x6B21;&#x8FD0;&#x884C;&#x76F8;&#x540C;&#x7684;&#x6784;&#x5EFA;&#x3002;&#x5982;&#x679C;&#x5DE5;&#x4F5C;&#x6B63;&#x5E38;&#xFF0C;<code>Turbo</code>&#x4E0D;&#x5E94;&#x8BE5;&#x5728;&#x672C;&#x5730;&#x6267;&#x884C;&#x4EFB;&#x52A1;&#xFF0C;&#x800C;&#x662F;&#x4ECE;&#x4F60;&#x7684;&#x8FDC;&#x7A0B;&#x7F13;&#x5B58;&#x4E2D;&#x4E0B;&#x8F7D;&#x65E5;&#x5FD7;&#x548C;&#x5DE5;&#x4EF6;&#xFF0C;&#x5E76;&#x5C06;&#x5B83;&#x4EEC;&#x56DE;&#x653E;&#x7ED9;&#x4F60;&#x3002;</p>
-<h3 id="vercel&#x6784;&#x5EFA;&#x7684;&#x8FDC;&#x7A0B;&#x7F13;&#x5B58;-remote-caching-on-vercel-builds">Vercel&#x6784;&#x5EFA;&#x7684;&#x8FDC;&#x7A0B;&#x7F13;&#x5B58; //Remote Caching on Vercel Builds</h3>
-<p>&#x5982;&#x679C;&#x4F60;&#x5728;Vercel&#x4E0A;&#x6784;&#x5EFA;&#x548C;&#x6258;&#x7BA1;&#x4F60;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x4E00;&#x65E6;&#x4F60;&#x4F7F;&#x7528;<code>turbo</code>&#xFF0C;&#x8FDC;&#x7A0B;&#x7F13;&#x5B58;&#x5C31;&#x4F1A;&#x81EA;&#x52A8;&#x4E3A;&#x4F60;&#x8BBE;&#x7F6E;&#x3002;&#x4F60;&#x9700;&#x8981;&#x66F4;&#x65B0;&#x4F60;&#x7684;<a href="https://vercel.com/docs/concepts/deployments/configure-a-build" target="_blank">&#x6784;&#x5EFA;&#x8BBE;&#x7F6E;</a>&#xFF0C;&#x4EE5;&#x4FBF;&#x7528;<code>turbo</code>&#x6784;&#x5EFA;&#x3002;</p>
-<p>&#x8BF7;&#x53C2;&#x8003;<a href="https://vercel.com/docs/concepts/git/monorepos#turborepo?utm_source=turbo.build&amp;utm_medium=referral&amp;utm_campaign=docs-link" target="_blank">Vercel&#x6587;&#x6863;</a>&#x4E2D;&#x7684;&#x8BF4;&#x660E;&#x3002;</p>
-<h3 id="&#x5DE5;&#x4F5C;&#x7684;&#x5B8C;&#x6574;&#x6027;&#x548C;&#x771F;&#x5B9E;&#x6027;&#x9A8C;&#x8BC1;-artifact-integrity-and-authenticity-verification">&#x5DE5;&#x4F5C;&#x7684;&#x5B8C;&#x6574;&#x6027;&#x548C;&#x771F;&#x5B9E;&#x6027;&#x9A8C;&#x8BC1; //Artifact Integrity and Authenticity Verification</h3>
-<p>&#x60A8;&#x53EF;&#x4EE5;&#x542F;&#x7528;Turborepo&#xFF0C;&#x5728;&#x4E0A;&#x4F20;&#x5DE5;&#x4EF6;&#x5230;&#x8FDC;&#x7A0B;&#x7F13;&#x5B58;&#x4E4B;&#x524D;&#x7528;&#x79D8;&#x94A5;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x7B7E;&#x540D;&#x3002;Turborepo&#x5728;&#x5DE5;&#x4EF6;&#x4E0A;&#x4F7F;&#x7528;<code>HMAC-SHA256</code>&#x7B7E;&#x540D;&#xFF0C;&#x4F7F;&#x7528;&#x60A8;&#x63D0;&#x4F9B;&#x7684;&#x5BC6;&#x5319;&#x3002;Turborepo&#x4F1A;&#x5728;&#x4E0B;&#x8F7D;&#x65F6;&#x9A8C;&#x8BC1;&#x8FDC;&#x7A0B;&#x7F13;&#x5B58;&#x5DE5;&#x4EF6;&#x7684;&#x5B8C;&#x6574;&#x6027;&#x548C;&#x771F;&#x5B9E;&#x6027;&#x3002;&#x4EFB;&#x4F55;&#x9A8C;&#x8BC1;&#x5931;&#x8D25;&#x7684;&#x5DE5;&#x4EF6;&#x5C06;&#x88AB;&#x5FFD;&#x7565;&#xFF0C;&#x5E76;&#x88AB;Turborepo&#x89C6;&#x4E3A;&#x7F13;&#x5B58;&#x4E22;&#x5931;&#x3002;</p>
-<p>&#x8981;&#x542F;&#x7528;&#x8FD9;&#x4E2A;&#x529F;&#x80FD;&#xFF0C;&#x5728;&#x4F60;&#x7684; <code>turbo.json</code> &#x914D;&#x7F6E;&#x4E2D;&#x8BBE;&#x7F6E; <code>remoteCache</code> &#x9009;&#x9879;&#xFF0C;&#x5305;&#x62EC;<code>signature: true</code>&#x3002;&#x7136;&#x540E;&#x901A;&#x8FC7;&#x58F0;&#x660E; <code>TURBO_REMOTE_CACHE_SIGNATURE_KEY</code> &#x73AF;&#x5883;&#x53D8;&#x91CF;&#x6765;&#x6307;&#x5B9A;&#x4F60;&#x7684;&#x5BC6;&#x5319;&#x3002;</p>
-<pre><code class="lang-jsonc">{
-  &quot;$schema&quot;: &quot;https://turbo.build/schema.json&quot;,
-  &quot;remoteCache&quot;: {
-    // Indicates if signature verification is enabled.
-    &quot;signature&quot;: true
-  }
-}
-</code></pre>
-<h2 id="&#x81EA;&#x5B9A;&#x4E49;&#x8FDC;&#x7A0B;&#x7F13;&#x5B58;-custom-remote-caches">&#x81EA;&#x5B9A;&#x4E49;&#x8FDC;&#x7A0B;&#x7F13;&#x5B58; //Custom Remote Caches</h2>
-<p>&#x60A8;&#x53EF;&#x4EE5;&#x81EA;&#x884C;&#x6258;&#x7BA1;&#x81EA;&#x5DF1;&#x7684;&#x8FDC;&#x7A0B;&#x7F13;&#x5B58;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5176;&#x4ED6;&#x8FDC;&#x7A0B;&#x7F13;&#x5B58;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x5546;&#xFF0C;&#x53EA;&#x8981;&#x4ED6;&#x4EEC;&#x7B26;&#x5408;Turborepo&#x7684;&#x8FDC;&#x7A0B;&#x7F13;&#x5B58;&#x670D;&#x52A1;&#x5668;API&#x3002;</p>
-<p>&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6307;&#x5B9A; <code>--api</code> &#x548C; <code>--token</code> &#x6807;&#x5FD7;&#x6765;&#x8BBE;&#x7F6E;&#x8FDC;&#x7A0B;&#x7F13;&#x5B58;&#x57DF;&#xFF0C;&#x5176;&#x4E2D; <code>--api</code> &#x662F;&#x4E3B;&#x673A;&#x540D;&#xFF0C; <code>--token</code> &#x662F;&#x4E00;&#x4E2A;&#x627F;&#x8F7D;&#x4EE4;&#x724C;&#x3002;</p>
-<pre><code class="lang-sh">turbo run build --api=<span class="hljs-string">&quot;https://my-server.example.com&quot;</span> --token=<span class="hljs-string">&quot;xxxxxxxxxxxxxxxxx&quot;</span>
-</code></pre>
-<p>&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x8FD9;&#x91CC;&#x770B;&#x5230;<a href="https://github.com/vercel/turbo/blob/main/cli/internal/client/client.go" target="_blank">&#x9700;&#x8981;&#x7684;</a>&#x7AEF;&#x70B9;/&#x8BF7;&#x6C42;&#x3002;</p>
+                                <h1 id="turborepo-&#x5FEB;&#x901F;&#x5165;&#x95E8;">Turborepo &#x5FEB;&#x901F;&#x5165;&#x95E8;</h1>
+<p>Turborepo&#x662F;&#x4E00;&#x4E2A;&#x4E3A; <strong>JavaScript&#x548C;TypeScript&#x4EE3;&#x7801;&#x5E93;&#x4F18;&#x5316;&#x7684;&#x667A;&#x80FD;&#x6784;&#x5EFA;&#x7CFB;&#x7EDF;</strong>&#x3002;</p>
+<p>&#x4F60;&#x7684;&#x4EE3;&#x7801;&#x5E93;&#x7684;&#x4EFB;&#x52A1;--&#x5982; <code>lint</code>&#x3001; <code>&#x6784;&#x5EFA;</code>&#x548C; <code>&#x6D4B;&#x8BD5;</code>--<strong>&#x4E0D;&#x80FD;&#x50CF;&#x5B83;&#x4EEC;&#x90A3;&#x6837;&#x5FEB;&#x901F;&#x8FD0;&#x884C;</strong>&#x3002;Turborepo &#x4F7F;&#x7528;<a href="https://turbo.build/repo/docs/core-concepts/caching" target="_blank">&#x7F13;&#x5B58;</a>&#x6765;&#x63D0;&#x5347;&#x4F60;&#x7684;&#x672C;&#x5730;&#x8BBE;&#x7F6E;&#x5E76;&#x52A0;&#x5FEB;&#x4F60;&#x7684; CI&#x3002;</p>
+<p>Turborepo&#x88AB;&#x8BBE;&#x8BA1;&#x6210;&#x53EF;&#x4EE5;<strong>&#x9010;&#x6B65;&#x91C7;&#x7528;</strong>&#xFF0C;&#x6240;&#x4EE5;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x51E0;&#x5206;&#x949F;&#x5185;&#x5C06;&#x5176;&#x6DFB;&#x52A0;&#x5230;&#x5927;&#x591A;&#x6570;&#x4EE3;&#x7801;&#x5E93;&#x4E2D;&#x3002;</p>
+<p><strong><a href="GettingStarted/AddtoExistingProject.md">&#x6DFB;&#x52A0;&#x5230;&#x73B0;&#x6709;&#x9879;&#x76EE;&#x4E2D;</a></strong> / 
+<strong><a href="GettingStarted/CreateANewMonorepo.md">&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x9879;&#x76EE;</a></strong>  /
+<strong><a href="GettingStarted/AddtoExistingMonorepo.md">&#x9010;&#x6B65;&#x91C7;&#x7528;&#x5230;&#x9879;&#x76EE;&#x4E2D;</a></strong> </p>
+<h2 id="&#x7279;&#x70B9;">&#x7279;&#x70B9;</h2>
+<p>Turborepo&#x5229;&#x7528;&#x5148;&#x8FDB;&#x7684;&#x6784;&#x5EFA;&#x7CFB;&#x7EDF;&#x6280;&#x672F;&#x6765;&#x52A0;&#x5FEB;&#x5F00;&#x53D1;&#x901F;&#x5EA6;&#xFF0C;<strong>&#x5305;&#x62EC;&#x5728;&#x4F60;&#x7684;&#x672C;&#x5730;&#x673A;&#x5668;&#x548C;CI/CD&#x4E0A;&#x7684;&#x5F00;&#x53D1;</strong>&#x3002;</p>
+<p><strong><a href="CoreConcepts/CachingTasks.md">&#x540C;&#x6837;&#x7684;&#x5DE5;&#x4F5C;&#x4E0D;&#x8981;&#x505A;&#x4E24;&#x6B21;</a></strong> / 
+<strong><a href="CoreConcepts/Monorepos/RunningTasks.md">&#x6700;&#x5927;&#x9650;&#x5EA6;&#x7684;&#x591A;&#x4EFB;&#x52A1;&#x5904;&#x7406;</a></strong> </p>
+<h2 id="&#x9879;&#x76EE;">&#x9879;&#x76EE;</h2>
+<p>Turborepo&#x5F00;&#x7BB1;&#x5373;&#x7528;&#xFF0C;&#x53EF;&#x4EE5;&#x4E0E; <code>npm</code>&#x3001; <code>pnpm</code>&#x548C; <code>yarn</code>&#x7B49;&#x5355;&#x7248;&#x672C;&#x5DE5;&#x5177;&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#x3002;&#x5982;&#x679C;&#x4F60;&#x89C9;&#x5F97;&#x4F60;&#x7684;monorepo&#x62D6;&#x7D2F;&#x4E86;&#x4F60;&#xFF0C;&#x53EF;&#x80FD;&#x662F;&#x65F6;&#x5019;&#x4F7F;&#x7528;Turborepo&#x4E86;&#x3002;</p>
+<p><strong><a href="CoreConcepts/Monorepos.md">&#x4E3A;&#x4EC0;&#x4E48;&#x9009;&#x62E9; Turborepo?</a></strong> / 
+<strong><a href="Handbook/README.md">&#x9605;&#x8BFB;&#x9879;&#x76EE;&#x624B;&#x518C;</a></strong> </p>
+<h2 id="&#x5B9E;&#x4F8B;">&#x5B9E;&#x4F8B;</h2>
+<p>&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x514B;&#x9686;&#x4E00;&#x4E2A;Turborepo&#x542F;&#x52A8;&#x5E93;&#xFF0C;&#x8BA9;&#x4F60;&#x7684;&#x9879;&#x76EE;&#x6709;&#x4E00;&#x4E2A;&#x521D;&#x6B65;&#x7684;&#x53D1;&#x5C55;&#x3002;&#x66F4;&#x591A;&#x7684;&#x4F8B;&#x5B50;&#x548C;&#x542F;&#x52A8;&#x7A0B;&#x5E8F;&#xFF0C;&#x8BF7;&#x770B; <a href="https://github.com/vercel/turbo/tree/main/examples" target="_blank">GitHub &#x4E0A;&#x7684; Turborepo &#x4F8B;&#x5B50;&#x76EE;&#x5F55;</a>&#x3002;</p>
+<p><strong>DEMO1:<a href="https://github.com/vercel/turbo/tree/main/examples/basic" target="_blank">Basic</a></strong> / 
+<strong>DEMO2:<a href="https://github.com/vercel/turbo/tree/main/examples/design-system" target="_blank">Design System</a></strong> / 
+<strong>DEMO3:<a href="https://github.com/vercel/turbo/tree/main/examples/with-tailwind" target="_blank">With Tailwind CSS</a></strong> / 
+<strong>DEMO4:<a href="https://github.com/vercel/turbo/tree/main/examples/kitchen-sink" target="_blank">Kitchen Sink</a></strong> /</p>
 
                                 
                                 </section>
@@ -892,12 +864,12 @@
 
             
                 
-                <a href="CachingTasks.html" class="navigation navigation-prev " aria-label="Previous page: 缓存任务">
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Turborepo 中文文档">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="Monorepos.html" class="navigation navigation-next " aria-label="Next page: 项目">
+                <a href="../GettingStarted/" class="navigation navigation-next " aria-label="Next page: 开始">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -908,7 +880,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"远程缓存","level":"1.2.3.2","depth":3,"next":{"title":"项目","level":"1.2.3.3","depth":3,"path":"Turborepo/CoreConcepts/Monorepos.md","ref":"Turborepo/CoreConcepts/Monorepos.md","articles":[{"title":"运行任务","level":"1.2.3.3.1","depth":4,"path":"Turborepo/CoreConcepts/Monorepos/RunningTasks.md","ref":"Turborepo/CoreConcepts/Monorepos/RunningTasks.md","articles":[]},{"title":"筛选工作空间","level":"1.2.3.3.2","depth":4,"path":"Turborepo/CoreConcepts/Monorepos/FilteringWorkspaces.md","ref":"Turborepo/CoreConcepts/Monorepos/FilteringWorkspaces.md","articles":[]}]},"previous":{"title":"缓存任务","level":"1.2.3.1","depth":3,"path":"Turborepo/CoreConcepts/CachingTasks.md","ref":"Turborepo/CoreConcepts/CachingTasks.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Turborepo 中文文档","gitbook":"*"},"file":{"path":"Turborepo/CoreConcepts/RemoteCaching.md","mtime":"2022-11-05T02:40:44.684Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-18T07:37:45.854Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"快速入门","level":"1.2.1","depth":2,"next":{"title":"开始","level":"1.2.2","depth":2,"path":"Turborepo/GettingStarted/README.md","ref":"Turborepo/GettingStarted/README.md","articles":[{"title":"兼容构建工具","level":"1.2.2.1","depth":3,"path":"Turborepo/GettingStarted/AddtoExistingProject.md","ref":"Turborepo/GettingStarted/AddtoExistingProject.md","articles":[]},{"title":"创建新的monorepo","level":"1.2.2.2","depth":3,"path":"Turborepo/GettingStarted/CreateANewMonorepo.md","ref":"Turborepo/GettingStarted/CreateANewMonorepo.md","articles":[]},{"title":"替换构建monorepo","level":"1.2.2.3","depth":3,"path":"Turborepo/GettingStarted/AddtoExistingMonorepo.md","ref":"Turborepo/GettingStarted/AddtoExistingMonorepo.md","articles":[]}]},"previous":{"title":"Turborepo 中文文档","level":"1.2","depth":1,"path":"Turborepo/README.md","ref":"Turborepo/README.md","articles":[{"title":"快速入门","level":"1.2.1","depth":2,"path":"Turborepo/Quickstart/README.md","ref":"Turborepo/Quickstart/README.md","articles":[]},{"title":"开始","level":"1.2.2","depth":2,"path":"Turborepo/GettingStarted/README.md","ref":"Turborepo/GettingStarted/README.md","articles":[{"title":"兼容构建工具","level":"1.2.2.1","depth":3,"path":"Turborepo/GettingStarted/AddtoExistingProject.md","ref":"Turborepo/GettingStarted/AddtoExistingProject.md","articles":[]},{"title":"创建新的monorepo","level":"1.2.2.2","depth":3,"path":"Turborepo/GettingStarted/CreateANewMonorepo.md","ref":"Turborepo/GettingStarted/CreateANewMonorepo.md","articles":[]},{"title":"替换构建monorepo","level":"1.2.2.3","depth":3,"path":"Turborepo/GettingStarted/AddtoExistingMonorepo.md","ref":"Turborepo/GettingStarted/AddtoExistingMonorepo.md","articles":[]}]},{"title":"核心概念","level":"1.2.3","depth":2,"path":"Turborepo/CoreConcepts/README.md","ref":"Turborepo/CoreConcepts/README.md","articles":[{"title":"缓存任务","level":"1.2.3.1","depth":3,"path":"Turborepo/CoreConcepts/CachingTasks.md","ref":"Turborepo/CoreConcepts/CachingTasks.md","articles":[]},{"title":"远程缓存","level":"1.2.3.2","depth":3,"path":"Turborepo/CoreConcepts/RemoteCaching.md","ref":"Turborepo/CoreConcepts/RemoteCaching.md","articles":[]},{"title":"项目","level":"1.2.3.3","depth":3,"path":"Turborepo/CoreConcepts/Monorepos.md","ref":"Turborepo/CoreConcepts/Monorepos.md","articles":[{"title":"运行任务","level":"1.2.3.3.1","depth":4,"path":"Turborepo/CoreConcepts/Monorepos/RunningTasks.md","ref":"Turborepo/CoreConcepts/Monorepos/RunningTasks.md","articles":[]},{"title":"筛选工作空间","level":"1.2.3.3.2","depth":4,"path":"Turborepo/CoreConcepts/Monorepos/FilteringWorkspaces.md","ref":"Turborepo/CoreConcepts/Monorepos/FilteringWorkspaces.md","articles":[]}]}]},{"title":"monorepo手册","level":"1.2.4","depth":2,"path":"Turborepo/Handbook/README.md","ref":"Turborepo/Handbook/README.md","articles":[{"title":"什么是Monorepo","level":"1.2.4.1","depth":3,"path":"Turborepo/Handbook/WhatIsAMonorepo.md","ref":"Turborepo/Handbook/WhatIsAMonorepo.md","articles":[]},{"title":"依赖安装","level":"1.2.4.2","depth":3,"path":"Turborepo/Handbook/PackageInstallation.md","ref":"Turborepo/Handbook/PackageInstallation.md","articles":[]},{"title":"工作空间","level":"1.2.4.3","depth":3,"path":"Turborepo/Handbook/Workspaces.md","ref":"Turborepo/Handbook/Workspaces.md","articles":[]},{"title":"迁移monorepo","level":"1.2.4.4","depth":3,"path":"Turborepo/Handbook/MigratingToAMonorepo.md","ref":"Turborepo/Handbook/MigratingToAMonorepo.md","articles":[]},{"title":"开发任务","level":"1.2.4.5","depth":3,"path":"Turborepo/Handbook/DevelopmentTasks.md","ref":"Turborepo/Handbook/DevelopmentTasks.md","articles":[]},{"title":"构建应用","level":"1.2.4.6","depth":3,"path":"Turborepo/Handbook/BuildingYourApp.md","ref":"Turborepo/Handbook/BuildingYourApp.md","articles":[]},{"title":"部署Docker","level":"1.2.4.7","depth":3,"path":"Turborepo/Handbook/DeployingWithDocker.md","ref":"Turborepo/Handbook/DeployingWithDocker.md","articles":[]},{"title":"共享代码","level":"1.2.4.8","depth":3,"path":"Turborepo/Handbook/SharingCode/README.md","ref":"Turborepo/Handbook/SharingCode/README.md","articles":[{"title":"内部代码","level":"1.2.4.8.1","depth":4,"path":"Turborepo/Handbook/SharingCode/InternalPackages.md","ref":"Turborepo/Handbook/SharingCode/InternalPackages.md","articles":[]}]},{"title":"Lint","level":"1.2.4.9","depth":3,"path":"Turborepo/Handbook/Linting/README.md","ref":"Turborepo/Handbook/Linting/README.md","articles":[{"title":"TypeScript","level":"1.2.4.9.1","depth":4,"path":"Turborepo/Handbook/Linting/TypeScript.md","ref":"Turborepo/Handbook/Linting/TypeScript.md","articles":[]},{"title":"ESLint","level":"1.2.4.9.2","depth":4,"path":"Turborepo/Handbook/Linting/ESLint.md","ref":"Turborepo/Handbook/Linting/ESLint.md","articles":[]}]},{"title":"测试","level":"1.2.4.10","depth":3,"path":"Turborepo/Handbook/Testing.md","ref":"Turborepo/Handbook/Testing.md","articles":[]},{"title":"发布依赖","level":"1.2.4.11","depth":3,"path":"Turborepo/Handbook/PublishingPackages/README.md","ref":"Turborepo/Handbook/PublishingPackages/README.md","articles":[{"title":"捆绑","level":"1.2.4.11.1","depth":4,"path":"Turborepo/Handbook/PublishingPackages/Bundling.md","ref":"Turborepo/Handbook/PublishingPackages/Bundling.md","articles":[]},{"title":"版本管理和发布","level":"1.2.4.11.2","depth":4,"path":"Turborepo/Handbook/PublishingPackages/VersioningAndPublishing.md","ref":"Turborepo/Handbook/PublishingPackages/VersioningAndPublishing.md","articles":[]}]},{"title":"Prisma","level":"1.2.4.12","depth":3,"path":"Turborepo/Handbook/Prisma.md","ref":"Turborepo/Handbook/Prisma.md","articles":[]},{"title":"故障排除","level":"1.2.4.13","depth":3,"path":"Turborepo/Handbook/Troubleshooting.md","ref":"Turborepo/Handbook/Troubleshooting.md","articles":[]}]},{"title":"CI专题","level":"1.2.5","depth":2,"path":"Turborepo/CIRecipes/README.md","ref":"Turborepo/CIRecipes/README.md","articles":[{"title":"CircleCI","level":"1.2.5.1","depth":3,"path":"Turborepo/CIRecipes/CircleCI.md","ref":"Turborepo/CIRecipes/CircleCI.md","articles":[]},{"title":"GitHub Actions","level":"1.2.5.2","depth":3,"path":"Turborepo/CIRecipes/GitHubActions.md","ref":"Turborepo/CIRecipes/GitHubActions.md","articles":[]},{"title":"GitLab CI","level":"1.2.5.3","depth":3,"path":"Turborepo/CIRecipes/GitLabCI.md","ref":"Turborepo/CIRecipes/GitLabCI.md","articles":[]},{"title":"Travis CI","level":"1.2.5.4","depth":3,"path":"Turborepo/CIRecipes/TravisCI.md","ref":"Turborepo/CIRecipes/TravisCI.md","articles":[]}]},{"title":"API参考","level":"1.2.6","depth":2,"path":"Turborepo/API/README.md","ref":"Turborepo/API/README.md","articles":[{"title":"配置选项","level":"1.2.6.1","depth":3,"path":"Turborepo/API/ConfigurationOptions.md","ref":"Turborepo/API/ConfigurationOptions.md","articles":[]},{"title":"CLI 使用","level":"1.2.6.2","depth":3,"path":"Turborepo/API/CLIUsage.md","ref":"Turborepo/API/CLIUsage.md","articles":[]},{"title":"编码方式","level":"1.2.6.3","depth":3,"path":"Turborepo/API/Codemods.md","ref":"Turborepo/API/Codemods.md","articles":[]}]},{"title":"更新日志","level":"1.2.7","depth":2,"path":"Turborepo/Changelog/README.md","ref":"Turborepo/Changelog/README.md","articles":[]},{"title":"升级到v1","level":"1.2.8","depth":2,"path":"Turborepo/Upgrading/README.md","ref":"Turborepo/Upgrading/README.md","articles":[]},{"title":"故障排除","level":"1.2.9","depth":2,"path":"Turborepo/Troubleshooting/README.md","ref":"Turborepo/Troubleshooting/README.md","articles":[]},{"title":"鸣谢","level":"1.2.10","depth":2,"path":"Turborepo/Acknowledgements/README.md","ref":"Turborepo/Acknowledgements/README.md","articles":[]},{"title":"FAQ","level":"1.2.11","depth":2,"path":"Turborepo/FAQ/README.md","ref":"Turborepo/FAQ/README.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["chapter-fold"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Turborepo 中文文档","gitbook":"*"},"file":{"path":"Turborepo/Quickstart/README.md","mtime":"2022-11-08T10:57:06.710Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-18T07:37:45.854Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
