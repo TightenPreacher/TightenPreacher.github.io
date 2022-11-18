@@ -1,4 +1,4 @@
 {
     "title": "Turborepo 中文文档",
-    "plugins": ["expandable-chapters-small"]
+    "plugins": ["chapter-fold"]
 }

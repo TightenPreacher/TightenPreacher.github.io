@@ -2,11 +2,11 @@
 * [Turbo 中文文档](README.md)
 * [Turborepo 中文文档](Turborepo/README.md)
   * [快速入门](Turborepo/Quickstart.md)
-  * 开始
+  * [开始](Turborepo/GettingStarted/README.md)
       * [兼容构建工具](Turborepo/GettingStarted/AddtoExistingProject.md)
       * [创建新的monorepo](Turborepo/GettingStarted/CreateANewMonorepo.md)
       * [替换构建monorepo](Turborepo/GettingStarted/AddtoExistingMonorepo.md)
-  * 核心概念
+  * [核心概念](Turborepo/CoreConcepts/README.md)
       * [缓存任务](Turborepo/CoreConcepts/CachingTasks.md)
       * [远程缓存](Turborepo/CoreConcepts/RemoteCaching.md)
       * [项目](Turborepo/CoreConcepts/Monorepos.md)
@@ -36,7 +36,7 @@
       * [GitHub Actions](Turborepo/CIRecipes/GitHubActions.md)
       * [GitLab CI](Turborepo/CIRecipes/GitLabCI.md)
       * [Travis CI](Turborepo/CIRecipes/TravisCI.md)
-  * API参考
+  * [API参考](Turborepo/API/README.md)
       * [配置选项](Turborepo/API/ConfigurationOptions.md)
       * [CLI 使用](Turborepo/API/CLIUsage.md)
       * [编码方式](Turborepo/API/Codemods.md)
